@@ -1,0 +1,11 @@
+.portfolio-projects-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.portfolio-projects-list {
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

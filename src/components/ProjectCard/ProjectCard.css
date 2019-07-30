@@ -1,0 +1,31 @@
+.portfolio-projectcard {
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  color: #0e1a3c;
+}
+.portfolio-projectcard:hover {
+  cursor: pointer;
+}
+.portfolio-projectcard:focus > h1 {
+  border: none;
+  background-color: #ffffff;
+  color: #eb21d4;
+}
+.portfolio-projectcard:hover > h1 {
+  border: none;
+  background-color: #ffffff;
+  color: #eb21d4;
+  cursor: pointer;
+}
+.portfolio-projectcard-logo {
+  width: 255px;
+  height: 255px;
+  object-fit: fill;
+}
+.portfolio-projectcard-title {
+  max-width: 255px;
+  font-size: 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10px 0px 0px 0px;
+}

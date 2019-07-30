@@ -1,0 +1,57 @@
+.portfolio-sidebartabs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.portfolio-sidebartabs-tab {
+  margin: 40px 0px 40px 0px;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-sidebartabs-tab-first {
+  margin: 100px 0px 40px 0px;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-sidebartabs-tab-last {
+  margin: 40px 0px 55px 0px;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-sidebartabs-tab:hover {
+  color: #eb21d4;
+  font-weight: bold;
+  cursor: pointer;
+}
+.portfolio-sidebartabs-tab-first:hover {
+  color: #eb21d4;
+  font-weight: bold;
+  cursor: pointer;
+}
+.portfolio-sidebartabs-tab-last:hover {
+  color: #eb21d4;
+  font-weight: bold;
+  cursor: pointer;
+}
+.portfolio-sidebartabs > button {
+  background-color: transparent;
+  width: 160px;
+}
+.portfolio-sidebartabs-tab:focus {
+  color: #eb21d4;
+  font-weight: bold;
+  outline: none;
+}
+.portfolio-sidebartabs-tab-first:focus {
+  color: #eb21d4;
+  font-weight: bold;
+  outline: none;
+}
+.portfolio-sidebartabs-tab-last:focus {
+  color: #eb21d4;
+  font-weight: bold;
+  outline: none;
+}

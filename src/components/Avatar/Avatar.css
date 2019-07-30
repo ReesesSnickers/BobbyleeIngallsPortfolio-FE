@@ -1,0 +1,37 @@
+.portfolio-avatar-wrapper {
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.portfolio-avatar {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.portfolio-avatar-border {
+  border: 1px solid #0e1a3c;
+}
+.portfolio-avatar-image {
+  object-fit: fill;
+  width: 100%;
+  height: auto;
+}
+.portfolio-avatar-name {
+  margin: 35px 0px 5px 0px;
+  font-size: 48px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #0e1a3c;
+  text-align: center;
+}
+.portfolio-avatar-title {
+  margin: 0;
+  font-size: 38px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #0e1a3c;
+  text-align: center;
+}
+.portfolio-avatar-user {
+  width: 400px;
+}

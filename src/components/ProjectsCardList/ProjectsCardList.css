@@ -1,0 +1,9 @@
+.portfolio-projectcardList {
+  /* margin: 100px 0px 0px 100px; */
+  width: 1050px;
+}
+.portfolio-projectcardList > .portfolio-projectcard {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+}

@@ -1,0 +1,63 @@
+.portfolio-sidebar {
+  background-color: #0e1a3c;
+  width: 452px;
+  height: 100vw;
+  position: fixed;
+}
+.portfolio-sidebar-avatar {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.portfolio-sidebar-avatar .portfolio-avatar {
+  width: 255px;
+  height: 255px;
+}
+.portfolio-sidebar-avatar .portfolio-avatar-name {
+  color: #fff;
+  font-size: 25px;
+  margin: 25px 0px 5px 0px;
+}
+.portfolio-sidebar-avatar .portfolio-avatar-title {
+  color: #fff;
+  font-size: 20px;
+}
+.portfolio-sidebar-sidebartabs-homepage {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-sidebar-sidebartabs {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-sidebar-sidebartabs-homepage .portfolio-sidebartabs-tab-first {
+  margin-top: 135px;
+}
+.portfolio-sidebar-avatar .portfolio-avatar-user {
+  width: 255px;
+}
+.portfolio-sidebar-backbutton {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+.portfolio-sidebar-backbutton:hover {
+  cursor: pointer;
+  color: #eb21d4;
+  font-weight: bold;
+}
+.portfolio-sidebar-backbutton:focus {
+  outline: none;
+  color: #eb21d4;
+  font-weight: bold;
+}
+
+.portfolio-sidebar-sociallist-container {
+  margin-bottom: 30px;
+}
