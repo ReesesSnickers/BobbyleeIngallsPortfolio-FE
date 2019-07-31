@@ -5,3 +5,34 @@
   width: 100%;
   height: 100%;
 }
+.portfolio-blogpage-image-wrapper {
+  max-width: 850px;
+  max-height: 450px;
+}
+.portfolio-blogpage-image {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-blogpage-title {
+  color: #0e1a3c;
+  font-size: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-blogpage-description {
+  color: #0e1a3c;
+  text-align: left;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-blogpage-created {
+  color: #0e1a3c;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-blogpage-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}

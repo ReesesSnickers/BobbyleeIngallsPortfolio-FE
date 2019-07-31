@@ -54,6 +54,7 @@ function App(props) {
               />
             )}
           />
+          {/* <Route exact path="/Blog/:projectId" component={BlogPage} /> */}
           <Route
             exact
             path="/Blog"

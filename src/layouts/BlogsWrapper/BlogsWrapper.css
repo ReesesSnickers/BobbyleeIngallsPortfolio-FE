@@ -1,0 +1,7 @@
+.portfolio-blogswrapper {
+  margin-bottom: 20px;
+}
+.portfolio-blogswrapper-pagination {
+  display: flex;
+  justify-content: flex-end;
+}

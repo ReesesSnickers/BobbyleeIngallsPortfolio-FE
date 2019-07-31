@@ -5,9 +5,13 @@ import BlogsPagination from "../../components/BlogPagination";
 const BlogsWrapper = ({ children }) => {
   return (
     <section className="portfolio-blogswrapper">
-      <BlogsPagination />
+      <div className="portfolio-blogswrapper-pagination">
+        <BlogsPagination />
+      </div>
       {children}
-      <BlogsPagination />
+      <div className="portfolio-blogswrapper-pagination">
+        <BlogsPagination />
+      </div>
     </section>
   );
 };
