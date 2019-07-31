@@ -11,7 +11,7 @@ const SidebarTabs = ({ goToPage, array }) => {
               key === 0 ? "-first" : key === array.length - 1 ? "-last" : ""
             }`}
             onClick={() => goToPage(`/${tab}`)}
-            tabIndex="1"
+            tabIndex="0"
             onKeyPress={event => {
               if (event.key === "Enter") {
                 goToPage(`/${tab}`);

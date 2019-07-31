@@ -1,0 +1,62 @@
+.portfolio-blogcardrecent-image {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-blogcardrecent-image-wrapper {
+  width: 350px;
+  height: 300px;
+  margin-left: 20px;
+}
+.portfolio-blogcardrecent-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1150px;
+  height: 350px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  border-color: #0e1a3c;
+  padding: 0px;
+  cursor: pointer;
+}
+.portfolio-blogcardrecent-wrapper:focus {
+  outline: none;
+  border: 2px solid #eb21d4;
+  box-shadow: 0px 0px 5px #eb21d4;
+}
+.portfolio-blogcardrecent-title {
+  color: #0e1a3c;
+  text-align: center;
+  max-width: 905px;
+  font-size: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+.portfolio-blogcardrecent-description {
+  color: #0e1a3c;
+  text-align: justify;
+  max-width: 905px;
+  height: 230px;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.portfolio-blogcardrecent-created {
+  color: #0e1a3c;
+  text-align: right;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 20px 0px 0px 0px;
+}
+.portfolio-blogcardrecent-details-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 905px;
+  height: 140px;
+}

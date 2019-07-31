@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
+import BlogPage from "./pages/BlogPage";
 
 // Css
 import "./App.css";
@@ -64,6 +65,7 @@ function App(props) {
               />
             )}
           />
+          <Route exact path="/Blog/:blogId" component={BlogPage} />
           <Route
             exact
             path="/Resume"
