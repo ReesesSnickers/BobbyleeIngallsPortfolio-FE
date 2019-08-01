@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlogsPagination = ({}) => {
+const BlogsPagination = () => {
   return (
     <section className="portfolio-BlogsPagination">
       <button className="portfolio-BlogsPagination-navigation-prev">

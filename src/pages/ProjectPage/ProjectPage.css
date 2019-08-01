@@ -1,55 +1,62 @@
-.portfolio-projectscarddialog-wrapper {
+.portfolio-projectpage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-projectpage-wrapper {
   margin: 40px 40px 40px 40px;
 }
-.portfolio-projectscarddialog-header-createdclosegroup {
+.portfolio-projectpage-header-createdclosegroup {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.portfolio-projectscarddialog-header-created {
+.portfolio-projectpage-header-created {
   font-size: 50px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
   color: #0e1a3c;
 }
-.portfolio-projectscarddialog-header-exit {
+.portfolio-projectpage-header-exit {
   background-color: transparent;
   font-size: 50px;
   font-family: Helvetica, Arial, sans-serif;
   color: #0e1a3c;
   border: none;
 }
-.portfolio-projectscarddialog-header-exit:hover {
+.portfolio-projectpage-header-exit:hover {
   cursor: pointer;
   color: #eb21d4;
 }
-.portfolio-projectscarddialog-header-exit:focus {
+.portfolio-projectpage-header-exit:focus {
   outline: none;
   color: #eb21d4;
 }
-.portfolio-projectscarddialog-header-name {
+.portfolio-projectpage-header-name {
   font-size: 50px;
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   margin: 0px;
   color: #0e1a3c;
 }
-.portfolio-projectscarddialog-header-description {
+.portfolio-projectpage-header-description {
   font-size: 50px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
   color: #0e1a3c;
 }
-.portfolio-projectscarddialog-photo {
+.portfolio-projectpage-photo {
   margin: 50px 0px 50px 0px;
   width: 100%;
   height: auto;
 }
-.portfolio-projectscarddialog-header-createdlivecodegroup {
+.portfolio-projectpage-header-createdlivecodegroup {
   display: flex;
   justify-content: flex-end;
 }
-.portfolio-projectscarddialog-header-createdclosegroup-livecode {
+.portfolio-projectpage-header-createdclosegroup-livecode {
   font-size: 30px;
   font-family: Helvetica, Arial, sans-serif;
   color: #0e1a3c;
@@ -58,12 +65,12 @@
   text-decoration: none;
   margin-right: 20px;
 }
-.portfolio-projectscarddialog-header-createdclosegroup-livecode:hover {
+.portfolio-projectpage-header-createdclosegroup-livecode:hover {
   cursor: pointer;
   color: #eb21d4;
   font-weight: bold;
 }
-.portfolio-projectscarddialog-header-createdclosegroup-livecode:focus {
+.portfolio-projectpage-header-createdclosegroup-livecode:focus {
   color: #eb21d4;
   outline: none;
   font-weight: bold;

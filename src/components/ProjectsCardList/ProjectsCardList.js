@@ -1,21 +1,22 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import ProjectCard from "../ProjectCard";
 
-const ProjectCardList = ({ array, onClick, setProject }) => {
+const ProjectCardList = ({ array }) => {
   return (
     <section className="portfolio-projectcardList">
       {array.map((project, key) => {
         return (
-          <ProjectCard
+          <Link
             key={key}
-            title={project.title}
-            logo={project.url}
-            onClick={() => {
-              setProject(project);
-              onClick();
+            to={{
+              pathname: `/Projects/${project.id}`
             }}
-          />
+          >
+            <ProjectCard title={project.title} logo={project.url} />
+          </Link>
         );
       })}
     </section>

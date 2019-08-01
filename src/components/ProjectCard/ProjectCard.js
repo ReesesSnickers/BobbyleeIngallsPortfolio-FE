@@ -1,8 +1,8 @@
 import React from "react";
 
-const ProjectCard = ({ onClick, title, logo }) => {
+const ProjectCard = ({ title, logo }) => {
   return (
-    <button className="portfolio-projectcard" onClick={onClick}>
+    <button className="portfolio-projectcard">
       <img className="portfolio-projectcard-logo" src={logo} alt={title} />
       <h1 className="portfolio-projectcard-title">{title}</h1>
     </button>
