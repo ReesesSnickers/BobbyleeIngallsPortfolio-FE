@@ -1,6 +1,6 @@
-import { SET_TEST_BLOG } from "../actions/types";
+import { SET_TEST_BLOG, FETCH_BLOGS } from "../actions/types";
 
-export const initialState = { test: "blogTest" };
+export const initialState = { test: "blogTest", blogs: [] };
 
 /** Reducer to handle the ordering object for Ordering module. */
 export default function(state = initialState, action) {
@@ -10,6 +10,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         test: action.payload
+      };
+    case FETCH_BLOGS:
+      // Set the computer and reset the accessories and services
+      return {
+        ...state,
+        blogs: action.payload
       };
     default:
       return state;
