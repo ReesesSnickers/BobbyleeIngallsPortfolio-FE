@@ -19,6 +19,10 @@
   cursor: pointer;
 }
 .portfolio-projectcard-logo {
+  min-width: 255px;
+  min-height: 255px;
+  max-width: 255px;
+  max-height: 255px;
   width: 255px;
   height: 255px;
   object-fit: fill;
@@ -29,3 +33,31 @@
   font-family: Helvetica, Arial, sans-serif;
   margin: 10px 0px 0px 0px;
 }
+
+/* @media screen and (max-width: 1510px) {
+  .portfolio-projectcard-logo {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    width: 200px;
+    height: 200px;
+  }
+  .portfolio-projectcard-title {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 1341px) {
+  .portfolio-projectcard-logo {
+    min-width: 160px;
+    min-height: 160px;
+    max-width: 160px;
+    max-height: 160px;
+    width: 160px;
+    height: 160px;
+  }
+  .portfolio-projectcard-title {
+    max-width: 160px;
+  }
+} */

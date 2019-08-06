@@ -19,6 +19,9 @@ import Resume from "./pages/Resume";
 import BlogPage from "./pages/BlogPage";
 import ProjectPage from "./pages/ProjectPage";
 
+// assets
+import UserPhoto from "./static/ProfilePhoto.jpg";
+
 // Css
 import "./App.css";
 
@@ -50,11 +53,12 @@ function App(props) {
   });
   return (
     <>
-      {window.innerWidth >= 1020 && (
+      {window.innerWidth >= 930 && (
         <PageWrapper
           goBack={goBack}
           goToPage={goToPage}
           page={props.history.location.pathname}
+          sidebarPhoto={UserPhoto}
         >
           <div className="App">
             <Switch>
@@ -62,7 +66,7 @@ function App(props) {
               <Route
                 exact
                 path="/Home"
-                render={() => <Home goToPage={goToPage} />}
+                render={() => <Home goToPage={goToPage} photo={UserPhoto} />}
               />
               <Route
                 exact
@@ -109,7 +113,7 @@ function App(props) {
           </div>
         </PageWrapper>
       )}
-      {window.innerWidth < 1020 && (
+      {window.innerWidth < 930 && (
         <div>sorry mobile responsiveness development in progress</div>
       )}
     </>

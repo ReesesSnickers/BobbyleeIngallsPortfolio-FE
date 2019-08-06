@@ -1,4 +1,5 @@
 import React from "react";
+import tempPhoto from "../../static/ProfilePhoto.jpg";
 
 const BlogCard = ({ blog, onClick }) => {
   return (
@@ -6,7 +7,8 @@ const BlogCard = ({ blog, onClick }) => {
       <div className="portfolio-blogcardrecent-image-wrapper">
         <img
           className="portfolio-blogcardrecent-image"
-          src={blog.photo}
+          // src={blog.photo}
+          src={tempPhoto}
           alt={blog.title}
         />
       </div>

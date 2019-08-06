@@ -1,18 +1,18 @@
 import React from "react";
 
+// config
+import socialConfig from "../../configs/socialConfig";
+
 // components
 import Avatar from "../../components/Avatar";
 import SocialList from "../../components/SocialList";
 
-// assets
-import UserPhoto from "../../assets/testavatar.jpg";
-
-const Home = ({ goToPage }) => {
+const Home = ({ photo }) => {
   return (
     <section className="portfolio-home-wrapper">
       <div className="portfolio-home-avatar">
         <Avatar
-          src={UserPhoto}
+          src={photo}
           alt="test"
           name="Bobbylee Ingalls"
           title="Software Engineer"
@@ -20,19 +20,7 @@ const Home = ({ goToPage }) => {
         />
       </div>
       <div className="portfolio-home-sociallist">
-        <SocialList
-          array={[
-            {
-              type: "Facebook",
-              url: "https://www.facebook.com/Bobbylee-Ingalls-102087861139492/"
-            },
-            { type: "Twitter", url: "https://twitter.com/BobbyleeIngalls" },
-            {
-              type: "LinkedIn",
-              url: "https://www.linkedin.com/in/bobbyleeingalls/"
-            }
-          ]}
-        />
+        <SocialList array={socialConfig} />
       </div>
     </section>
   );

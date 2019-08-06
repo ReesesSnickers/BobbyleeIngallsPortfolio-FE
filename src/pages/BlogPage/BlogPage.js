@@ -1,5 +1,7 @@
 import React from "react";
 
+import tempImage from "../../static/ProfilePhoto.jpg";
+
 const BlogPage = ({ match, history }) => {
   const blog = history.location.state.blogs.find(
     element => element._id === match.params.blogId
@@ -18,7 +20,8 @@ const BlogPage = ({ match, history }) => {
       <div className="portfolio-blogpage-image-wrapper">
         <img
           className="portfolio-blogpage-image"
-          src={blog.photo}
+          // src={blog.photo}
+          src={tempImage}
           alt={blog.title}
         />
       </div>

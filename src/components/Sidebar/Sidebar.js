@@ -1,15 +1,15 @@
 import React from "react";
 
-// assets
-import UserPhoto from "../../assets/testavatar.jpg";
+// config
+import socialConfig from "../../configs/socialConfig";
+import sidebarConfig from "../../configs/sidebarConfig";
 
 // components
 import Avatar from "../../components/Avatar";
 import SidebarTabs from "../../components/SidebarTabs";
 import SocialList from "../../components/SocialList";
 
-const Sidebar = ({ page, goToPage, goBack }) => {
-  let routeArray = ["Resume", "Projects", "Blog"];
+const Sidebar = ({ page, goToPage, goBack, photo }) => {
   return (
     <section className="portfolio-sidebar">
       {page !== "/Home" && (
@@ -19,7 +19,7 @@ const Sidebar = ({ page, goToPage, goBack }) => {
           </button>
           <div className="portfolio-sidebar-avatar">
             <Avatar
-              src={UserPhoto}
+              src={photo}
               alt="test"
               name="Bobbylee Ingalls"
               title="Software Engineer"
@@ -34,24 +34,11 @@ const Sidebar = ({ page, goToPage, goBack }) => {
             : "portfolio-sidebar-sidebartabs"
         }
       >
-        <SidebarTabs array={routeArray} goToPage={goToPage} />
+        <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
       </div>
       {page !== "/Home" && (
         <div className="portfolio-sidebar-sociallist-container">
-          <SocialList
-            array={[
-              {
-                type: "Facebook",
-                url:
-                  "https://www.facebook.com/Bobbylee-Ingalls-102087861139492/"
-              },
-              { type: "Twitter", url: "https://twitter.com/BobbyleeIngalls" },
-              {
-                type: "LinkedIn",
-                url: "https://www.linkedin.com/in/bobbyleeingalls/"
-              }
-            ]}
-          />
+          <SocialList array={socialConfig} />
         </div>
       )}
     </section>

@@ -4,6 +4,10 @@
   height: 100%;
 }
 .portfolio-blogcardrecent-image-wrapper {
+  min-width: 350px;
+  min-height: 300px;
+  max-width: 350px;
+  max-height: 300px;
   width: 350px;
   height: 300px;
   margin-left: 20px;
