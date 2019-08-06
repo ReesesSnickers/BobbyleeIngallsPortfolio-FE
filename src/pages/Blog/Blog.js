@@ -6,16 +6,17 @@ import BlogsWrapper from "../../layouts/BlogsWrapper";
 import BlogCard from "../../components/BlogCard";
 import BlogCardRecent from "../../components/BlogCardRecent";
 
-const Blog = ({ goBack, blogs }) => {
+const Blog = ({ blogs }) => {
   return (
     <section className="portfolio-blog-wrapper">
       <section className="portfolio-blog-mostrecent-wrapper">
         <h1 className="portfolio-blog-mostrecent-caption">Most Recent:</h1>
         <Link
           to={{
-            pathname: `/Blog/${blogs[0].id}`,
+            pathname: `/Blog/${blogs[0]._id}`,
             state: {
-              blog: blogs[0]
+              blog: blogs[0],
+              blogs: blogs
             }
           }}
         >
@@ -27,7 +28,10 @@ const Blog = ({ goBack, blogs }) => {
           return (
             <Link
               key={key}
-              to={{ pathname: `/Blog/${blog.id}`, state: { blog: blog } }}
+              to={{
+                pathname: `/Blog/${blog._id}`,
+                state: { blog: blog, blogs: blogs }
+              }}
             >
               <div
                 className={

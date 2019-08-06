@@ -12,7 +12,8 @@ const ProjectCardList = ({ array }) => {
           <Link
             key={key}
             to={{
-              pathname: `/Projects/${project.id}`
+              pathname: `/Projects/${project._id}`,
+              state: { projects: array }
             }}
           >
             <ProjectCard title={project.title} logo={project.url} />
