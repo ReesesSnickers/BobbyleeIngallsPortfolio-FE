@@ -1,7 +1,5 @@
 import React from "react";
 
-import testPhoto from "../../static/ProfilePhoto.jpg";
-
 const ProjectPage = ({ match, history }) => {
   const project = history.location.state.projects.find(
     project => project._id === match.params.projectId
@@ -51,8 +49,7 @@ const ProjectPage = ({ match, history }) => {
         <div className="portfolio-projectpage-photo-wrapper">
           <img
             className="portfolio-projectpage-photo"
-            // src={project.fullScreenPhoto}
-            src={testPhoto}
+            src={require(`../../${project.fullScreenPhoto}`)}
             alt={project.title}
           />
         </div>

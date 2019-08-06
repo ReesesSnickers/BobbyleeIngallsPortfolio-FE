@@ -16,7 +16,7 @@ const ProjectCardList = ({ array }) => {
               state: { projects: array }
             }}
           >
-            <ProjectCard title={project.title} logo={project.url} />
+            <ProjectCard title={project.title} logo={project.fullScreenPhoto} />
           </Link>
         );
       })}
