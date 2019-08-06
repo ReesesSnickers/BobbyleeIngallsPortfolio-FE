@@ -114,7 +114,21 @@ function App(props) {
         </PageWrapper>
       )}
       {window.innerWidth < 930 && (
-        <div>sorry mobile responsiveness development in progress</div>
+        <div
+          style={{
+            display: "flex",
+            height: "100vh",
+            width: "100vw",
+            textAlign: "center",
+            alignItems: "center",
+            color: "#0e1a3c",
+            fontSize: "40px",
+            fontFamily: "Helvetica, Arial, sans-serif"
+          }}
+        >
+          sorry, mobile responsiveness development in progress. Feature coming
+          soon
+        </div>
       )}
     </>
   );
