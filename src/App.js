@@ -52,85 +52,60 @@ function App(props) {
     }
   });
   return (
-    <>
-      {window.innerWidth >= 930 && (
-        <PageWrapper
-          goBack={goBack}
-          goToPage={goToPage}
-          page={props.history.location.pathname}
-          sidebarPhoto={UserPhoto}
-        >
-          <div className="App">
-            <Switch>
-              <Route exact path="/" render={() => <Redirect to="/Home" />} />
-              <Route
-                exact
-                path="/Home"
-                render={() => <Home goToPage={goToPage} photo={UserPhoto} />}
+    <PageWrapper
+      goBack={goBack}
+      goToPage={goToPage}
+      page={props.history.location.pathname}
+      sidebarPhoto={UserPhoto}
+    >
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={() => <Redirect to="/Home" />} />
+          <Route
+            exact
+            path="/Home"
+            render={() => <Home goToPage={goToPage} photo={UserPhoto} />}
+          />
+          <Route
+            exact
+            path="/Projects"
+            render={() => (
+              <Projects
+                goBack={goBack}
+                projects={props.projects.projects.projects}
+                projectActions={props.actions.projects}
+                projectState={props.projects.projects}
               />
-              <Route
-                exact
-                path="/Projects"
-                render={() => (
-                  <Projects
-                    goBack={goBack}
-                    projects={props.projects.projects.projects}
-                    projectActions={props.actions.projects}
-                    projectState={props.projects.projects}
-                  />
-                )}
+            )}
+          />
+          <Route exact path="/Projects/:projectId" component={ProjectPage} />
+          <Route
+            exact
+            path="/Blog"
+            render={() => (
+              <Blog
+                goBack={goBack}
+                blogs={props.blog.blog.blogs}
+                blogActions={props.actions.blog}
+                blogState={props.blog.blog}
               />
-              <Route
-                exact
-                path="/Projects/:projectId"
-                component={ProjectPage}
+            )}
+          />
+          <Route exact path="/Blog/:blogId" component={BlogPage} />
+          <Route
+            exact
+            path="/Resume"
+            render={() => (
+              <Resume
+                goBack={goBack}
+                resumeActions={props.actions.resume}
+                resumeState={props.resume.resume}
               />
-              <Route
-                exact
-                path="/Blog"
-                render={() => (
-                  <Blog
-                    goBack={goBack}
-                    blogs={props.blog.blog.blogs}
-                    blogActions={props.actions.blog}
-                    blogState={props.blog.blog}
-                  />
-                )}
-              />
-              <Route exact path="/Blog/:blogId" component={BlogPage} />
-              <Route
-                exact
-                path="/Resume"
-                render={() => (
-                  <Resume
-                    goBack={goBack}
-                    resumeActions={props.actions.resume}
-                    resumeState={props.resume.resume}
-                  />
-                )}
-              />
-            </Switch>
-          </div>
-        </PageWrapper>
-      )}
-      {window.innerWidth < 930 && (
-        <div
-          style={{
-            display: "flex",
-            height: "100vh",
-            width: "100vw",
-            textAlign: "center",
-            alignItems: "center",
-            color: "#0e1a3c",
-            fontSize: "40px",
-            fontFamily: "Helvetica, Arial, sans-serif"
-          }}
-        >
-          sorry, mobile responsiveness development in progress. Feature coming
-          soon
-        </div>
-      )}
-    </>
+            )}
+          />
+        </Switch>
+      </div>
+    </PageWrapper>
   );
 }
 
