@@ -20,7 +20,14 @@ const SocialList = ({ array }) => {
           ) : (
             undefined
           );
-        return <IconButton key={key} icon={icon} href={social.url} />;
+        return (
+          <IconButton
+            className="portfolio-sociallist-iconbutton"
+            key={key}
+            icon={icon}
+            href={social.url}
+          />
+        );
       })}
     </section>
   );

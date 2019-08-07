@@ -20,7 +20,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
           <div className="portfolio-sidebar-avatar">
             <Avatar
               src={photo}
-              alt="test"
+              alt="Bobbylee Ingalls"
               name="Bobbylee Ingalls"
               title="Software Engineer"
             />

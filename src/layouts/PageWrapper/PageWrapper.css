@@ -13,6 +13,12 @@
   margin-left: 465px;
   transition: margin 0.3s linear;
 }
+.portfolio-wrapper-bottomnavigation-container {
+  display: none;
+}
+.portfolio-wrapper-topnavigation-container {
+  display: none;
+}
 
 @media screen and (max-width: 1300px) {
   .portfolio-wrapper-mainpage {
@@ -25,5 +31,29 @@
   .portfolio-wrapper-mainpage {
     margin-left: 302px;
     transition: margin 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-wrapper-sidebar-container {
+    display: none;
+  }
+  .portfolio-wrapper {
+    flex-direction: column;
+    min-height: 0px;
+  }
+  .portfolio-wrapper-bottomnavigation-container {
+    display: initial;
+  }
+  .portfolio-wrapper-topnavigation-container {
+    display: initial;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+  }
+  .portfolio-wrapper-mainpage {
+    margin-left: 0px;
+    transition: margin 0.3s linear;
+    min-height: 0px;
   }
 }

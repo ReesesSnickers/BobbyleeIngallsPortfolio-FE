@@ -15,3 +15,40 @@
   width: 550px;
   margin-top: 100px;
 }
+
+.portfolio-home-avatar .portfolio-avatar-name {
+  transition: font 0.3s linear, margin 0.3s linear;
+}
+.portfolio-home-avatar .portfolio-avatar-title {
+  transition: font 0.3s linear;
+}
+.portfolio-home-avatar .portfolio-avatar {
+  transition: width 0.3s linear, height 0.3s linear;
+}
+.portfolio-home-avatar {
+  transition: padding 0.3s linear;
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-home-sociallist {
+    display: none;
+  }
+  .portfolio-home-avatar {
+    padding-top: 120px;
+    transition: padding 0.3s linear;
+  }
+  .portfolio-home-avatar .portfolio-avatar-name {
+    font-size: 38px;
+    margin-top: 60px;
+    transition: font 0.3s linear, margin 0.3s linear;
+  }
+  .portfolio-home-avatar .portfolio-avatar-title {
+    font-size: 28px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-home-avatar .portfolio-avatar {
+    width: 300px;
+    height: 300px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}

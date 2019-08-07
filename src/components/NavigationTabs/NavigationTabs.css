@@ -1,0 +1,68 @@
+.portfolio-navigationtabs {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+}
+.portfolio-navigationtabs-tab {
+  font-size: 30px;
+  margin: 0px 50px;
+  color: #0e1a3c;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-navigationtabs-tab-first {
+  font-size: 30px;
+  color: #0e1a3c;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-navigationtabs-tab-last {
+  font-size: 30px;
+  color: #0e1a3c;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio-navigationtabs-tab-bar {
+  background-color: transparent;
+  height: 4px;
+  width: 100%;
+}
+.portfolio-navigationtabs-tab:hover {
+  cursor: pointer;
+}
+.portfolio-navigationtabs-tab-last:hover {
+  cursor: pointer;
+}
+.portfolio-navigationtabs-tab-first:hover {
+  cursor: pointer;
+}
+.portfolio-navigationtabs-tab:focus {
+  outline: none;
+}
+.portfolio-navigationtabs-tab-last:focus {
+  outline: none;
+}
+.portfolio-navigationtabs-tab-first:focus {
+  outline: none;
+}
+.portfolio-navigationtabs-tab:hover + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+}
+.portfolio-navigationtabs-tab-first:hover + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+}
+.portfolio-navigationtabs-tab-last:hover + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+}
+
+.portfolio-navigationtabs-tab:focus + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+}
+.portfolio-navigationtabs-tab-first:focus + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+}
+.portfolio-navigationtabs-tab-last:focus + .portfolio-navigationtabs-tab-bar {
+  background-color: #eb21d4;
+}

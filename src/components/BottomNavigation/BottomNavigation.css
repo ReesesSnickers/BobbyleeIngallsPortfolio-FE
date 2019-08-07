@@ -1,0 +1,19 @@
+.portfolio-BottomNavigation {
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+}
+.portfolio-BottomNavigation-social-container {
+  background-color: #0e1a3c;
+  padding: 20px 0px;
+  width: 100%;
+}
+.portfolio-BottomNavigation-navigation-container {
+  margin-bottom: 20px;
+}
+.portfolio-BottomNavigation-social-container > .portfolio-sociallist {
+  justify-content: center;
+}
+.portfolio-BottomNavigation-social-container .portfolio-IconButton {
+  margin: 0px 30px;
+}
