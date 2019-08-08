@@ -66,3 +66,15 @@
 .portfolio-navigationtabs-tab-last:focus + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;
 }
+
+@media screen and (max-width: 400px) {
+  .portfolio-navigationtabs-tab {
+    font-size: 20px;
+  }
+  .portfolio-navigationtabs-tab-first {
+    font-size: 20px;
+  }
+  .portfolio-navigationtabs-tab-last {
+    font-size: 20px;
+  }
+}

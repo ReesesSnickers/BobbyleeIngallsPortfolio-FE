@@ -3,12 +3,14 @@
   color: #0e1a3c;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
+  transition: font 0.3s linear;
 }
 .portfolio-UpperNavigation-name {
   font-size: 48px;
   color: #0e1a3c;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
+  transition: font 0.3s linear;
 }
 .portfolio-UpperNavigation-info-container {
   display: flex;
@@ -25,6 +27,7 @@
   width: 100px;
   height: 100px;
   margin: 0px 30px 0px 30px;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 .portfolio-UpperNavigation-avatar .portfolio-avatar-wrapper {
   width: auto;
@@ -36,4 +39,36 @@
 .portfolio-UpperNavigation {
   margin-top: 20px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 570px) {
+  .portfolio-UpperNavigation-title {
+    font-size: 27px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-UpperNavigation-name {
+    font-size: 33px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-UpperNavigation-avatar .portfolio-avatar {
+    width: 80px;
+    height: 80px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-UpperNavigation-title {
+    font-size: 20px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-UpperNavigation-name {
+    font-size: 28px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-UpperNavigation-avatar .portfolio-avatar {
+    width: 60px;
+    height: 60px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
 }

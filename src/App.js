@@ -18,6 +18,7 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import BlogPage from "./pages/BlogPage";
 import ProjectPage from "./pages/ProjectPage";
+import UnknownRoute from "./pages/UnkownRoute";
 
 // assets
 import UserPhoto from "./static/ProfilePhoto.jpg";
@@ -103,6 +104,8 @@ function App(props) {
               />
             )}
           />
+          <Route exact path="/UnknownRoute" render={() => <UnknownRoute />} />
+          <Redirect to="/UnknownRoute" />
         </Switch>
       </div>
     </PageWrapper>
