@@ -1,8 +1,29 @@
 .portfolio-projectcardList {
   width: 100%;
+  padding-bottom: 40px;
+  transition: padding 0.3s linear;
 }
-.portfolio-projectcardList .portfolio-projectcard {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 20px;
+
+@media screen and (max-width: 930px) {
+  .portfolio-projectcardList {
+    padding-bottom: 160px;
+    padding-top: 100px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .portfolio-projectcardList {
+    padding-bottom: 160px;
+    padding-top: 80px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-projectcardList {
+    padding-bottom: 160px;
+    padding-top: 50px;
+    transition: padding 0.3s linear;
+  }
 }
