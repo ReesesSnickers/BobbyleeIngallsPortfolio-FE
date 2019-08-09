@@ -1,5 +1,5 @@
 .portfolio-BottomNavigation {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   bottom: 0px;
 }
@@ -7,6 +7,7 @@
   background-color: #0e1a3c;
   padding: 20px 0px;
   width: 100%;
+  transition: padding 0.3s linear;
 }
 .portfolio-BottomNavigation-navigation-container {
   margin-bottom: 20px;
@@ -16,4 +17,23 @@
 }
 .portfolio-BottomNavigation-social-container .portfolio-IconButton {
   margin: 0px 30px;
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-BottomNavigation-social-container {
+    padding: 10px 0px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-BottomNavigation-social-container {
+    padding: 10px 0px;
+    transition: padding 0.3s linear;
+  }
+  .portfolio-BottomNavigation-social-container .portfolio-IconButton {
+    margin: 0px 30px;
+    height: 55px;
+    width: 55px;
+  }
 }

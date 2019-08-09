@@ -1,7 +1,7 @@
 .portfolio-navigationtabs {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 }
 .portfolio-navigationtabs-tab {
