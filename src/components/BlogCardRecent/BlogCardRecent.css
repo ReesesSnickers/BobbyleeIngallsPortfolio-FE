@@ -11,17 +11,19 @@
   width: 350px;
   height: 300px;
   margin-left: 20px;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 .portfolio-blogcardrecent-wrapper {
   display: flex;
   flex-direction: row;
-  width: 1150px;
+  width: 1050px;
   height: 350px;
   border-radius: 25px;
   background-color: #ffffff;
   border-color: #0e1a3c;
   padding: 0px;
   cursor: pointer;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 .portfolio-blogcardrecent-wrapper:focus {
   outline: none;
@@ -50,6 +52,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  transition: height 0.3s linear;
 }
 .portfolio-blogcardrecent-created {
   color: #0e1a3c;
@@ -57,10 +60,177 @@
   font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 20px 0px 0px 0px;
+  transition: margin 0.3s linear;
 }
 .portfolio-blogcardrecent-details-wrapper {
   margin-left: 20px;
   margin-right: 20px;
   width: 905px;
   height: 140px;
+}
+
+@media screen and (max-width: 1600px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 950px;
+    height: 350px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 850px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 800px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 700px;
+    height: 300px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+
+  .portfolio-blogcardrecent-image-wrapper {
+    min-width: 300px;
+    min-height: 250px;
+    max-width: 300px;
+    max-height: 250px;
+    width: 300px;
+    height: 250px;
+    margin-left: 20px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+
+  .portfolio-blogcardrecent-description {
+    height: 182px;
+    transition: height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 600px;
+    height: 270px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-blogcardrecent-image-wrapper {
+    min-width: 270px;
+    min-height: 220px;
+    max-width: 270px;
+    max-height: 220px;
+    width: 270px;
+    height: 220px;
+    margin-left: 20px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+
+  .portfolio-blogcardrecent-description {
+    height: 154px;
+    transition: height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 800px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 700px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 600px;
+    height: 220px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+
+  .portfolio-blogcardrecent-image-wrapper {
+    min-width: 220px;
+    min-height: 170px;
+    max-width: 220px;
+    max-height: 170px;
+    width: 220px;
+    height: 170px;
+    margin-left: 20px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+
+  .portfolio-blogcardrecent-description {
+    height: 104px;
+    transition: height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 500px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-blogcardrecent-image-wrapper {
+    min-width: 190px;
+    min-height: 170px;
+    max-width: 190px;
+    max-height: 170px;
+    width: 190px;
+    height: 170px;
+    margin-left: 20px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 400px;
+    height: 200px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-blogcardrecent-image-wrapper {
+    min-width: 180px;
+    min-height: 160px;
+    max-width: 180px;
+    max-height: 160px;
+    width: 180px;
+    height: 160px;
+    margin-left: 20px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-blogcardrecent-created {
+    margin: 10px 0px 0px 0px;
+    transition: margin 0.3s linear;
+  }
+  .portfolio-blogcardrecent-description {
+    height: 96px;
+    transition: height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .portfolio-blogcardrecent-wrapper {
+    width: 300px;
+    height: 200px;
+    margin-left: -10px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-blogcardrecent-image-wrapper {
+    display: none;
+  }
+  .portfolio-blogcardrecent-created {
+    margin: 0px 0px 0px 0px;
+    transition: margin 0.3s linear;
+  }
 }

@@ -1,7 +1,22 @@
 .portfolio-blogswrapper {
   margin-bottom: 20px;
+  transition: margin 0.3s linear;
 }
 .portfolio-blogswrapper-pagination {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-blogswrapper {
+    margin-bottom: 120px;
+    transition: margin 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-blogswrapper {
+    margin-bottom: 100px;
+    transition: margin 0.3s linear;
+  }
 }
