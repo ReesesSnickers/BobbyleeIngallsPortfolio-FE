@@ -4,7 +4,6 @@ import ProjectCardList from "../../components/ProjectsCardList";
 import Loading from "../../components/Loading";
 
 const Projects = ({ projectActions, projects }) => {
-  projects = [];
   if (projects.length === 0) {
     return <Loading load="projects" />;
   } else {
