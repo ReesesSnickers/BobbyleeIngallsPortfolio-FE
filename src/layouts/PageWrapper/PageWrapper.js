@@ -8,7 +8,7 @@ import UpperNavigation from "../../components/UpperNavigation";
 const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
   return (
     <section className="portfolio-wrapper">
-      {page !== "/Home" && (
+      {page !== "/About" && (
         <div className="portfolio-wrapper-topnavigation-container">
           <UpperNavigation
             goToPage={goToPage}

@@ -12,7 +12,7 @@ import * as resumeActions from "./pages/Resume/actions/resumeActions";
 import PageWrapper from "./layouts/PageWrapper";
 
 // Pages
-import Home from "./pages/Home";
+import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
@@ -61,11 +61,11 @@ function App(props) {
     >
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/Home" />} />
+          <Route exact path="/" render={() => <Redirect to="/About" />} />
           <Route
             exact
-            path="/Home"
-            render={() => <Home goToPage={goToPage} photo={UserPhoto} />}
+            path="/About"
+            render={() => <About goToPage={goToPage} photo={UserPhoto} />}
           />
           <Route
             exact

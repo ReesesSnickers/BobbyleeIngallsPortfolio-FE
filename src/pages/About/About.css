@@ -1,0 +1,200 @@
+.portfolio-about-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.portfolio-about-divider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.portfolio-about-dividercircle {
+  width: 66px;
+  height: 66px;
+  border: 5px solid #0e1a3c;
+  border-radius: 50%;
+  transition: border 0.3s linear;
+}
+.portfolio-about-dividerline {
+  width: 389px;
+  height: 5px;
+  background-color: #0e1a3c;
+  margin: 0px 25px;
+  transition: width 0.3s linear;
+}
+
+.portfolio-about-upper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  transition: margin 0.3s linear;
+}
+
+.portfolio-about-description-wrapper {
+  padding: 0px 130px 20px;
+  font-size: 30px;
+  transition: padding 0.3s linear, margin 0.3s linear;
+}
+
+.portfolio-about-avatar {
+  padding-top: 10px;
+}
+
+.portfolio-about-sociallist {
+  width: 550px;
+  margin-top: 100px;
+}
+
+.portfolio-about-avatar .portfolio-avatar-name {
+  transition: font 0.3s linear, margin 0.3s linear;
+}
+.portfolio-about-avatar .portfolio-avatar-title {
+  transition: font 0.3s linear;
+}
+.portfolio-about-avatar .portfolio-avatar {
+  transition: width 0.3s linear, height 0.3s linear;
+}
+.portfolio-about-avatar {
+  transition: padding 0.3s linear;
+}
+
+@media screen and (max-width: 1450px) {
+  .portfolio-about-dividerline {
+    width: 300px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .portfolio-about-dividerline {
+    width: 225px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-about-dividerline {
+    width: 300px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-about-upper-wrapper {
+    margin-top: 80px;
+    transition: margin 0.3s linear;
+  }
+  .portfolio-about-description-wrapper {
+    margin-bottom: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+    transition: padding 0.3s linear, margin 0.3s linear;
+  }
+  .portfolio-about-sociallist {
+    display: none;
+  }
+  .portfolio-about-avatar .portfolio-avatar-name {
+    font-size: 30px;
+    margin-top: 20px;
+    transition: font 0.3s linear, margin 0.3s linear;
+  }
+  .portfolio-about-avatar .portfolio-avatar-title {
+    font-size: 18px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-about-avatar .portfolio-avatar {
+    width: 250px;
+    height: 250px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio-about-dividerline {
+    width: 225px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .portfolio-about-dividercircle {
+    border: 3px solid #0e1a3c;
+    transition: border 0.3s linear, height 0.3s linear, width 0.3s linear;
+  }
+  .portfolio-about-dividerline {
+    height: 3px;
+    transition: height 0.3s linear, width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .portfolio-about-dividerline {
+    width: 175px;
+    transition: width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .portfolio-about-description-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .portfolio-about-dividerline {
+    width: 125px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .portfolio-about-dividerline {
+    width: 75px;
+    height: 2px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+  .portfolio-about-dividercircle {
+    width: 53px;
+    height: 53px;
+    border: 2px solid #0e1a3c;
+    border-radius: 50%;
+    transition: border 0.3s linear, height 0.3s linear, width 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-about-description-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .portfolio-about-description-wrapper {
+    font-size: 20px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-about-avatar .portfolio-avatar-name {
+    font-size: 25px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-about-avatar .portfolio-avatar-title {
+    font-size: 18px;
+    transition: font 0.3s linear;
+  }
+  .portfolio-about-avatar .portfolio-avatar {
+    width: 200px;
+    height: 200px;
+    transition: width 0.3s linear, height 0.3s linear;
+  }
+}

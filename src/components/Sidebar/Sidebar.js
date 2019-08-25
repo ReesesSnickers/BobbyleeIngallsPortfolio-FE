@@ -12,7 +12,7 @@ import SocialList from "../../components/SocialList";
 const Sidebar = ({ page, goToPage, goBack, photo }) => {
   return (
     <section className="portfolio-sidebar">
-      {page !== "/Home" && (
+      {page !== "/About" && (
         <>
           <button onClick={goBack} className="portfolio-sidebar-backbutton">
             Back
@@ -29,14 +29,14 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
       )}
       <div
         className={
-          page === "/Home"
+          page === "/About"
             ? "portfolio-sidebar-sidebartabs-homepage"
             : "portfolio-sidebar-sidebartabs"
         }
       >
         <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
       </div>
-      {page !== "/Home" && (
+      {page !== "/About" && (
         <div className="portfolio-sidebar-sociallist-container">
           <SocialList array={socialConfig} />
         </div>

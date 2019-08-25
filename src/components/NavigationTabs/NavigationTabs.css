@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
 }
 .portfolio-navigationtabs-tab {
   font-size: 30px;
-  margin: 0px 50px;
   color: #0e1a3c;
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -45,8 +44,6 @@
 }
 .portfolio-navigationtabs-tab:hover + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;
-  width: calc(100% - 100px);
-  margin-left: 50px;
 }
 .portfolio-navigationtabs-tab-first:hover + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;

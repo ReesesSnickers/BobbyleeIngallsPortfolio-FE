@@ -32,15 +32,19 @@
 .portfolio-blogcard-title {
   color: #0e1a3c;
   text-align: left;
-  max-width: 905px;
+  max-width: 800px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 30px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 0px;
+  transition: width 0.3s linear;
 }
 .portfolio-blogcard-description {
   color: #0e1a3c;
   text-align: left;
-  max-width: 905px;
+  max-width: 820px;
   height: 70px;
   font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
@@ -51,6 +55,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  transition: width 0.3s linear;
 }
 .portfolio-blogcard-created {
   color: #0e1a3c;
@@ -58,6 +63,7 @@
   font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
   margin: 15px 20px 0px 0px;
+  transition: font 0.3s linear;
 }
 .portfolio-blogcard-details-wrapper {
   margin-left: 20px;
@@ -71,12 +77,28 @@
     height: 170px;
     transition: width 0.3s linear;
   }
+  .portfolio-blogcard-description {
+    max-width: 700px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 700px;
+    transition: width 0.3s linear;
+  }
 }
 
 @media screen and (max-width: 1500px) {
   .portfolio-blogcard-wrapper {
     width: 850px;
     height: 170px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-description {
+    max-width: 600px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 600px;
     transition: width 0.3s linear;
   }
 }
@@ -87,6 +109,14 @@
     height: 170px;
     transition: width 0.3s linear;
   }
+  .portfolio-blogcard-description {
+    max-width: 550px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 550px;
+    transition: width 0.3s linear;
+  }
 }
 
 @media screen and (max-width: 1230px) {
@@ -94,6 +124,14 @@
     width: 700px;
     height: 170px;
     transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-description {
+    max-width: 450px;
+    transition: width 0.3s linear, font 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 450px;
+    transition: width 0.3s linear, font 0.3s linear;
   }
 }
 
@@ -103,12 +141,34 @@
     height: 170px;
     transition: width 0.3s linear;
   }
+  .portfolio-blogcard-description {
+    max-width: 350px;
+    font-size: 15px;
+    transition: width 0.3s linear, font 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 350px;
+    font-size: 25px;
+    transition: width 0.3s linear, font 0.3s linear;
+  }
+  .portfolio-blogcard-created {
+    font-size: 15px;
+    transition: font 0.3s linear;
+  }
 }
 
 @media screen and (max-width: 930px) {
   .portfolio-blogcard-wrapper {
     width: 800px;
     height: 170px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-description {
+    max-width: 550px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 550px;
     transition: width 0.3s linear;
   }
 }
@@ -119,12 +179,28 @@
     height: 170px;
     transition: width 0.3s linear;
   }
+  .portfolio-blogcard-description {
+    max-width: 450px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 450px;
+    transition: width 0.3s linear;
+  }
 }
 
 @media screen and (max-width: 760px) {
   .portfolio-blogcard-wrapper {
     width: 600px;
     height: 170px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-description {
+    max-width: 350px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 350px;
     transition: width 0.3s linear;
   }
 }
@@ -135,12 +211,28 @@
     height: 170px;
     transition: width 0.3s linear;
   }
+  .portfolio-blogcard-description {
+    max-width: 250px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 250px;
+    transition: width 0.3s linear;
+  }
 }
 
 @media screen and (max-width: 560px) {
   .portfolio-blogcard-wrapper {
     width: 400px;
     height: 170px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-description {
+    max-width: 150px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 150px;
     transition: width 0.3s linear;
   }
 }
@@ -153,5 +245,13 @@
   }
   .portfolio-blogcard-image-wrapper {
     display: none;
+  }
+  .portfolio-blogcard-description {
+    max-width: 250px;
+    transition: width 0.3s linear;
+  }
+  .portfolio-blogcard-title {
+    max-width: 250px;
+    transition: width 0.3s linear;
   }
 }

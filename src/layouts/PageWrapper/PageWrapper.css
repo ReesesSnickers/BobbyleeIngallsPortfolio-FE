@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1024px) {
   .portfolio-wrapper-sidebar-container {
     display: none;
   }

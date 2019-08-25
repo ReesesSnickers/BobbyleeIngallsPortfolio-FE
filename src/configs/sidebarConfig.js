@@ -1,1 +1,1 @@
-module.exports = ["Resume", "Projects", "Blog"];
+module.exports = ["About", "Resume", "Projects", "Blog"];

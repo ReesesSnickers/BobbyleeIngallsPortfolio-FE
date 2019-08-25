@@ -11,7 +11,7 @@ import NavigationTabs from "../../components/NavigationTabs";
 const BottomNavigation = ({ page, goToPage }) => {
   return (
     <section className="portfolio-BottomNavigation">
-      {page === "/Home" && (
+      {page === "/About" && (
         <div className="portfolio-BottomNavigation-navigation-container">
           <NavigationTabs goToPage={goToPage} array={sidebarConfig} />
         </div>
