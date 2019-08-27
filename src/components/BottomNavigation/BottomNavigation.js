@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // config
 import socialConfig from "../../configs/socialConfig";
@@ -28,3 +29,10 @@ const BottomNavigation = ({ page, goToPage }) => {
 };
 
 export default BottomNavigation;
+
+BottomNavigation.propTypes = {
+  // current page in url
+  page: PropTypes.string.isRequired,
+  // function to goto a specific page
+  goToPage: PropTypes.func.isRequired
+};

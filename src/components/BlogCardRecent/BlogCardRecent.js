@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import tempPhoto from "../../static/ProfilePhoto.jpg";
 
-const BlogCard = ({ blog, onClick }) => {
+const BlogCardRecent = ({ blog, onClick }) => {
   return (
     <button className="portfolio-blogcardrecent-wrapper" onClick={onClick}>
       <div className="portfolio-blogcardrecent-image-wrapper">
@@ -23,4 +25,16 @@ const BlogCard = ({ blog, onClick }) => {
   );
 };
 
-export default BlogCard;
+export default BlogCardRecent;
+
+BlogCardRecent.propTypes = {
+  // blog object
+  blog: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    create: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired
+  }),
+  // function to occure when card is clicked
+  onClick: PropTypes.func.isRequired
+};

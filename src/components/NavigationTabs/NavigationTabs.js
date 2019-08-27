@@ -1,11 +1,9 @@
 import React from "react";
 
 const NavigationTabs = ({ goToPage, array, page }) => {
-  console.log(page);
   return (
     <section className="portfolio-navigationtabs">
       {array.map((tab, key) => {
-        console.log(tab);
         return (
           <section style={{ width: "auto" }}>
             <span

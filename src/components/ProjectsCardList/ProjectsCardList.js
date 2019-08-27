@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
@@ -25,3 +26,14 @@ const ProjectCardList = ({ array }) => {
 };
 
 export default ProjectCardList;
+
+ProjectCardList.propTypes = {
+  // Projects array
+  array: PropTypes.shape([
+    {
+      title: PropTypes.string.isRequired,
+      fullScreenPhoto: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired
+    }
+  ])
+};

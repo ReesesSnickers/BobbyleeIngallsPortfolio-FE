@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ProjectCard = ({ title, logo }) => {
   return (
@@ -14,3 +15,10 @@ const ProjectCard = ({ title, logo }) => {
 };
 
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+  // title to the project
+  title: PropTypes.string,
+  // image string to the project
+  logo: PropTypes.string
+};

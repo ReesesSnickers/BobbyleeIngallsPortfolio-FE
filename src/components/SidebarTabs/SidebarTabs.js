@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SidebarTabs = ({ goToPage, array }) => {
   return (
@@ -28,3 +29,10 @@ const SidebarTabs = ({ goToPage, array }) => {
 };
 
 export default SidebarTabs;
+
+SidebarTabs.propTypes = {
+  // function to go directly to a page
+  goToPage: PropTypes.func.isRequired,
+  // tabs array
+  array: PropTypes.array.isRequired
+};

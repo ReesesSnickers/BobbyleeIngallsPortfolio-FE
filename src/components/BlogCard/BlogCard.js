@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import tempPhoto from "../../static/ProfilePhoto.jpg";
 
 const BlogCard = ({ blog, onClick }) => {
@@ -22,3 +24,15 @@ const BlogCard = ({ blog, onClick }) => {
 };
 
 export default BlogCard;
+
+BlogCard.propTypes = {
+  // blog object
+  blog: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    create: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired
+  }),
+  // function to occure when card is clicked
+  onClick: PropTypes.func.isRequired
+};

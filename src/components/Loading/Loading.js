@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Loading = ({ load }) => {
   return (
@@ -9,3 +10,8 @@ const Loading = ({ load }) => {
 };
 
 export default Loading;
+
+Loading.propTypes = {
+  // text of what is being retrieved
+  load: PropTypes.string.isRequired
+};

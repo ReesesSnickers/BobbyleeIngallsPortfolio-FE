@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // config
 import sidebarConfig from "../../configs/sidebarConfig";
@@ -27,3 +28,16 @@ const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
 };
 
 export default UpperNavigation;
+
+UpperNavigation.propTypes = {
+  // function to go directly to a page
+  goToPage: PropTypes.func.isRequired,
+  // title for the avatar
+  title: PropTypes.string.isRequired,
+  // name for the avatar
+  name: PropTypes.string.isRequired,
+  // photo for the avatar
+  photo: PropTypes.string.isRequired,
+  // current page in the url
+  page: PropTypes.string.isRequired
+};

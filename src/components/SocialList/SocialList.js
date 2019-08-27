@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import IconButton from "../IconButton";
 
@@ -34,3 +35,13 @@ const SocialList = ({ array }) => {
 };
 
 export default SocialList;
+
+SocialList.propTypes = {
+  // social options array
+  array: PropTypes.shape([
+    {
+      type: PropTypes.oneOf(["Facebook", "Twitter", "LinkedIn"]).isRequired,
+      url: PropTypes.string.isRequired
+    }
+  ])
+};
