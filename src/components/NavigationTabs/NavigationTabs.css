@@ -54,14 +54,18 @@
 
 .portfolio-navigationtabs-tab:focus + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;
-  width: calc(100% - 100px);
-  margin-left: 50px;
+  width: 100%;
 }
 .portfolio-navigationtabs-tab-first:focus + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;
 }
 .portfolio-navigationtabs-tab-last:focus + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;
+}
+
+.portfolio-navigationtabs-tab-active {
+  color: #eb21d4;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 400px) {

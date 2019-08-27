@@ -13,7 +13,11 @@ const BottomNavigation = ({ page, goToPage }) => {
     <section className="portfolio-BottomNavigation">
       {page === "/About" && (
         <div className="portfolio-BottomNavigation-navigation-container">
-          <NavigationTabs goToPage={goToPage} array={sidebarConfig} />
+          <NavigationTabs
+            page={page}
+            goToPage={goToPage}
+            array={sidebarConfig}
+          />
         </div>
       )}
       <div className="portfolio-BottomNavigation-social-container">

@@ -1,15 +1,19 @@
 import React from "react";
 
-const NavigationTabs = ({ goToPage, array }) => {
+const NavigationTabs = ({ goToPage, array, page }) => {
+  console.log(page);
   return (
     <section className="portfolio-navigationtabs">
       {array.map((tab, key) => {
+        console.log(tab);
         return (
           <section style={{ width: "auto" }}>
             <span
               key={key}
               className={`portfolio-navigationtabs-tab${
                 key === 0 ? "-first" : key === array.length - 1 ? "-last" : ""
+              } ${
+                page === `/${tab}` ? "portfolio-navigationtabs-tab-active" : ""
               }`}
               onClick={() => goToPage(`/${tab}`)}
               tabIndex="0"

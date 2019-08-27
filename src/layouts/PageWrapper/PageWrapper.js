@@ -11,6 +11,7 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
       {page !== "/About" && (
         <div className="portfolio-wrapper-topnavigation-container">
           <UpperNavigation
+            page={page}
             goToPage={goToPage}
             name="Bobbylee Ingalls"
             title="Software Engineer"

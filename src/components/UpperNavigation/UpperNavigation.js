@@ -7,7 +7,7 @@ import sidebarConfig from "../../configs/sidebarConfig";
 import NavigationTabs from "../../components/NavigationTabs";
 import Avatar from "../../components/Avatar";
 
-const UpperNavigation = ({ goToPage, title, name, photo }) => {
+const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
   return (
     <section className="portfolio-UpperNavigation">
       <section className="portfolio-UpperNavigation-header-container">
@@ -20,7 +20,7 @@ const UpperNavigation = ({ goToPage, title, name, photo }) => {
         </section>
       </section>
       <div className="portfolio-UpperNavigation-navigation-container">
-        <NavigationTabs goToPage={goToPage} array={sidebarConfig} />
+        <NavigationTabs page={page} goToPage={goToPage} array={sidebarConfig} />
       </div>
     </section>
   );
