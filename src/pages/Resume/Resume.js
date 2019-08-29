@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Resume = ({ goBack }) => {
   return (
@@ -9,3 +10,8 @@ const Resume = ({ goBack }) => {
 };
 
 export default Resume;
+
+Resume.propTypes = {
+  // function to go back a page
+  goBack: PropTypes.func.isRequired
+};

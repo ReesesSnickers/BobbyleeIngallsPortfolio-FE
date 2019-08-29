@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
@@ -58,3 +59,8 @@ const Blog = ({ blogs }) => {
 };
 
 export default Blog;
+
+Blog.propTypes = {
+  // array of blog objects
+  blogs: PropTypes.array
+};

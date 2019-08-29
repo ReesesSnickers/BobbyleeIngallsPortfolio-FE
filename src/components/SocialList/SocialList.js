@@ -38,10 +38,5 @@ export default SocialList;
 
 SocialList.propTypes = {
   // social options array
-  array: PropTypes.shape([
-    {
-      type: PropTypes.oneOf(["Facebook", "Twitter", "LinkedIn"]).isRequired,
-      url: PropTypes.string.isRequired
-    }
-  ])
+  array: PropTypes.array
 };

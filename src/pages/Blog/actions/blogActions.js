@@ -33,13 +33,11 @@ export const fetchBlogs = () => async dispatch => {
 
   // Filter by date
   let blogs = response.data.data.blogs.sort((date1, date2) => {
-    console.log(new Date(date1.created));
     return new Date(date2.created) - new Date(date1.created);
   });
-  console.log(blogs);
 
   dispatch({
     type: FETCH_BLOGS,
-    payload: response.data.data.blogs
+    payload: blogs
   });
 };

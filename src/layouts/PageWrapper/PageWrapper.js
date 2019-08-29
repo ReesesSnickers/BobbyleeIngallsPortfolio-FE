@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import Sidebar from "../../components/Sidebar";
@@ -36,3 +37,16 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
 };
 
 export default PageWrapper;
+
+PageWrapper.propTypes = {
+  // function to go back
+  goBack: PropTypes.func.isRequired,
+  // function to go directly to a page
+  goToPage: PropTypes.func.isRequired,
+  // current page in the url
+  page: PropTypes.string,
+  // image source string
+  sidebarPhoto: PropTypes.string,
+  // child to be passed into wrapper
+  children: PropTypes.node
+};

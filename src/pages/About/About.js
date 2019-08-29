@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // config
 import socialConfig from "../../configs/socialConfig";
@@ -44,3 +45,8 @@ const About = ({ photo }) => {
 };
 
 export default About;
+
+About.propTypes = {
+  // photo source string
+  photo: PropTypes.string
+};

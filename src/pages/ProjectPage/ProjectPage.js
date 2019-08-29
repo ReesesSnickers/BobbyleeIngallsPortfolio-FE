@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ProjectPage = ({ match, history }) => {
   const project = history.location.state.projects.find(
@@ -57,3 +58,10 @@ const ProjectPage = ({ match, history }) => {
 };
 
 export default ProjectPage;
+
+ProjectPage.propTypes = {
+  // react-router match object
+  match: PropTypes.object,
+  // react-router history object
+  history: PropTypes.object
+};

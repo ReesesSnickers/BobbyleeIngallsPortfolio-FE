@@ -5,7 +5,7 @@ const NavigationTabs = ({ goToPage, array, page }) => {
     <section className="portfolio-navigationtabs">
       {array.map((tab, key) => {
         return (
-          <section style={{ width: "auto" }}>
+          <section key={key} style={{ width: "auto" }}>
             <span
               key={key}
               className={`portfolio-navigationtabs-tab${

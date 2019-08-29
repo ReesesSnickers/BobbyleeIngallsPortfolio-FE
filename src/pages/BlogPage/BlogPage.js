@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import tempImage from "../../static/ProfilePhoto.jpg";
 
@@ -32,3 +33,10 @@ const BlogPage = ({ match, history }) => {
 };
 
 export default BlogPage;
+
+BlogPage.propTypes = {
+  // react-router match object
+  match: PropTypes.object,
+  // react-router history object
+  history: PropTypes.object
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import BlogsPagination from "../../components/BlogPagination";
 
@@ -17,3 +18,8 @@ const BlogsWrapper = ({ children }) => {
 };
 
 export default BlogsWrapper;
+
+BlogsWrapper.propTypes = {
+  // child to be passed into wrapper
+  children: PropTypes.node
+};

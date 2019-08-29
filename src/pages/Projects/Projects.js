@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import ProjectCardList from "../../components/ProjectsCardList";
 import Loading from "../../components/Loading";
@@ -21,3 +22,16 @@ const Projects = ({ projectActions, projects }) => {
 };
 
 export default Projects;
+
+Projects.propTypes = {
+  // redux project actions object
+  projectActions: PropTypes.object,
+  // array of project objects
+  projects: PropTypes.shape([
+    {
+      title: PropTypes.string.isRequired,
+      fullScreenPhoto: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired
+    }
+  ])
+};

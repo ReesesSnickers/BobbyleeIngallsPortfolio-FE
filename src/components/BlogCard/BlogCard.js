@@ -27,12 +27,7 @@ export default BlogCard;
 
 BlogCard.propTypes = {
   // blog object
-  blog: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    create: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired
-  }),
+  blog: PropTypes.object,
   // function to occure when card is clicked
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
