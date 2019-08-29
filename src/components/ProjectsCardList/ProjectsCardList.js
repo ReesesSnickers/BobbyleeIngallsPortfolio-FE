@@ -29,11 +29,5 @@ export default ProjectCardList;
 
 ProjectCardList.propTypes = {
   // Projects array
-  array: PropTypes.shape([
-    {
-      title: PropTypes.string.isRequired,
-      fullScreenPhoto: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired
-    }
-  ])
+  array: PropTypes.array
 };

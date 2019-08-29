@@ -27,11 +27,5 @@ Projects.propTypes = {
   // redux project actions object
   projectActions: PropTypes.object,
   // array of project objects
-  projects: PropTypes.shape([
-    {
-      title: PropTypes.string.isRequired,
-      fullScreenPhoto: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired
-    }
-  ])
+  projects: PropTypes.array
 };
