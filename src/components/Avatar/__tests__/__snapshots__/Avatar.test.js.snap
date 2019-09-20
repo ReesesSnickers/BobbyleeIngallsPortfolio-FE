@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should match snapshot 1`] = `
+<section
+  className="portfolio-avatar-wrapper"
+>
+  <section
+    className="portfolio-avatar false"
+  >
+    <img
+      alt="Profile Photo"
+      className="portfolio-avatar-image"
+      src="MockSrc"
+    />
+  </section>
+  <section
+    className="portfolio-avatar-user"
+  >
+    <h1
+      className="portfolio-avatar-name"
+    />
+    <h2
+      className="portfolio-avatar-title"
+    />
+  </section>
+</section>
+`;

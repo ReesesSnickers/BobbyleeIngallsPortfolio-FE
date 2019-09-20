@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton should match snapshot 1`] = `
+<a
+  className="portfolio-IconButton"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <svg>
+    Facebook-Logo-Square.svg
+  </svg>
+</a>
+`;

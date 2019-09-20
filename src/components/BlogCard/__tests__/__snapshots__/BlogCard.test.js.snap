@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogCard should match snapshot 1`] = `
+<button
+  className="portfolio-blogcard-wrapper"
+>
+  <div
+    className="portfolio-blogcard-image-wrapper"
+  >
+    <img
+      alt=""
+      className="portfolio-blogcard-image"
+      src="ProfilePhoto.jpg"
+    />
+  </div>
+  <div
+    className="portfolio-blogcard-details-wrapper"
+  >
+    <h1
+      className="portfolio-blogcard-title"
+    >
+      
+    </h1>
+    <h2
+      className="portfolio-blogcard-description"
+    >
+      
+    </h2>
+    <h3
+      className="portfolio-blogcard-created"
+    >
+      
+    </h3>
+  </div>
+</button>
+`;

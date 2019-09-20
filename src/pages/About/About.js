@@ -48,5 +48,5 @@ export default About;
 
 About.propTypes = {
   // photo source string
-  photo: PropTypes.string
+  photo: PropTypes.string.isRequired
 };

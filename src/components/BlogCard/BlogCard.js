@@ -31,3 +31,7 @@ BlogCard.propTypes = {
   // function to occure when card is clicked
   onClick: PropTypes.func
 };
+
+BlogCard.defaultProps = {
+  blog: { title: "", description: "", created: "", photo: "" }
+};
