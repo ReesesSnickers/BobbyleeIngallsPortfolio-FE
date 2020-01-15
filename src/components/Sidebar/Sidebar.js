@@ -28,7 +28,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
           </div>
         </>
       )}
-      <div
+      {/* <div
         className={
           page === "/About"
             ? "portfolio-sidebar-sidebartabs-homepage"
@@ -36,7 +36,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
         }
       >
         <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
-      </div>
+      </div> */}
       {page !== "/About" && (
         <div className="portfolio-sidebar-sociallist-container">
           <SocialList array={socialConfig} />

@@ -12,7 +12,7 @@ import NavigationTabs from "../../components/NavigationTabs";
 const BottomNavigation = ({ page, goToPage }) => {
   return (
     <section className="portfolio-BottomNavigation">
-      {page === "/About" && (
+      {/* {page === "/About" && (
         <div className="portfolio-BottomNavigation-navigation-container">
           <NavigationTabs
             page={page}
@@ -20,7 +20,7 @@ const BottomNavigation = ({ page, goToPage }) => {
             array={sidebarConfig}
           />
         </div>
-      )}
+      )} */}
       <div className="portfolio-BottomNavigation-social-container">
         <SocialList array={socialConfig} />
       </div>

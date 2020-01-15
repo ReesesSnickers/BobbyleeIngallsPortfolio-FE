@@ -13,11 +13,11 @@ import PageWrapper from "./layouts/PageWrapper";
 
 // Pages
 import About from "./pages/About";
-import Blog from "./pages/Blog";
-import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
-import BlogPage from "./pages/BlogPage";
-import ProjectPage from "./pages/ProjectPage";
+// import Blog from "./pages/Blog";
+// import Projects from "./pages/Projects";
+// import Resume from "./pages/Resume";
+// import BlogPage from "./pages/BlogPage";
+// import ProjectPage from "./pages/ProjectPage";
 import UnknownRoute from "./pages/UnkownRoute";
 
 // assets
@@ -67,7 +67,7 @@ function App(props) {
             path="/About"
             render={() => <About goToPage={goToPage} photo={UserPhoto} />}
           />
-          <Route
+          {/* <Route
             exact
             path="/Projects"
             render={() => (
@@ -103,7 +103,7 @@ function App(props) {
                 resumeState={props.resume.resume}
               />
             )}
-          />
+          /> */}
           <Route exact path="/UnknownRoute" render={() => <UnknownRoute />} />
           <Redirect to="/UnknownRoute" />
         </Switch>
@@ -129,9 +129,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 // connect function wrapped with withRouter to allow routing of children components
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(App)
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
