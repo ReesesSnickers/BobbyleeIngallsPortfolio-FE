@@ -20,9 +20,15 @@ const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
           <h2 className="portfolio-UpperNavigation-title">{title}</h2>
         </section>
       </section>
-      {/* <div className="portfolio-UpperNavigation-navigation-container">
-        <NavigationTabs page={page} goToPage={goToPage} array={sidebarConfig} />
-      </div> */}
+      {page === "/UnknownRoute" && (
+        <div className="portfolio-UpperNavigation-navigation-container">
+          <NavigationTabs
+            page={page}
+            goToPage={goToPage}
+            array={sidebarConfig}
+          />
+        </div>
+      )}
     </section>
   );
 };

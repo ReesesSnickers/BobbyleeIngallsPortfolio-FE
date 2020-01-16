@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: center;
 }
 .portfolio-navigationtabs-tab {
   font-size: 30px;

@@ -28,15 +28,17 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
           </div>
         </>
       )}
-      {/* <div
-        className={
-          page === "/About"
-            ? "portfolio-sidebar-sidebartabs-homepage"
-            : "portfolio-sidebar-sidebartabs"
-        }
-      >
-        <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
-      </div> */}
+      {page === "/UnknownRoute" && (
+        <div
+          className={
+            page === "/About"
+              ? "portfolio-sidebar-sidebartabs-homepage"
+              : "portfolio-sidebar-sidebartabs"
+          }
+        >
+          <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
+        </div>
+      )}
       {page !== "/About" && (
         <div className="portfolio-sidebar-sociallist-container">
           <SocialList array={socialConfig} />
