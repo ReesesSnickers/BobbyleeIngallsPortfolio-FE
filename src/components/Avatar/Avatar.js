@@ -7,7 +7,12 @@ const Avatar = ({ src, alt, border, name, title }) => {
       <section
         className={`portfolio-avatar ${border && "portfolio-avatar-border"}`}
       >
-        <img className="portfolio-avatar-image" src={src} alt={alt} />
+        <img
+          aria-label="Bobbylee Ingalls portrait smiling in a blue plad shirt"
+          className="portfolio-avatar-image"
+          src={src}
+          alt={alt}
+        />
       </section>
       <section className="portfolio-avatar-user">
         <h1 className="portfolio-avatar-name">{name}</h1>

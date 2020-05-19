@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import ProjectCard from "../ProjectCard";
 
+import { ROUTES } from "../../utility/constants/routes";
+
 const ProjectCardList = ({ array }) => {
   return (
     <section className="portfolio-projectcardList">
@@ -13,8 +15,8 @@ const ProjectCardList = ({ array }) => {
           <Link
             key={key}
             to={{
-              pathname: `/Projects/${project._id}`,
-              state: { projects: array }
+              pathname: `${ROUTES.PROJECTS}/${project._id}`,
+              state: { projects: array },
             }}
           >
             <ProjectCard title={project.title} logo={project.fullScreenPhoto} />
@@ -33,7 +35,7 @@ ProjectCardList.propTypes = {
     {
       title: PropTypes.string.isRequired,
       fullScreenPhoto: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired
-    }
-  ])
+      _id: PropTypes.string.isRequired,
+    },
+  ]),
 };

@@ -10,7 +10,7 @@ import Avatar from "../../components/Avatar";
 
 const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
   return (
-    <section className="portfolio-UpperNavigation">
+    <section role="navigation" className="portfolio-UpperNavigation">
       <section className="portfolio-UpperNavigation-header-container">
         <div className="portfolio-UpperNavigation-avatar">
           <Avatar src={photo} alt="Bobbylee Ingalls" border={true} />

@@ -27,12 +27,12 @@
 .portfolio-BlogsPagination-navigation-prev:focus {
   color: #eb21d4;
   font-weight: bold;
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-BlogsPagination-navigation-next:focus {
   color: #eb21d4;
   font-weight: bold;
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-BlogsPagination-show {
   color: #0e1a3c;

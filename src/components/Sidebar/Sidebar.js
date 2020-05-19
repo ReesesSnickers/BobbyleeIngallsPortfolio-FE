@@ -10,10 +10,15 @@ import Avatar from "../../components/Avatar";
 import SidebarTabs from "../../components/SidebarTabs";
 import SocialList from "../../components/SocialList";
 
+// constants
+import { ROUTES } from "../../utility/constants/routes";
+
 const Sidebar = ({ page, goToPage, goBack, photo }) => {
+  const isAbooutPage = page === ROUTES.ABOUT;
+  const IsUnkownPage = page === ROUTES.UNKNOWN;
   return (
-    <section className="portfolio-sidebar">
-      {page !== "/About" && (
+    <section role="contentinfo" className="portfolio-sidebar">
+      {!isAbooutPage && (
         <>
           <button onClick={goBack} className="portfolio-sidebar-backbutton">
             Back
@@ -28,10 +33,10 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
           </div>
         </>
       )}
-      {page === "/UnknownRoute" && (
+      {IsUnkownPage && (
         <div
           className={
-            page === "/About"
+            isAbooutPage
               ? "portfolio-sidebar-sidebartabs-homepage"
               : "portfolio-sidebar-sidebartabs"
           }
@@ -39,7 +44,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
           <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
         </div>
       )}
-      {page !== "/About" && (
+      {!isAbooutPage && (
         <div className="portfolio-sidebar-sociallist-container">
           <SocialList array={socialConfig} />
         </div>
@@ -58,5 +63,5 @@ Sidebar.propTypes = {
   // function to go back a page
   goBack: PropTypes.func.isRequired,
   // string to the image source
-  photo: PropTypes.string.isRequired
+  photo: PropTypes.string.isRequired,
 };

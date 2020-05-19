@@ -84,6 +84,9 @@
     width: 300px;
     transition: width 0.3s linear;
   }
+  .portfolio-about-sociallist {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -97,9 +100,9 @@
     padding-right: 100px;
     transition: padding 0.3s linear, margin 0.3s linear;
   }
-  .portfolio-about-sociallist {
+  /* .portfolio-about-sociallist {
     display: none;
-  }
+  } */
   .portfolio-about-avatar .portfolio-avatar-name {
     font-size: 30px;
     margin-top: 20px;

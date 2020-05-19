@@ -1,7 +1,7 @@
 .portfolio-projectcard {
   border: none;
   background-color: #ffffff;
-  outline: none;
+  /* outline: none; */
   color: #0e1a3c;
   padding: 0px;
   margin-left: 40px;

@@ -35,13 +35,13 @@
   cursor: pointer;
 }
 .portfolio-navigationtabs-tab:focus {
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-navigationtabs-tab-last:focus {
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-navigationtabs-tab-first:focus {
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-navigationtabs-tab:hover + .portfolio-navigationtabs-tab-bar {
   background-color: #eb21d4;

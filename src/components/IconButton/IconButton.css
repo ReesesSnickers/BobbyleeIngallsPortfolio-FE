@@ -12,7 +12,7 @@
 .portfolio-IconButton:focus {
   width: 82px;
   height: 82px;
-  outline: none;
+  /* outline: none; */
   border: 2px solid #eb21d4;
   box-shadow: 0px 0px 5px #eb21d4;
 }

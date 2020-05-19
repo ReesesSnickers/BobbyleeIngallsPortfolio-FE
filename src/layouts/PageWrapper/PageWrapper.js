@@ -6,10 +6,13 @@ import Sidebar from "../../components/Sidebar";
 import BottomNavigation from "../../components/BottomNavigation";
 import UpperNavigation from "../../components/UpperNavigation";
 
+// constants
+import { ROUTES } from "../../utility/constants/routes";
 const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
+  const isAbooutPage = page === ROUTES.ABOUT;
   return (
     <section className="portfolio-wrapper">
-      {page !== "/About" && (
+      {!isAbooutPage && (
         <div className="portfolio-wrapper-topnavigation-container">
           <UpperNavigation
             page={page}
@@ -28,7 +31,9 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
           photo={sidebarPhoto}
         />
       </div>
-      <div className="portfolio-wrapper-mainpage">{children}</div>
+      <div role="main" className="portfolio-wrapper-mainpage">
+        {children}
+      </div>
       <div className="portfolio-wrapper-bottomnavigation-container">
         <BottomNavigation page={page} goToPage={goToPage} />
       </div>
@@ -48,5 +53,5 @@ PageWrapper.propTypes = {
   // image source string
   sidebarPhoto: PropTypes.string,
   // child to be passed into wrapper
-  children: PropTypes.node
+  children: PropTypes.node,
 };

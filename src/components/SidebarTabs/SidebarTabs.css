@@ -43,15 +43,15 @@
 .portfolio-sidebartabs-tab:focus {
   color: #eb21d4;
   font-weight: bold;
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-sidebartabs-tab-first:focus {
   color: #eb21d4;
   font-weight: bold;
-  outline: none;
+  /* outline: none; */
 }
 .portfolio-sidebartabs-tab-last:focus {
   color: #eb21d4;
   font-weight: bold;
-  outline: none;
+  /* outline: none; */
 }

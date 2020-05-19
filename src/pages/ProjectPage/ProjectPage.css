@@ -33,7 +33,7 @@
   color: #eb21d4;
 }
 .portfolio-projectpage-header-exit:focus {
-  outline: none;
+  /* outline: none; */
   color: #eb21d4;
 }
 .portfolio-projectpage-header-name {
@@ -78,7 +78,7 @@
 }
 .portfolio-projectpage-header-createdclosegroup-livecode:focus {
   color: #eb21d4;
-  outline: none;
+  /* outline: none; */
   font-weight: bold;
 }
 

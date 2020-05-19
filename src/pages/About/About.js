@@ -26,7 +26,7 @@ const About = ({ photo }) => {
             border
           />
         </div>
-        <div className="portfolio-about-sociallist">
+        <div role="navigation" className="portfolio-about-sociallist">
           <SocialList array={socialConfig} />
         </div>
         <div className="portfolio-about-divider">

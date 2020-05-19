@@ -52,7 +52,7 @@
   font-weight: bold;
 }
 .portfolio-sidebar-backbutton:focus {
-  outline: none;
+  /* outline: none; */
   color: #eb21d4;
   font-weight: bold;
 }

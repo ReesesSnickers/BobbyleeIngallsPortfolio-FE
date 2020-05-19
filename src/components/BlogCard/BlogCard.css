@@ -25,7 +25,7 @@
   transition: width 0.3s linear;
 }
 .portfolio-blogcard-wrapper:focus {
-  outline: none;
+  /* outline: none; */
   border: 2px solid #eb21d4;
   box-shadow: 0px 0px 5px #eb21d4;
 }

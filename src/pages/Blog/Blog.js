@@ -8,6 +8,8 @@ import BlogCard from "../../components/BlogCard";
 import BlogCardRecent from "../../components/BlogCardRecent";
 import Loading from "../../components/Loading";
 
+import { ROUTES } from "../../utility/constants/routes";
+
 const Blog = ({ blogs }) => {
   if (blogs.length === 0) {
     return <Loading load="blogs" />;
@@ -18,11 +20,11 @@ const Blog = ({ blogs }) => {
           <h1 className="portfolio-blog-mostrecent-caption">Most Recent:</h1>
           <Link
             to={{
-              pathname: `/Blog/${blogs[0]._id}`,
+              pathname: `${ROUTES.BLOG}/${blogs[0]._id}`,
               state: {
                 blog: blogs[0],
-                blogs: blogs
-              }
+                blogs: blogs,
+              },
             }}
           >
             <BlogCardRecent blog={blogs[0]} />
@@ -34,8 +36,8 @@ const Blog = ({ blogs }) => {
               <Link
                 key={key}
                 to={{
-                  pathname: `/Blog/${blog._id}`,
-                  state: { blog: blog, blogs: blogs }
+                  pathname: `${ROUTES.BLOG}/${blog._id}`,
+                  state: { blog: blog, blogs: blogs },
                 }}
               >
                 <div
@@ -62,5 +64,5 @@ export default Blog;
 
 Blog.propTypes = {
   // array of blog objects
-  blogs: PropTypes.array
+  blogs: PropTypes.array,
 };
