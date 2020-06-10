@@ -1,14 +1,14 @@
 import React from "react";
+import { Messages } from "../../utility/constants/messages";
 
 const UnknownRoute = () => {
   return (
     <section className="portfolio-unknownroute">
       <h1 className="portfolio-unknownroute-error">
-        The route you attempted to reach either does not exist.
+        {Messages.BAD_ROUTE_TITLE}
       </h1>
       <h2 className="portfolio-unknownroute-message">
-        Please verify you spelled the route correctly or use one of the links on
-        the side.
+        {Messages.BAD_ROUTE_ACTION}
       </h2>
     </section>
   );

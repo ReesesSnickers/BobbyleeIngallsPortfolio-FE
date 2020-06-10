@@ -3,4 +3,5 @@ export const ROUTES = {
   UNKNOWN: "/UnknownRoute",
   PROJECTS: "/Projects",
   BLOG: "/Blog",
+  ROOT: "/",
 };
