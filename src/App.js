@@ -25,10 +25,11 @@ import UserPhoto from "./static/ProfilePhoto.jpg";
 
 // Css
 import "./App.css";
+import { ROUTES } from "./utility/constants/routes";
 
 function App(props) {
   const [pageWidth, setPageWidth] = useState();
-  const goToPage = path => {
+  const goToPage = (path) => {
     props.history.push(path);
   };
   const goBack = () => {
@@ -61,10 +62,14 @@ function App(props) {
     >
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/About" />} />
           <Route
             exact
-            path="/About"
+            path={ROUTES.ROOT}
+            render={() => <Redirect to={ROUTES.ABOUT} />}
+          />
+          <Route
+            exact
+            path={ROUTES.ABOUT}
             render={() => <About goToPage={goToPage} photo={UserPhoto} />}
           />
           {/* <Route
@@ -104,8 +109,8 @@ function App(props) {
               />
             )}
           /> */}
-          <Route exact path="/UnknownRoute" render={() => <UnknownRoute />} />
-          <Redirect to="/UnknownRoute" />
+          <Route exact path={ROUTES.UNKNOWN} render={() => <UnknownRoute />} />
+          <Redirect to={ROUTES.UNKNOWN} />
         </Switch>
       </div>
     </PageWrapper>
@@ -123,8 +128,8 @@ function mapDispatchToProps(dispatch) {
     actions: {
       blog: bindActionCreators(blogActions, dispatch),
       projects: bindActionCreators(projectsActions, dispatch),
-      resume: bindActionCreators(resumeActions, dispatch)
-    }
+      resume: bindActionCreators(resumeActions, dispatch),
+    },
   };
 }
 
