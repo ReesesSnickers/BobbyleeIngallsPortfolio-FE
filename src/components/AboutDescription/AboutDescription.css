@@ -1,0 +1,37 @@
+.portfolio-about-description-wrapper {
+  padding: 0px 130px 20px;
+  font-size: 30px;
+  transition: padding 0.3s linear, margin 0.3s linear;
+}
+
+@media screen and (max-width: 930px) {
+  .portfolio-about-description-wrapper {
+    margin-bottom: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+    transition: padding 0.3s linear, margin 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .portfolio-about-description-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .portfolio-about-description-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: padding 0.3s linear;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .portfolio-about-description-wrapper {
+    font-size: 20px;
+    transition: font 0.3s linear;
+  }
+}
