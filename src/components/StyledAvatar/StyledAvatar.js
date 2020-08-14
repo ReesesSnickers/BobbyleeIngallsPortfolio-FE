@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MatAvatar from "@material-ui/core/Avatar";
+import Avatar from "@material-ui/core/Avatar";
 import AvatarText from "./AvatarText";
 
-const Avatar = ({ src, alt, border, name, title, customClassName }) => {
+const StyledAvatar = ({ src, alt, border, name, title, customClassName }) => {
   return (
     <section
       className={`wrapper${
         customClassName ? ` ${customClassName}-wrapper` : ""
       }`}
     >
-      <MatAvatar className={customClassName} alt={alt} src={src} />
+      <Avatar className={customClassName} alt={alt} src={src} />
       <AvatarText
         customClassName={customClassName ? `${customClassName}-text` : ""}
         primary={name}
@@ -50,9 +50,9 @@ const Avatar = ({ src, alt, border, name, title, customClassName }) => {
   );
 };
 
-export default Avatar;
+export default StyledAvatar;
 
-Avatar.propTypes = {
+StyledAvatar.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   border: PropTypes.bool,
@@ -61,7 +61,7 @@ Avatar.propTypes = {
   customClassName: PropTypes.string,
 };
 
-Avatar.defaultProps = {
+StyledAvatar.defaultProps = {
   alt: "Profile Photo",
   border: false,
   customClassName: "",

@@ -6,7 +6,7 @@ import sidebarConfig from "../../configs/sidebarConfig";
 
 // components
 import NavigationTabs from "../../components/NavigationTabs";
-import Avatar from "../../components/Avatar";
+import StyledAvatar from "../../components/StyledAvatar";
 
 // constants
 import { ROUTES } from "../../utility/constants/routes";
@@ -16,7 +16,7 @@ const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
     <nav className="uppernavigation">
       <section className="portfolio-UpperNavigation-header-container">
         <div className="avatar-wrapper">
-          <Avatar
+          <StyledAvatar
             src={photo}
             alt="Bobbylee Ingalls"
             border={true}

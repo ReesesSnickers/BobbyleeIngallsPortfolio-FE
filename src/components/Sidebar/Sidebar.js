@@ -6,7 +6,7 @@ import socialConfig from "../../configs/socialConfig";
 import sidebarConfig from "../../configs/sidebarConfig";
 
 // components
-import Avatar from "../../components/Avatar";
+import StyledAvatar from "../../components/StyledAvatar";
 import SidebarTabs from "../../components/SidebarTabs";
 import SocialList from "../../components/SocialList";
 
@@ -24,7 +24,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
             Back
           </button>
           <div className="avatar-wrapper">
-            <Avatar
+            <StyledAvatar
               src={photo}
               alt="Bobbylee Ingalls"
               name="Bobbylee Ingalls"

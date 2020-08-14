@@ -6,13 +6,13 @@ import socialConfig from "../../configs/socialConfig";
 import { CONSTS } from "../../utility/constants/consts";
 
 import AboutDivider from "../AboutDivider";
-import Avatar from "../Avatar";
+import StyledAvatar from "../StyledAvatar";
 import SocialList from "../SocialList";
 
 const AboutHeader = ({ photo }) => {
   return (
     <section>
-      <Avatar
+      <StyledAvatar
         src={photo}
         alt={`Photo of ${CONSTS.FULL_NAME}`}
         name={CONSTS.FULL_NAME}
