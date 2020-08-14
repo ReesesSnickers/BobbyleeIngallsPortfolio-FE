@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 
 // config
 import socialConfig from "../../configs/socialConfig";
-import sidebarConfig from "../../configs/sidebarConfig";
+// import sidebarConfig from "../../configs/sidebarConfig";
 
 // components
 import SocialList from "../../components/SocialList";
-import NavigationTabs from "../../components/NavigationTabs";
+// import NavigationTabs from "../../components/NavigationTabs";
 
 // constants
-import { ROUTES } from "../../utility/constants/routes";
+// import { ROUTES } from "../../utility/constants/routes";
 
 const BottomNavigation = ({ page, goToPage }) => {
   return (
