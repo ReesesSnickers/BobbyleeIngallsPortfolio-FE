@@ -15,9 +15,10 @@ import { ROUTES } from "../../utility/constants/routes";
 const BottomNavigation = ({ page, goToPage }) => {
   return (
     <nav className="bottom">
-      {page === ROUTES.ABOUT && (
+      {/* pending additional pages */}
+      {/* {page === ROUTES.ABOUT && (
         <NavigationTabs page={page} goToPage={goToPage} array={sidebarConfig} />
-      )}
+      )} */}
       <div className="social-container">
         <SocialList
           customClassName="bottomnavigation-sociallist"
