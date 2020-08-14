@@ -23,20 +23,71 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
           />
         </div>
       )}
-      <div className="portfolio-wrapper-sidebar-container">
-        <Sidebar
-          goBack={goBack}
-          page={page}
-          goToPage={goToPage}
-          photo={sidebarPhoto}
-        />
-      </div>
-      <div role="main" className="portfolio-wrapper-mainpage">
-        {children}
-      </div>
+      <Sidebar
+        goBack={goBack}
+        page={page}
+        goToPage={goToPage}
+        photo={sidebarPhoto}
+      />
+      <main className="portfolio-wrapper-mainpage">{children}</main>
       <div className="portfolio-wrapper-bottomnavigation-container">
         <BottomNavigation page={page} goToPage={goToPage} />
       </div>
+      <style jsx>{`
+        section {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          flex-direction: row;
+        }
+        main {
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          margin-left: 452px;
+        }
+        .portfolio-wrapper-bottomnavigation-container {
+          display: none;
+        }
+        .portfolio-wrapper-topnavigation-container {
+          display: none;
+        }
+
+        @media screen and (max-width: 1300px) {
+          main {
+            margin-left: 352px;
+          }
+        }
+
+        @media screen and (max-width: 1100px) {
+          main {
+            margin-left: 302px;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          section {
+            flex-direction: column;
+            min-height: 0px;
+          }
+          .portfolio-wrapper-bottomnavigation-container {
+            display: initial;
+          }
+          .portfolio-wrapper-topnavigation-container {
+            display: initial;
+            position: fixed;
+            top: 0px;
+            z-index: 1000;
+            width: 100%;
+          }
+          main {
+            margin-left: 0px;
+            min-height: 0px;
+          }
+        }
+      `}</style>
     </section>
   );
 };
@@ -44,14 +95,9 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
 export default PageWrapper;
 
 PageWrapper.propTypes = {
-  // function to go back
   goBack: PropTypes.func.isRequired,
-  // function to go directly to a page
   goToPage: PropTypes.func.isRequired,
-  // current page in the url
   page: PropTypes.string,
-  // image source string
   sidebarPhoto: PropTypes.string,
-  // child to be passed into wrapper
   children: PropTypes.node,
 };

@@ -8,42 +8,111 @@ import sidebarConfig from "../../configs/sidebarConfig";
 import NavigationTabs from "../../components/NavigationTabs";
 import Avatar from "../../components/Avatar";
 
+// constants
+import { ROUTES } from "../../utility/constants/routes";
+
 const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
   return (
-    <section role="navigation" className="portfolio-UpperNavigation">
+    <nav className="uppernavigation">
       <section className="portfolio-UpperNavigation-header-container">
-        <div className="portfolio-UpperNavigation-avatar">
-          <Avatar src={photo} alt="Bobbylee Ingalls" border={true} />
-        </div>
-        <section className="portfolio-UpperNavigation-info-container">
-          <h1 className="portfolio-UpperNavigation-name">{name}</h1>
-          <h2 className="portfolio-UpperNavigation-title">{title}</h2>
-        </section>
-      </section>
-      {page === "/UnknownRoute" && (
-        <div className="portfolio-UpperNavigation-navigation-container">
-          <NavigationTabs
-            page={page}
-            goToPage={goToPage}
-            array={sidebarConfig}
+        <div className="avatar-wrapper">
+          <Avatar
+            src={photo}
+            alt="Bobbylee Ingalls"
+            border={true}
+            name={name}
+            title={title}
+            customClassName="uppernavigation-avatar"
           />
         </div>
+      </section>
+      {page === ROUTES.UNKNOWN && (
+        <NavigationTabs page={page} goToPage={goToPage} array={sidebarConfig} />
       )}
-    </section>
+      <style jsx>{`
+        :global(section.uppernavigation-avatar-text) {
+          width: auto !important;
+        }
+        :global(section.uppernavigation-avatar-wrapper)
+          > :global(.MuiAvatar-root) {
+          width: 95px;
+          height: 95px;
+        }
+        .avatar-wrapper :global(h2) {
+          font-size: 32px;
+          color: #0e1a3c;
+          font-family: Helvetica, Arial, sans-serif;
+          margin: 0px;
+        }
+        .avatar-wrapper :global(h1) {
+          font-size: 48px;
+          color: #0e1a3c;
+          font-family: Helvetica, Arial, sans-serif;
+          margin: 0px;
+        }
+        .avatar-wrapper :global(.wrapper) {
+          flex-direction: row;
+        }
+        :global(.MuiAvatar-root) {
+          width: 100px;
+          height: 100px;
+          margin: 0px 30px 0px 30px;
+        }
+        nav.uppernavigation {
+          padding-top: 20px;
+          background-color: #fff;
+        }
+        @media screen and (max-width: 570px) {
+          .avatar-wrapper :global(h2) {
+            font-size: 27px;
+          }
+          .avatar-wrapper :global(h1) {
+            font-size: 33px;
+          }
+          :global(section.uppernavigation-avatar-wrapper)
+            > :global(.MuiAvatar-root) {
+            width: 75px;
+            height: 75px;
+          }
+        }
+        @media screen and (max-width: 430px) {
+          .avatar-wrapper :global(h2) {
+            font-size: 20px;
+          }
+          .avatar-wrapper :global(h1) {
+            font-size: 28px;
+          }
+          :global(.MuiAvatar-root) {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        @media screen and (max-width: 358px) {
+          :global(section.uppernavigation-avatar-wrapper)
+            > :global(.MuiAvatar-root) {
+            width: 55px;
+            height: 55px;
+            margin-left 10px;
+            margin-right: 10px;
+          }
+          .avatar-wrapper :global(h2) {
+            font-size: 16px;
+          }
+          .avatar-wrapper :global(h1) {
+            font-size: 24px;
+          }
+        }
+      `}</style>
+    </nav>
   );
 };
 
 export default UpperNavigation;
 
 UpperNavigation.propTypes = {
-  // function to go directly to a page
   goToPage: PropTypes.func.isRequired,
-  // title for the avatar
   title: PropTypes.string.isRequired,
-  // name for the avatar
   name: PropTypes.string.isRequired,
-  // photo for the avatar
   photo: PropTypes.string.isRequired,
-  // current page in the url
-  page: PropTypes.string.isRequired
+  page: PropTypes.string.isRequired,
 };

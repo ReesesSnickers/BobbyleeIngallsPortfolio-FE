@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // Redux actions
-import * as blogActions from "./pages/Blog/actions/blogActions";
-import * as projectsActions from "./pages/Projects/actions/projectsActions";
-import * as resumeActions from "./pages/Resume/actions/resumeActions";
+import * as blogActions from "./unUsedATM/Blog/actions/blogActions";
+import * as projectsActions from "./unUsedATM/Projects/actions/projectsActions";
+import * as resumeActions from "./unUsedATM/Resume/actions/resumeActions";
 
 // Layouts
 import PageWrapper from "./layouts/PageWrapper";
@@ -28,31 +28,13 @@ import "./App.css";
 import { ROUTES } from "./utility/constants/routes";
 
 function App(props) {
-  const [pageWidth, setPageWidth] = useState();
   const goToPage = (path) => {
     props.history.push(path);
   };
   const goBack = () => {
     props.history.goBack();
   };
-  const setDemensions = () => {
-    if (pageWidth !== window.innerWidth) {
-      setPageWidth(window.innerWidth);
-    }
-  };
 
-  useEffect(() => {
-    window.addEventListener("resize", setDemensions.bind(this));
-    if (props.blog.blog.blogs && props.blog.blog.blogs.length === 0) {
-      props.actions.blog.fetchBlogs();
-    }
-    if (
-      props.projects.projects.projects &&
-      props.projects.projects.projects.length === 0
-    ) {
-      props.actions.projects.fetchProjects();
-    }
-  });
   return (
     <PageWrapper
       goBack={goBack}

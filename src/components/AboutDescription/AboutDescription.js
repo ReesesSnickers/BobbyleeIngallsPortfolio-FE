@@ -8,30 +8,29 @@ import {
 
 const AboutDescription = () => {
   return (
-    <section className="description-wrapper">
-      <p className="description">{paragraph1}</p>
-      <p className="description">{paragraph2}</p>
-      <p className="description">{paragraph3}</p>
+    <section>
+      <p>{paragraph1}</p>
+      <p>{paragraph2}</p>
+      <p>{paragraph3}</p>
       <style jsx>{`
-        section.description-wrapper {
+        section {
           font-size: 30px;
           margin-bottom: 100px;
-          transition: padding 0.3s linear, margin 0.3s linear, font 0.3s linear;
         }
 
-        p.description {
+        p {
           padding: 0px 50px;
           margin: 100px 0px;
         }
 
         @media screen and (max-width: 1025px) {
-          section.description-wrapper {
+          section {
             margin-bottom: 0px;
           }
         }
 
         @media screen and (max-width: 400px) {
-          section.description-wrapper {
+          section {
             font-size: 20px;
           }
         }

@@ -9,9 +9,9 @@ import { ReactComponent as FacebookLogo } from "../../assets/Facebook-Logo-Squar
 import { ReactComponent as TwitterLogo } from "../../assets/Twitter-Logo-WhiteOnBlue.svg";
 import { ReactComponent as LinkedInLogo } from "../../assets/LinkedIn-Icon-Square.svg";
 
-const SocialList = ({ array }) => {
+const SocialList = ({ array, customClassName }) => {
   return (
-    <section className="portfolio-sociallist">
+    <nav className={customClassName}>
       {array.map((social, key) => {
         // constants
         const isFacebook = social.type === SOCIAL_MEDIA.FACEBOOK;
@@ -26,7 +26,6 @@ const SocialList = ({ array }) => {
         ) : undefined;
         return (
           <IconButton
-            className="portfolio-sociallist-iconbutton"
             key={key}
             icon={icon}
             href={social.url}
@@ -34,13 +33,24 @@ const SocialList = ({ array }) => {
           />
         );
       })}
-    </section>
+      <style jsx>{`
+        nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 550px;
+        }
+      `}</style>
+    </nav>
   );
 };
 
 export default SocialList;
 
 SocialList.propTypes = {
-  // social options array
   array: PropTypes.array,
+  customClassName: PropTypes.string,
+};
+SocialList.defaultProps = {
+  customClassName: "",
 };

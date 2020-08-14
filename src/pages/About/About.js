@@ -7,11 +7,11 @@ import AboutHeader from "../../components/AboutHeader";
 
 const About = ({ photo }) => {
   return (
-    <section className="about-wrapper">
+    <section>
       <AboutHeader photo={photo} />
       <AboutDescription />
       <style jsx>{`
-        section.about-wrapper {
+        section {
           width: 100%;
           height: 100%;
         }
@@ -23,6 +23,5 @@ const About = ({ photo }) => {
 export default About;
 
 About.propTypes = {
-  // photo source string
   photo: PropTypes.string.isRequired,
 };

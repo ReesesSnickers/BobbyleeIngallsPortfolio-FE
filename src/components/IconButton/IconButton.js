@@ -8,9 +8,27 @@ const IconButton = ({ icon, href, social }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Redirect to Bobbylee's ${social} profile`}
-      className="portfolio-IconButton"
     >
       {icon}
+      <style jsx>{`
+        a {
+          width: 80px;
+          height: 80px;
+          border-radius: 13px;
+          padding: 0px;
+          border: none;
+          cursor: pointer;
+        }
+        a :global(svg) {
+          border-radius: 10px;
+        }
+        a:focus {
+          width: 82px;
+          height: 82px;
+          border: 2px solid #eb21d4;
+          box-shadow: 0px 0px 5px #eb21d4;
+        }
+      `}</style>
     </a>
   );
 };
@@ -18,10 +36,7 @@ const IconButton = ({ icon, href, social }) => {
 export default IconButton;
 
 IconButton.propTypes = {
-  // icon to be shown
   icon: PropTypes.node.isRequired,
-  // url string for the button to navigate to
   href: PropTypes.string,
-  // what social media source is provided
-  social: PropTypes.string
+  social: PropTypes.string,
 };

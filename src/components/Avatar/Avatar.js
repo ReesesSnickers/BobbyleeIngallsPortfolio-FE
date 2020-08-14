@@ -1,23 +1,51 @@
 import React from "react";
 import PropTypes from "prop-types";
+import MatAvatar from "@material-ui/core/Avatar";
+import AvatarText from "./AvatarText";
 
-const Avatar = ({ src, alt, border, name, title }) => {
+const Avatar = ({ src, alt, border, name, title, customClassName }) => {
   return (
-    <section className="portfolio-avatar-wrapper">
-      <section
-        className={`portfolio-avatar ${border && "portfolio-avatar-border"}`}
-      >
-        <img
-          aria-label="Bobbylee Ingalls portrait smiling in a blue plad shirt"
-          className="portfolio-avatar-image"
-          src={src}
-          alt={alt}
-        />
-      </section>
-      <section className="portfolio-avatar-user">
-        <h1 className="portfolio-avatar-name">{name}</h1>
-        <h2 className="portfolio-avatar-title">{title}</h2>
-      </section>
+    <section
+      className={`wrapper${
+        customClassName ? ` ${customClassName}-wrapper` : ""
+      }`}
+    >
+      <MatAvatar className={customClassName} alt={alt} src={src} />
+      <AvatarText
+        customClassName={customClassName ? `${customClassName}-text` : ""}
+        primary={name}
+        secondary={title}
+      />
+      <style jsx>
+        {`
+          section.wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          :global(.MuiAvatar-root) {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: ${border ? "1px solid #0e1a3c;" : "none;"};
+          }
+          @media screen and (max-width: 930px) {
+            :global(.MuiAvatar-root) {
+              width: 250px;
+              height: 250px;
+            }
+          }
+          @media screen and (max-width: 400px) {
+            :global(.MuiAvatar-root) {
+              width: 200px;
+              height: 200px;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
@@ -25,19 +53,16 @@ const Avatar = ({ src, alt, border, name, title }) => {
 export default Avatar;
 
 Avatar.propTypes = {
-  // path to the avatar image
   src: PropTypes.string.isRequired,
-  // alternate text for if the image cannot be found
   alt: PropTypes.string,
-  // boolean for if there is a border around the image or not
   border: PropTypes.bool,
-  // Avater name text
   name: PropTypes.string,
-  // Avatar title text
-  title: PropTypes.string
+  title: PropTypes.string,
+  customClassName: PropTypes.string,
 };
 
 Avatar.defaultProps = {
   alt: "Profile Photo",
-  border: false
+  border: false,
+  customClassName: "",
 };
