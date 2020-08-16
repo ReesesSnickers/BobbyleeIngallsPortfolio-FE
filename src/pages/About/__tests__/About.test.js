@@ -2,12 +2,12 @@ import React from "react";
 import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 import About from "../About.js";
-import {
-  paragraph1,
-  paragraph2,
-  paragraph3
-} from "../../../configs/aboutMeConfig";
-import SocialList from "../../../components/SocialList";
+// import {
+//   paragraph1,
+//   paragraph2,
+//   paragraph3
+// } from "../../../configs/aboutMeConfig";
+// import SocialList from "../../../components/SocialList";
 
 let props;
 let mountedComponent;
@@ -22,7 +22,7 @@ describe("About", () => {
 
   beforeEach(() => {
     props = {
-      photo: "MockPhotoString"
+      photo: "MockPhotoString",
     };
     mountedComponent = undefined;
   });

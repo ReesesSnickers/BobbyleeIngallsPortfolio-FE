@@ -13,7 +13,7 @@ const Projects = ({ projectActions, projects }) => {
         setRequestedProjectsFromBE(true);
       });
     }
-  }, []);
+  }, [requestedProjectsFromBE, projectActions]);
 
   return (
     <>
