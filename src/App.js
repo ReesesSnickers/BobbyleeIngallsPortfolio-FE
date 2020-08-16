@@ -5,7 +5,7 @@ import { withRouter, Switch, Route, Redirect } from "react-router-dom";
 
 // Redux actions
 import * as blogActions from "./unUsedATM/Blog/actions/blogActions";
-import * as projectsActions from "./unUsedATM/Projects/actions/projectsActions";
+import * as projectsActions from "./pages/Projects/actions/projectsActions";
 import * as resumeActions from "./unUsedATM/Resume/actions/resumeActions";
 
 // Layouts
@@ -14,7 +14,7 @@ import PageWrapper from "./layouts/PageWrapper";
 // Pages
 import About from "./pages/About";
 // import Blog from "./pages/Blog";
-// import Projects from "./pages/Projects";
+import Projects from "./pages/Projects";
 // import Resume from "./pages/Resume";
 // import BlogPage from "./pages/BlogPage";
 // import ProjectPage from "./pages/ProjectPage";
@@ -25,7 +25,11 @@ import UserPhoto from "./static/ProfilePhoto.jpg";
 
 // Css
 import "./App.css";
+
+// Utility
 import { ROUTES } from "./utility/constants/routes";
+import Feature from "./utility/featureConfig";
+import { initialRedirect } from "./utility/initialRedirect";
 
 function App(props) {
   const goToPage = (path) => {
@@ -47,27 +51,31 @@ function App(props) {
           <Route
             exact
             path={ROUTES.ROOT}
-            render={() => <Redirect to={ROUTES.ABOUT} />}
+            render={() => <Redirect to={initialRedirect()} />}
           />
-          <Route
-            exact
-            path={ROUTES.ABOUT}
-            render={() => <About goToPage={goToPage} photo={UserPhoto} />}
-          />
+          {Feature.about ? (
+            <Route
+              exact
+              path={ROUTES.ABOUT}
+              render={() => <About goToPage={goToPage} photo={UserPhoto} />}
+            />
+          ) : null}
+          {Feature.projects ? (
+            <Route
+              exact
+              path={ROUTES.PROJECTS}
+              render={() => (
+                <Projects
+                  goBack={goBack}
+                  projects={props.projects.projects.projects}
+                  projectActions={props.actions.projects}
+                  projectState={props.projects.projects}
+                />
+              )}
+            />
+          ) : /* <Route exact path="/Projects/:projectId" component={ProjectPage} /> */
+          null}
           {/* <Route
-            exact
-            path="/Projects"
-            render={() => (
-              <Projects
-                goBack={goBack}
-                projects={props.projects.projects.projects}
-                projectActions={props.actions.projects}
-                projectState={props.projects.projects}
-              />
-            )}
-          />
-          <Route exact path="/Projects/:projectId" component={ProjectPage} />
-          <Route
             exact
             path="/Blog"
             render={() => (
@@ -78,9 +86,9 @@ function App(props) {
                 blogState={props.blog.blog}
               />
             )}
-          />
-          <Route exact path="/Blog/:blogId" component={BlogPage} />
-          <Route
+          /> */}
+          {/* <Route exact path="/Blog/:blogId" component={BlogPage} /> */}
+          {/* <Route
             exact
             path="/Resume"
             render={() => (

@@ -29,7 +29,7 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
         goToPage={goToPage}
         photo={sidebarPhoto}
       />
-      <main className="portfolio-wrapper-mainpage">{children}</main>
+      <main className="mainpage">{children}</main>
       <div className="portfolio-wrapper-bottomnavigation-container">
         <BottomNavigation page={page} goToPage={goToPage} />
       </div>
@@ -40,13 +40,12 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
           display: flex;
           flex-direction: row;
         }
-        main {
+        main.mainpage {
           width: 100%;
-          min-height: 100vh;
+          height: 100%;
           display: flex;
           flex-direction: row;
           position: relative;
-          margin-left: 452px;
         }
         .portfolio-wrapper-bottomnavigation-container {
           display: none;
@@ -56,13 +55,13 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
         }
 
         @media screen and (max-width: 1300px) {
-          main {
+          main.mainpage {
             margin-left: 352px;
           }
         }
 
         @media screen and (max-width: 1100px) {
-          main {
+          main.mainpage {
             margin-left: 302px;
           }
         }
@@ -82,7 +81,7 @@ const PageWrapper = ({ goBack, goToPage, children, page, sidebarPhoto }) => {
             z-index: 1000;
             width: 100%;
           }
-          main {
+          main.mainpage {
             margin-left: 0px;
             min-height: 0px;
           }

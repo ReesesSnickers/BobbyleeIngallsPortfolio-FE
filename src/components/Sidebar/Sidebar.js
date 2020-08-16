@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // config
 import socialConfig from "../../configs/socialConfig";
-import sidebarConfig from "../../configs/sidebarConfig";
+import { createNavigationTabs } from "../../configs/sidebarConfig";
 
 // components
 import StyledAvatar from "../../components/StyledAvatar";
@@ -34,7 +34,7 @@ const Sidebar = ({ page, goToPage, goBack, photo }) => {
         </>
       )}
       {IsUnkownPage && (
-        <SidebarTabs array={sidebarConfig} goToPage={goToPage} />
+        <SidebarTabs array={createNavigationTabs()} goToPage={goToPage} />
       )}
       {!isAbooutPage && (
         <div className="sociallist-wrapper">

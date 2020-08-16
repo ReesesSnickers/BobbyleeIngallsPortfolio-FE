@@ -35,16 +35,20 @@ const NavigationTabs = ({ goToPage, array, page }) => {
           justify-content: center;
         }
         .tab {
+          margin-left: 10px;
+          margin-right: 10px;
           font-size: 30px;
           color: #0e1a3c;
           font-family: Helvetica, Arial, sans-serif;
         }
         .tab-first {
+          margin-right: 10px;
           font-size: 30px;
           color: #0e1a3c;
           font-family: Helvetica, Arial, sans-serif;
         }
         .tab-last {
+          margin-left: 10px;
           font-size: 30px;
           color: #0e1a3c;
           font-family: Helvetica, Arial, sans-serif;

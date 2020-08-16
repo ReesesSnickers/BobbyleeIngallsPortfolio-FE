@@ -2,14 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // config
-import sidebarConfig from "../../configs/sidebarConfig";
+import { createNavigationTabs } from "../../configs/sidebarConfig";
 
 // components
 import NavigationTabs from "../../components/NavigationTabs";
 import StyledAvatar from "../../components/StyledAvatar";
-
-// constants
-import { ROUTES } from "../../utility/constants/routes";
 
 const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
   return (
@@ -26,9 +23,11 @@ const UpperNavigation = ({ goToPage, title, name, photo, page }) => {
           />
         </div>
       </section>
-      {page === ROUTES.UNKNOWN && (
-        <NavigationTabs page={page} goToPage={goToPage} array={sidebarConfig} />
-      )}
+      <NavigationTabs
+        page={page}
+        goToPage={goToPage}
+        array={createNavigationTabs()}
+      />
       <style jsx>{`
         :global(section.uppernavigation-avatar-text) {
           width: auto !important;

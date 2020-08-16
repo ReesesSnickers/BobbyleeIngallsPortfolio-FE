@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253.5 185.62">
+  <defs>
+  <style>.cls-1{fill:#0b4e8f;}.cls-1,.cls-2,.cls-3{opacity:0.85;}.cls-2{fill:#2379be;}.cls-3{fill:#7ab9e6;}</style>
+  </defs>
+  <title>mytech</title>
+  <g data-name="Layer 2">
+    <g data-name="Layer 1">
+      <polygon fill="#0b4e8f" opacity="0.85" class="cls-1" points="192.44 116.58 131.39 149.9 131.6 79.64 192.65 46.78 192.44 116.58"/>
+      <polygon opacity="0.85" fill="#2379be" class="cls-2" points="220.31 135.44 159.26 168.77 159.46 98.51 220.51 65.65 220.31 135.44"/>
+      <polygon opacity="0.85" fill="#7ab9e6" class="cls-3" points="253.3 152.29 192.25 185.62 192.45 115.36 253.5 82.5 253.3 152.29"/>
+      <polygon fill="#0b4e8f" opacity="0.85" class="cls-1" points="61.06 115.55 121.91 149.23 122.12 78.97 61.26 45.76 61.06 115.55"/>
+      <polygon opacity="0.85" fill="#2379be" class="cls-2" points="33.09 134.26 93.94 167.94 94.14 97.67 33.29 64.46 33.09 134.26"/>
+      <polygon opacity="0.85" fill="#7ab9e6" class="cls-3" points="0 150.91 60.86 184.59 61.06 114.33 0.2 81.12 0 150.91"/>
+      <polygon fill="#0b4e8f" opacity="0.85" class="cls-1" points="126.19 0 63.62 36.28 126.18 71.18 187.95 37.26 126.19 0"/>
+    </g>
+  </g>
+</svg>
