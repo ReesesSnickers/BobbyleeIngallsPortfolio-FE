@@ -1,5 +1,5 @@
 class Feature {
-  static about = true;
+  static about = false;
   static projects = false;
   static blogs = false;
   static resume = false;
