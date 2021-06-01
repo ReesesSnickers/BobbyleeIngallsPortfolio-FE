@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "axios": "^0.19.2",
+    "axios": ">=0.21.1",
     "customize-cra": "^1.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-15": "^1.4.2",
