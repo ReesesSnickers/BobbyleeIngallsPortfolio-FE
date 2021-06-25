@@ -6,6 +6,7 @@ import {
   faCodepen,
 } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import URLs from '../utility/constants/urls';
 
 // Dev note: need to look into a glow efect to the icon's on hover b- starting point https://codepen.io/dig-lopes/pen/WLVGda
 // Need to apply proper hrefs to new page
@@ -17,13 +18,13 @@ const Navbar = () => {
       <a href='#' className='neumorphism-button' aria-label='Menu'>
         <FontAwesomeIcon icon={faBars} />
       </a>
-      <a href='#' className='neumorphism-button' aria-label='Facebook Profile'>
+      <a href={URLs.FACEBOOK} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='Facebook Profile'>
         <FontAwesomeIcon icon={faFacebookF} />
       </a>
-      <a href='#' className='neumorphism-button' aria-label='LinkedIn Profile'>
+      <a href={URLs.LINKEDIN} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='LinkedIn Profile'>
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
-      <a href='#' className='neumorphism-button' aria-label='Codepen Profile'>
+      <a href={URLs.CODEPEN} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='Codepen Profile'>
         <FontAwesomeIcon icon={faCodepen} />
       </a>
       <h1 className='neumorphism-button'>Bobbylee Ingalls Portfolio</h1>

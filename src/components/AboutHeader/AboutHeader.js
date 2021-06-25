@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // config
 import socialConfig from "../../configs/socialConfig";
-import { CONSTS } from "../../utility/constants/consts";
+import Consts from "../../utility/constants/consts";
 
 import AboutDivider from "../AboutDivider";
 import StyledAvatar from "../StyledAvatar";
@@ -14,9 +14,9 @@ const AboutHeader = ({ photo }) => {
     <section>
       <StyledAvatar
         src={photo}
-        alt={`Photo of ${CONSTS.FULL_NAME}`}
-        name={CONSTS.FULL_NAME}
-        title={CONSTS.JOB_TITLE}
+        alt={`Photo of ${Consts.FULL_NAME}`}
+        name={Consts.FULL_NAME}
+        title={Consts.JOB_TITLE}
         border
       />
       <div className="sociallist-wrapper">
