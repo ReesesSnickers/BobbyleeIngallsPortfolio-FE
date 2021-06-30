@@ -1,5 +1,4 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState, useReducer } from 'react';
 import {
   faFacebookF,
   faLinkedinIn,
@@ -7,29 +6,115 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import URLs from '../utility/constants/urls';
+import CSS from '../utility/constants/CSS';
+import NavIconButton from './buttons/NavIconButton';
 
-// Dev note: need to look into a glow efect to the icon's on hover b- starting point https://codepen.io/dig-lopes/pen/WLVGda
-// Need to apply proper hrefs to new page
+// Dev note:
 // Need to apply a dropdown box
+// Need to move icons right to left into  hamberger at different sizes
 
 const Navbar = () => {
+  const [showNav, setShowNav] = useState(true);
+  const [isMenuOpen, toggleMenu] = useReducer(
+    (isMenuOpen) => (isMenuOpen = !isMenuOpen),
+    false
+  );
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+  const [showCodePen, setShowCodePen] = useState(true);
+  const [showLinkedIn, setShowLinkedIn] = useState(true);
+  const [showFacebook, setShowFacebook] = useState(true);
+
+  const controlNavbar = () => {
+    if (window.scrollY > 75) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+  };
+
+  const handleResize = () => {
+    setDimensions({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    });
+  };
+
+  useEffect(() => {
+    if (dimensions.width < 644) {
+      setShowCodePen(false);
+    } else {
+      setShowCodePen(true);
+    }
+
+    if (dimensions.width < 563) {
+      setShowLinkedIn(false);
+    } else {
+      setShowLinkedIn(true);
+    }
+
+    if (dimensions.width < 484) {
+      setShowFacebook(false);
+    } else {
+      setShowFacebook(true);
+    }
+  }, [dimensions]);
+
+  useEffect(() => {
+    // UE for handling windows events
+    window.addEventListener('scroll', controlNavbar);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <nav>
-      <a href='#' className='neumorphism-button' aria-label='Menu'>
-        <FontAwesomeIcon icon={faBars} />
-      </a>
-      <a href={URLs.FACEBOOK} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='Facebook Profile'>
-        <FontAwesomeIcon icon={faFacebookF} />
-      </a>
-      <a href={URLs.LINKEDIN} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='LinkedIn Profile'>
-        <FontAwesomeIcon icon={faLinkedinIn} />
-      </a>
-      <a href={URLs.CODEPEN} target="_blank" rel="noopener noreferrer" className='neumorphism-button' aria-label='Codepen Profile'>
-        <FontAwesomeIcon icon={faCodepen} />
-      </a>
-      <h1 className='neumorphism-button'>Bobbylee Ingalls Portfolio</h1>
+    <>
+      <nav className={`nav ${showNav ? 'show-nav' : ''}`}>
+        <NavIconButton
+          onClick={toggleMenu}
+          ariaLabel="Menu"
+          className="menu-button"
+          icon={faBars}
+          useButton={true}
+        />
+        <div className="menu">
+          <ul>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+            <li>Codepen</li>
+            <li>Assist a developer</li>
+          </ul>
+        </div>
+        {showFacebook ? (
+          <NavIconButton
+            href={URLs.FACEBOOK}
+            ariaLabel="Facebook Profile"
+            icon={faFacebookF}
+          />
+        ) : null}
+        {showLinkedIn ? (
+          <NavIconButton
+            href={URLs.LINKEDIN}
+            ariaLabel="LinkedIn Profile"
+            icon={faLinkedinIn}
+          />
+        ) : null}
+        {showCodePen ? (
+          <NavIconButton
+            href={URLs.CODEPEN}
+            ariaLabel="Codepen Profile"
+            icon={faCodepen}
+          />
+        ) : null}
+        <h1>Bobbylee Ingalls Portfolio</h1>
+      </nav>
       <style jsx>{`
-        nav {
+        .nav {
           display: -webkit-flex;
           display: -moz-flex;
           display: -ms-flex;
@@ -40,69 +125,49 @@ const Navbar = () => {
           top: 0;
           width: 100%;
           background-color: #000000;
+          transition-timing-function: ease-in;
+          transition: 0.5s;
+          opacity: 0;
+        }
+
+        .nav:hover,
+        .nav:focus-within,
+        .show-nav {
+          opacity: 1;
         }
 
         h1 {
           opacity: 0.9;
           margin-right: 30px;
+          font-size: 24px;
         }
 
-        a:visited {
-          color: #ffffff;
+        .menu {
+          position: absolute;
+          top: 55px;
+          background-color: #b5a0bb;
+          width: ${isMenuOpen ? '300px' : '0px'};
+          height: ${isMenuOpen ? '500px' : '0px'};
+          display: ${isMenuOpen ? 'block' : 'none'};
+          visibility: ${isMenuOpen ? 'auto' : 'hidden'};
         }
 
-        a {
-          opacity: 0.9;
-        }
-        a.neumorphism-button:first-of-type {
+        .menu-button {
+          position: relative;
           margin-left: 30px;
         }
 
-        a.neumorphism-button {
-          margin-left: 20px;
-          margin-right: 20px;
-          background: #000000;
-          height: 40px;
-          width: 40px;
-          border-radius: 50%;
-          border: none;
-          outline: none;
-          display: -webkit-flex;
-          display: -moz-flex;
-          display: -ms-flex;
-          display: -o-flex;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-          text-decoration: none;
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8);
-        }
+        @media screen and (max-width: ${CSS.MAX_WIDTH_MOBILE}px) {
+          h1 {
+            font-size: 20px;
+          }
 
-        a.neumorphism-button:hover {
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8),
-            inset -2px -2px 10px rgba(0, 0, 0, 0.05),
-            inset -2px -2px 10px rgba(76, 76, 76, 0.5);
-          text-shadow: 0 0 5px #ffee10;
-        }
-
-        a.neumorphism-button:focus {
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8),
-            inset -2px -2px 10px rgba(0, 0, 0, 0.05),
-            inset -2px -2px 10px rgba(76, 76, 76, 0.5);
-        }
-
-        a.neumorphism-button:active {
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8),
-            inset -2px -2px 10px rgba(0, 0, 0, 0.05),
-            inset -2px -2px 10px rgba(76, 76, 76, 0.5);
+          .menu {
+            width: 100%;
+          }
         }
       `}</style>
-    </nav>
+    </>
   );
 };
 
