@@ -20,7 +20,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.13.1",
-    "styled-jsx": "^3.3.0"
+    "styled-jsx": "^3.3.3"
   },
   "scripts": {
     "start": "react-app-rewired start",
