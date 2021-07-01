@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Colors from '../../utility/constants/colors';
 
 const NavIconButton = ({
   ariaLabel,
@@ -34,7 +35,7 @@ const NavIconButton = ({
       <style jsx>{`
         a,
         button {
-          color: #ffffff;
+          color: ${Colors.WHITE};
           opacity: 0.9;
         }
 
@@ -42,7 +43,7 @@ const NavIconButton = ({
         button.neumorphism-button {
           margin-left: 20px;
           margin-right: 20px;
-          background: #000000;
+          background: ${Colors.BLACK};
           height: 40px;
           width: 40px;
           border-radius: 50%;
@@ -63,7 +64,7 @@ const NavIconButton = ({
 
         a.neumorphism-button:hover,
         button.neumorphism-button:hover {
-          text-shadow: 0 0 5px #ffee10;
+          text-shadow: 0 0 5px ${Colors.YELLOW};
         }
 
         a.neumorphism-button:focus,
@@ -84,7 +85,7 @@ const NavIconButton = ({
         button.neumorphism-button:focus :global(svg path),
         button.neumorphism-button:active :global(svg path),
         button.neumorphism-button:hover :global(svg path) {
-          fill: #d97896;
+          fill: ${Colors.LIGHT_PINK};
         }
       `}</style>
     </>

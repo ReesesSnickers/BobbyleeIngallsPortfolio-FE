@@ -7,7 +7,10 @@ import {
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import URLs from '../utility/constants/urls';
 import CSS from '../utility/constants/CSS';
+import Colors from '../utility/constants/colors';
 import NavIconButton from './buttons/NavIconButton';
+import NavMenu from './NavMenu';
+import Feature from '../utility/featureConfig';
 
 // Dev note:
 // Need to apply a dropdown box
@@ -43,6 +46,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    // UE handles when the social media buttons should be removed from the nav bar
     if (dimensions.width < 644) {
       setShowCodePen(false);
     } else {
@@ -76,35 +80,32 @@ const Navbar = () => {
     <>
       <nav className={`nav ${showNav ? 'show-nav' : ''}`}>
         <NavIconButton
-          onClick={toggleMenu}
+          onClick={() => {
+            if (dimensions.width < 644) toggleMenu();
+          }}
           ariaLabel="Menu"
           className="menu-button"
           icon={faBars}
           useButton={true}
         />
-        <div className="menu">
-          <ul>
-            <li>Facebook</li>
-            <li>LinkedIn</li>
-            <li>Codepen</li>
-            <li>Assist a developer</li>
-          </ul>
-        </div>
-        {showFacebook ? (
+
+        <NavMenu isOpen={isMenuOpen && dimensions.width < 644} />
+
+        {showFacebook && Feature.showFacebookMediaButton ? (
           <NavIconButton
             href={URLs.FACEBOOK}
             ariaLabel="Facebook Profile"
             icon={faFacebookF}
           />
         ) : null}
-        {showLinkedIn ? (
+        {showLinkedIn && Feature.showLinkedInMediaButton ? (
           <NavIconButton
             href={URLs.LINKEDIN}
             ariaLabel="LinkedIn Profile"
             icon={faLinkedinIn}
           />
         ) : null}
-        {showCodePen ? (
+        {showCodePen && Feature.showCodepenMediaButton ? (
           <NavIconButton
             href={URLs.CODEPEN}
             ariaLabel="Codepen Profile"
@@ -124,7 +125,7 @@ const Navbar = () => {
           align-items: center;
           top: 0;
           width: 100%;
-          background-color: #000000;
+          background-color: ${Colors.BLACK};
           transition-timing-function: ease-in;
           transition: 0.5s;
           opacity: 0;
@@ -142,16 +143,6 @@ const Navbar = () => {
           font-size: 24px;
         }
 
-        .menu {
-          position: absolute;
-          top: 55px;
-          background-color: #b5a0bb;
-          width: ${isMenuOpen ? '300px' : '0px'};
-          height: ${isMenuOpen ? '500px' : '0px'};
-          display: ${isMenuOpen ? 'block' : 'none'};
-          visibility: ${isMenuOpen ? 'auto' : 'hidden'};
-        }
-
         .menu-button {
           position: relative;
           margin-left: 30px;
@@ -160,10 +151,6 @@ const Navbar = () => {
         @media screen and (max-width: ${CSS.MAX_WIDTH_MOBILE}px) {
           h1 {
             font-size: 20px;
-          }
-
-          .menu {
-            width: 100%;
           }
         }
       `}</style>

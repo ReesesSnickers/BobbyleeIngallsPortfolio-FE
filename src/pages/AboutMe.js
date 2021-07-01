@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import profileImage from '../static/profilePicture.jpg';
+import Colors from '../utility/constants/colors';
 import Consts from '../utility/constants/consts';
 
 const array = [
@@ -50,7 +51,7 @@ const NewApp = () => {
       </div>
       <style jsx>{`
         div.pw {
-          color: #ffffff;
+          color: ${Colors.WHITE};
           min-height: 100vh;
           background-color: black;
         }
