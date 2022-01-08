@@ -1,8 +1,8 @@
 export const ROUTES = {
   ABOUT: '/about',
-  UNKNOWN: '/UnknownRoute',
-  PROJECTS: '/Projects',
-  RESUME: '/Resume',
-  BLOG: '/Blog',
+  UNKNOWN: '/unknown-route',
+  PROJECTS: '/projects',
+  RESUME: '/resume',
+  BLOG: '/blog',
   ROOT: '/',
 };

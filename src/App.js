@@ -1,19 +1,19 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import AboutMe from './pages/AboutMe';
+import BadRoute from './pages/BadRoute';
+// import Projects from './pages/Projects';
 import { ROUTES } from './utility/constants/routes';
 
-const NewApp = () => {
+const App = () => {
   return (
     <main className="App">
-      <Switch>
-        <Route
-          exact
-          path={ROUTES.ROOT}
-          render={() => <Redirect to={ROUTES.ABOUT} />}
-        />
-        <Route exact path={ROUTES.ABOUT} render={() => <AboutMe />} />
-      </Switch>
+      <Routes>
+        <Route path={ROUTES.ROOT} element={<Navigate to={ROUTES.ABOUT} />} />
+        <Route path={ROUTES.ABOUT} element={<AboutMe />} />
+        {/* <Route path={ROUTES.PROJECTS} element={<Projects />} /> */}
+        <Route path="*" element={<BadRoute />} />
+      </Routes>
       <style jsx>{`
         .App {
           width: 100vw;
@@ -24,4 +24,4 @@ const NewApp = () => {
   );
 };
 
-export default NewApp;
+export default App;
