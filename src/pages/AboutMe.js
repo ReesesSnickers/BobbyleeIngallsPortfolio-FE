@@ -15,7 +15,7 @@ const array = [
   'Again thank you again for taking the time to learn about me and what I do. Feel free to investigate my portfolio some more. Have a wonderful day and may your weeks ahead be prosperous!',
 ];
 
-const NewApp = () => {
+const AboutMe = () => {
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -86,4 +86,4 @@ const NewApp = () => {
   );
 };
 
-export default NewApp;
+export default AboutMe;
