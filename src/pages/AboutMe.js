@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
 import profileImage from '../static/profilePicture.jpg';
 import Colors from '../utility/constants/colors';
 import Consts from '../utility/constants/consts';
@@ -38,7 +37,6 @@ const AboutMe = () => {
 
   return (
     <div className="pw">
-      <Navbar />
       <div className="page">
         <img src={profileImage} alt={Consts.FULL_NAME} />
         <h1>{Consts.FULL_NAME}</h1>
@@ -53,7 +51,7 @@ const AboutMe = () => {
         div.pw {
           color: ${Colors.WHITE};
           min-height: 100vh;
-          background-color: black;
+          background-color: ${Colors.BLACK};
         }
 
         .page {

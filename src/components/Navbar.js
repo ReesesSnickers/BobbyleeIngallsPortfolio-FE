@@ -129,6 +129,7 @@ const Navbar = () => {
           transition-timing-function: ease-in;
           transition: 0.5s;
           opacity: 0;
+          z-index: 100;
         }
 
         .nav:hover,
