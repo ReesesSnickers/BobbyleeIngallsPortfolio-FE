@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import CSS from '../utility/constants/CSS';
 import Feature from '../utility/featureConfig';
+import BugReportNavMenuLink from './BugReportNavMenuLink';
 import CoffeeDonationContainer from './CoffeeDonationContainer';
 import DirectoriesContainer from './DirectoriesContainer';
+import NavMenuEndContainer from './NavMenuEndContainer';
 import SocialMediaContainer from './SocialMediaContainer';
 
 const NavMenu = ({ isOpen = false, closeMenu }) => {
@@ -46,8 +48,14 @@ const NavMenu = ({ isOpen = false, closeMenu }) => {
     >
       <DirectoriesContainer closeMenu={closeMenu} />
       <SocialMediaContainer closeMenu={closeMenu} />
-      {Feature.showDevCoffeeSupport ? <CoffeeDonationContainer /> : null}
+      <div className="line" />
+      <NavMenuEndContainer closeMenu={closeMenu} />
       <style jsx>{`
+      .line {
+        width:100%
+        height:1px;
+        border-bottom: 2px solid rgba(255,255,255,0.18);
+      }
         .menu {
           position: fixed;
           width: 300px;
