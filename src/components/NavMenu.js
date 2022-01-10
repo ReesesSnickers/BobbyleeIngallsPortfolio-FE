@@ -1,54 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import {
-  faCodepen,
-  faFacebookSquare,
-  faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
+import React, { useEffect, useState } from 'react';
 import CSS from '../utility/constants/CSS';
-import NavMenuIconButton from './buttons/NavMenuIconButton';
-import Colors from '../utility/constants/colors';
-import URLs from '../utility/constants/urls';
 import Feature from '../utility/featureConfig';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faMugHot } from '@fortawesome/free-solid-svg-icons';
+import CoffeeDonationContainer from './CoffeeDonationContainer';
+import DirectoriesContainer from './DirectoriesContainer';
+import SocialMediaContainer from './SocialMediaContainer';
 
-const NavMenu = ({ isOpen = false }) => {
+const NavMenu = ({ isOpen = false, closeMenu }) => {
+  const [hidden, setHidden] = useState(true);
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
-  const [showCodePen, setShowCodePen] = useState(false);
-  const [showLinkedIn, setShowLinkedIn] = useState(false);
-  const [showFacebook, setShowFacebook] = useState(false);
-
   const handleResize = () => {
     setDimensions({
       height: window.innerHeight,
       width: window.innerWidth,
     });
   };
-
-  useEffect(() => {
-    // UE handles when the social media buttons should show in the menu
-    if (dimensions.width < 644) {
-      setShowCodePen(true);
-    } else {
-      setShowCodePen(false);
-    }
-
-    if (dimensions.width < 563) {
-      setShowLinkedIn(true);
-    } else {
-      setShowLinkedIn(false);
-    }
-
-    if (dimensions.width < 484) {
-      setShowFacebook(true);
-    } else {
-      setShowFacebook(false);
-    }
-  }, [dimensions]);
-
   useEffect(() => {
     // UE for handling windows events
     window.addEventListener('resize', handleResize);
@@ -57,76 +25,70 @@ const NavMenu = ({ isOpen = false }) => {
     };
   }, []);
 
+  // UE sets the visability to hidden to hide changes when the screen is resized to mobile sizes and prevents issues if the button is clicked quickly
+  useEffect(() => {
+    let timer = null;
+    if (!isOpen && !hidden) {
+      timer = setTimeout(() => {
+        setHidden(true);
+      }, 1100);
+    } else setHidden(false);
+    return () => {
+      if (isOpen && timer) clearTimeout(timer);
+    };
+  }, [isOpen, hidden]);
+
   return (
-    <div className="menu">
-      <section>
-        <ul>
-          {showFacebook && Feature.showFacebookMediaButton ? (
-            <li>
-              <NavMenuIconButton
-                href={URLs.FACEBOOK}
-                ariaLabel="Facebook Profile"
-                icon={faFacebookSquare}
-              />
-            </li>
-          ) : null}
-          {showLinkedIn && Feature.showLinkedInMediaButton ? (
-            <li>
-              <NavMenuIconButton
-                href={URLs.LINKEDIN}
-                ariaLabel="LinkedIn Profile"
-                icon={faLinkedin}
-              />
-            </li>
-          ) : null}
-          {showCodePen && Feature.showCodepenMediaButton ? (
-            <li>
-              <NavMenuIconButton
-                href={URLs.CODEPEN}
-                ariaLabel="Codepen Profile"
-                icon={faCodepen}
-              />
-            </li>
-          ) : null}
-        </ul>
-        {/* DEV NOTE: Apply a donation tied to a payment gateway service */}
-        {/* <p>Donate a coffee</p>
-        <NavMenuIconButton
-          href="#"
-          ariaLabel="Donate a coffee to Bobbylee Ingalls"
-          icon={faMugHot}
-          className="coffee"
-        /> */}
-      </section>
+    <div
+      className={`menu ${isOpen ? 'open-menu' : 'closed-menu'}${
+        hidden ? ' hidden' : ''
+      }`}
+    >
+      <DirectoriesContainer closeMenu={closeMenu} />
+      <SocialMediaContainer closeMenu={closeMenu} />
+      {Feature.showDevCoffeeSupport ? <CoffeeDonationContainer /> : null}
       <style jsx>{`
         .menu {
-          position: absolute;
-          top: 55px;
-          background-color: ${Colors.LIGHT_PURPLE};
-          width: ${isOpen ? '300px' : '0px'};
-          display: ${isOpen ? 'block' : 'none'};
-          visibility: ${isOpen ? 'auto' : 'hidden'};
+          position: fixed;
+          width: 300px;
+          top: 68px;
+          border-bottom-right-radius: 8px;
+          background: rgba(38, 37, 37, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          transition: all 0.6s linear;
         }
 
-        section {
-          padding: 25px;
+        .closed-menu {
+          left: -350px;
+          pointer-events: none;
         }
 
-        li {
+        .open-menu {
+          left: 0;
+        }
+        .hidden {
+          visibility: hidden;
+          display: none;
+        }
+
+        .menu :global(li) {
           list-style-type: none;
         }
 
-        ul {
+        .menu :global(ul) {
           padding: 0px;
           margin: 0px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
         }
 
         @media screen and (max-width: ${CSS.MAX_WIDTH_MOBILE}px) {
           .menu {
             width: 100%;
+          }
+          .closed-menu {
+            left: -${dimensions.width}px;
           }
         }
       `}</style>
