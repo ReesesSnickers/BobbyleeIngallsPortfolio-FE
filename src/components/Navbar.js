@@ -1,20 +1,13 @@
 import React, { useEffect, useState, useReducer } from 'react';
-import {
-  faFacebookF,
-  faLinkedinIn,
-  faCodepen,
-} from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import URLs from '../utility/constants/urls';
 import CSS from '../utility/constants/CSS';
 import Colors from '../utility/constants/colors';
 import NavIconButton from './buttons/NavIconButton';
 import NavMenu from './NavMenu';
 import Feature from '../utility/featureConfig';
-
-// Dev note:
-// Need to apply a dropdown box
-// Need to move icons right to left into  hamberger at different sizes
+import FacebookNavIconButton from './FacebookNavIconButton';
+import LinkedInNavIconButton from './LinkedInNavIconButton';
+import CodePenNavIconButton from './CodePenNavIconButton';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
@@ -81,39 +74,27 @@ const Navbar = () => {
       <nav className={`nav ${showNav ? 'show-nav' : ''}`}>
         <NavIconButton
           onClick={() => {
-            if (dimensions.width < 644) toggleMenu();
+            toggleMenu();
           }}
           ariaLabel="Menu"
           className="menu-button"
           icon={faBars}
           useButton={true}
         />
-
-        <NavMenu isOpen={isMenuOpen && dimensions.width < 644} />
+        <NavMenu isOpen={isMenuOpen} closeMenu={toggleMenu} />
 
         {showFacebook && Feature.showFacebookMediaButton ? (
-          <NavIconButton
-            href={URLs.FACEBOOK}
-            ariaLabel="Facebook Profile"
-            icon={faFacebookF}
-          />
+          <FacebookNavIconButton />
         ) : null}
         {showLinkedIn && Feature.showLinkedInMediaButton ? (
-          <NavIconButton
-            href={URLs.LINKEDIN}
-            ariaLabel="LinkedIn Profile"
-            icon={faLinkedinIn}
-          />
+          <LinkedInNavIconButton />
         ) : null}
         {showCodePen && Feature.showCodepenMediaButton ? (
-          <NavIconButton
-            href={URLs.CODEPEN}
-            ariaLabel="Codepen Profile"
-            icon={faCodepen}
-          />
+          <CodePenNavIconButton />
         ) : null}
         <h1>Bobbylee Ingalls Portfolio</h1>
       </nav>
+
       <style jsx>{`
         .nav {
           display: -webkit-flex;
@@ -145,7 +126,7 @@ const Navbar = () => {
         }
 
         .menu-button {
-          position: relative;
+          // position: relative;
           margin-left: 30px;
         }
 

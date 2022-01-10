@@ -7,12 +7,12 @@ import StartedDateDescriptionLabel from './StartedDateDescriptionLabel';
 const DetailsContainer = ({ project }) => {
   const { company, startDate, endDate, description } = project;
   return (
-    <>
+    <section>
       <CompanyDescriptionLabel company={company} />
       <StartedDateDescriptionLabel date={startDate} />
       <EndedDateDescriptionLabel date={endDate} />
       <DetailsDescriptionLabel details={description} />
-    </>
+    </section>
   );
 };
 

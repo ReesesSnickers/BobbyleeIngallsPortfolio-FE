@@ -79,13 +79,11 @@ const NavIconButton = ({
             inset -2px -2px 10px rgba(76, 76, 76, 0.5);
         }
 
-        a.neumorphism-button:focus :global(svg path),
         a.neumorphism-button:active :global(svg path),
         a.neumorphism-button:hover :global(svg path),
-        button.neumorphism-button:focus :global(svg path),
         button.neumorphism-button:active :global(svg path),
         button.neumorphism-button:hover :global(svg path) {
-          fill: ${Colors.LIGHT_PINK};
+          fill: ${Colors.BRIGHT_GREEN};
         }
       `}</style>
     </>

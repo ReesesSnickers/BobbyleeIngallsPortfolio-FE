@@ -6,6 +6,7 @@ import SadFace from '../../../static/SadFace.png';
 import Consts from '../../../utility/constants/consts';
 
 const PortfolioCarousel = ({ assets, key }) => {
+  const containsOneAsset = assets && assets.length === 1;
   const formatAssetElement = (asset) => {
     const isImageAsset = asset.type === Consts.IMAGE_ASSET_TYPE;
     const isVideoAsset = asset.type === Consts.VIDEO_ASSET_TYPE;
@@ -26,14 +27,24 @@ const PortfolioCarousel = ({ assets, key }) => {
 
   return (
     <>
-      <Carousel infiniteLoop={true} showThumbs={false}>
+      <Carousel
+        infiniteLoop={true}
+        showThumbs={false}
+        showIndicators={!containsOneAsset}
+        showStatus={!containsOneAsset}
+        showArrows={!containsOneAsset}
+      >
         {assets.map((asset) => {
           return <div key={asset.title}>{formatAssetElement(asset)}</div>;
         })}
       </Carousel>
       <style jsx>{`
         :global(.carousel .slide img) {
-          height: 400px;
+          max-height: 400px;
+          width: auto;
+        }
+        :global(.carousel img) {
+          width: auto;
         }
       `}</style>
     </>

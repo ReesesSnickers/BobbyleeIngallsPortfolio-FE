@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import profileImage from '../static/profilePicture.jpg';
-import Colors from '../utility/constants/colors';
-import Consts from '../utility/constants/consts';
+import profileImage from '../../static/profilePicture.jpg';
+import Colors from '../../utility/constants/colors';
+import Consts from '../../utility/constants/consts';
 
 const array = [
   'First off I want to thank you for taking the time out of your day to review my portfolio. It was a experience to overengineer, design, architect and deploy. I hope it brings you as much joy as it has brought me. Who knows, maybe it will inspire you or someone else to persue the journey as well.',

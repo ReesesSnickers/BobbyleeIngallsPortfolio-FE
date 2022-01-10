@@ -11,7 +11,8 @@ const Projects = [
     company: 'mock1 company',
     startDate: '2019',
     endDate: 'Ongoing',
-    description: '',
+    description:
+      'Was asked to build a applictaion where users can come to see tech related information, their assigned devices, support, ect. MyTech was our solution. Although I am primarily a front end developer on this project, I also handle occasional backend and dev ops related tasks. This is still a ongoing project and I am excited to be a part of its growth. Some technologies I have worked with on this project as it has grown are: ReactJs, NodeJs, Azure, Apollo GraphQL, MongoDB, Strapi, React-Router, Material UI, Jest, Enzyme, Axios, Filepond, Formik, Moment, Redux, Context, Styled-jsx, Yup, LDAP',
     url: '',
     assets: [
       {
@@ -29,7 +30,7 @@ const Projects = [
     endDate: 'Ongoing',
     description:
       'Personal Portfolio for myself. This is a MERN (MongoDb, Express, ReactJs, NodeJs) stack web application that also utilizes Apollo GraphQL. Hosted by Netlify and Heroku for the back and front ends.',
-    url: 'https://bobbyleeingals.dev',
+    url: 'https://bobbyleeingalls.dev',
     assets: [
       {
         type: 'image',
@@ -61,7 +62,8 @@ const Projects = [
     company: 'Walmart',
     startDate: '2017',
     endDate: '2019',
-    description: '',
+    description:
+      'I came on this project for the v2 refactor. Origionally it was a simple applictaion with a few simple scripts that Windows users could use to see computer information and fix minor issues. The origional developer of the project had moved on and support for the appliction left with him. This was one of the applications I first started on and we grew the v2 version of the applictaion into much more then just simple scripts and information. We added advanced powershell scripts that allowed corrections of common issues seen on the level one helpdesk as well as knowledge share for different technologies that were new. We also provided quick links to commonly used sites and directories that the user may have needed. I only worked on the frontend for this application and some of the technologies I worked with during the development process are: ReactJs, Bootstrap, ElectronJs, Powershell, Axios',
     url: '',
     assets: [
       {
@@ -77,7 +79,8 @@ const Projects = [
     company: 'Walmart',
     startDate: '2018',
     endDate: '2019',
-    description: '',
+    description:
+      'We were asked to help reduce calls and increase the corrected issues and only slightly increasing the number of tickets. We accomplished this by creating a self service portal where callers could see current Issues in Progress (IIPs) as well as select common issues and do general troubleshooting by following instructions we provided for the issue. if it was fixed we made a ticket and showed it was fixed and if not we made a ticket and logged the information that the user would have done to the proper team to correct the issue. This project successfully did as we were asked. Some of the technologies I worked with during this project are: ReactJs, Axios, Remedy, PowerShell, NodeJs, React-Router',
     url: '',
     assets: [
       {
@@ -93,7 +96,8 @@ const Projects = [
     company: 'Walmart',
     startDate: '2017',
     endDate: '2019',
-    description: '',
+    description:
+      'The application was built to support the level one helpdesk in expiditing tasks to help them in correcting incidents either on the call quickly or while working placed issues. It held numerous scripts and had additional features to help gain information on a device that they needed to work on when the device was not in their posession. The applictaion was Written in C# and for a very short time I maintained the C# part of the code and added one or two requested features. Being said I do not claim to know C#. During the time working on this application I contributed the most by writing PowerShell scripts.',
     url: '',
     assets: [
       {
@@ -107,9 +111,10 @@ const Projects = [
   {
     title: 'Spark Notifications',
     company: 'Walmart',
-    startDate: '',
-    endDate: '',
-    description: '',
+    startDate: '2019',
+    endDate: '2019',
+    description:
+      'I worked briefly on this project at the beginning creation. The application at the time allowed users to create custome themed emails similar to MailChimp. Technologies I worked with at the time of the project are: ReactJs, NodeJs',
     url: '',
     assets: [
       {
@@ -125,7 +130,8 @@ const Projects = [
     company: 'Walmart',
     startDate: '2020',
     endDate: '2021',
-    description: '',
+    description:
+      'Worked on this project for a short time. Was asked to assist the developer who was on it with adding a few features. Shortly after adding a feature or two the project was handed of to a different team during a reorg event. The application was a widget that would show different feed back and other information to a page widget if the site was registerd to show it. It also had a custome admin page for setting up what features showed on each registered site. I also helped get this project from no test coverage to >50% test coverage. During the time i worked with technologies such as: Filepond, ReactJs, NodeJs, Jest, Enzyme',
     url: '',
     assets: [
       {
@@ -158,7 +164,8 @@ const Projects = [
     company: 'Personal Project',
     startDate: 'Nov 2019',
     endDate: 'Nov 2020 (Pending Re-start)',
-    description: '',
+    description:
+      'Every year my family would play a gift game where each player would bring a wrapped gift and set it in the middle. We would all pull a number for order then proceed to choose a gift but the next person to pick had the option to steal a gift. The catch was a gift could only be stolen twice. This is one of my favorite games each year. The issue I saw was we have a very large family. Many of which were very far away and I wanted to find a way to include them. So I started making a game where we could have sessions and play the same game but virtually on a screen. This is a inprogress game that I started but have yet to find the time to finish. Technologies I have used working on this so far are: ReactJs, NodeJs, Apollo GraphQL, MongoDB, Express, React-router, Netlify, Heroku, styled-jsx, Formik, Axios, Fontawesome, Material UI, Moment, Mongoose, Auth0',
     url: '',
     assets: [
       {
@@ -174,7 +181,8 @@ const Projects = [
     company: 'Volunteer freelance for Bridget Ingalls',
     startDate: '2020',
     endDate: '2020',
-    description: '',
+    description:
+      'Bridget Ingalls had a Etsy as a way for her sell her witchy services and products. She asked to begin building a simple website to take over for the Etsy profile she had. I began building the site, but soon after she decided to close the Etsy shop and cancel the website. During my time starting this project I worked with the following technologies: ReactJs, MongoDB, Formik',
     url: '',
     assets: [],
   },

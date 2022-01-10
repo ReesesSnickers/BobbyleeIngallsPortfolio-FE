@@ -2,17 +2,28 @@ import React from 'react';
 import PortfolioCarousel from './PortfolioCarousel';
 
 const AssetContainer = ({ project }) => {
+  let forceCarousel = false;
+  if (project.title === 'Bobbylee Ingalls Portfolio') forceCarousel = true;
   return (
     <section>
-      {project.url ? (
-        <div>hass website</div>
+      {!forceCarousel && project.url ? (
+        <iframe
+          src={project.url}
+          title={project.title}
+          sandbox="allow-scripts"
+        />
       ) : (
-        <PortfolioCarousel assets={project.assets} />
+        <div>
+          <PortfolioCarousel assets={project.assets} />
+        </div>
       )}
       <style jsx>{`
-        section {
-          height: 400px;
+        div {
           max-height: 400px;
+        }
+        iframe {
+          height: 500px;
+          width: 100%;
         }
       `}</style>
     </section>

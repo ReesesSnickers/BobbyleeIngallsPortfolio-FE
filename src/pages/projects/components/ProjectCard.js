@@ -1,10 +1,11 @@
 import React from 'react';
 import Colors from '../../../utility/constants/colors';
+import Regex from '../../../utility/constants/regex';
 import defaultImage from '../../../static/SadFace.png';
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ title, image }) => {
-  const linkToParam = title.replace(' ', '').toLowerCase();
+  const linkToParam = title.replace(Regex.ALL_SPACES, '').toLowerCase();
   if (!image) image = defaultImage;
   return (
     <Link className="projectcard-link" to={linkToParam}>

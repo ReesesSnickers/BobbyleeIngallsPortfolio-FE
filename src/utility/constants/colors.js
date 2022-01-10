@@ -1,9 +1,10 @@
 const Colors = {
   WHITE: '#FFFFFF',
   BLACK: '#000000',
-  LIGHT_PINK: '#D97896',
   YELLOW: '#FFEE10',
-  LIGHT_PURPLE: '#B5A0BB',
+  DARKER_GREY: '#262525',
+  DARK_GREY: '#737171',
+  BRIGHT_GREEN: '#7CFC00',
 };
 
 export default Colors;
