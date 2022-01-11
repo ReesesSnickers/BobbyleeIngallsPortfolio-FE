@@ -14,9 +14,9 @@ const CoffeeDonationContainer = () => {
       </div>
       <h5>
         Like what you see? Please{' '}
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          donate
-        </a>{' '}
+        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        donate
+        {/* </a>{' '} */}
         and support my coffee addiction!
       </h5>
       <style jsx>{`

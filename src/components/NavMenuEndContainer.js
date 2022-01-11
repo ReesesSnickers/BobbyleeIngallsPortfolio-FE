@@ -12,7 +12,7 @@ const NavMenuEndContainer = ({ closeMenu }) => {
           <BugReportNavMenuLink />
         </li>
       </ul>
-      {true ? <CoffeeDonationContainer /> : null}
+      {Feature.showDevCoffeeSupport ? <CoffeeDonationContainer /> : null}
       <style jsx>{`
         section {
           padding: 10px;
