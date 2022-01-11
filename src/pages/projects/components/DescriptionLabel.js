@@ -4,7 +4,7 @@ const DescriptionLabel = ({ label, information }) => {
   return (
     <div>
       <h2>{label}:</h2>
-      <p>{information}</p>
+      {information}
       <style jsx>{`
         div {
           display: flex;
