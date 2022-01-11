@@ -33,7 +33,6 @@ const ProjectPage = () => {
         useButton={true}
       />
       <AssetContainer project={project} />
-      <h1>{project.title}</h1>
       <DetailsContainer project={project} />
       <style jsx>{`
         h1 {
