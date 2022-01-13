@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ExternalLink = ({ to, label, ...props }) => {
+const ExternalLink = ({ to, label, children, ...props }) => {
   // validate if the to contains a http/https request and remove it for React-Router requirements to link external
-  const pathname = to.includes('http') ? `//${to.split('//')[1]}` : to;
+  const pathname = to?.includes('http') ? `//${to.split('//')[1]}` : to;
 
   return (
     <Link
@@ -15,6 +15,7 @@ const ExternalLink = ({ to, label, ...props }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
+      {children}
       {label}
     </Link>
   );

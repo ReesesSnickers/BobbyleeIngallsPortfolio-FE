@@ -5,6 +5,7 @@ import ResumeNavMenuLink from './ResumeNavMenuLink';
 import BlogsNavMenuLink from './BlogsNavMenuLink';
 import Feature from '../utility/featureConfig';
 import Colors from '../utility/constants/colors';
+import CSS from '../utility/constants/CSS';
 
 const DirectoriesContainer = ({ closeMenu }) => {
   return (
@@ -36,7 +37,7 @@ const DirectoriesContainer = ({ closeMenu }) => {
         .directories li {
           padding: 10px;
           height: 60px;
-          border-radius: 3px;
+          border-radius: ${CSS.NAV_LINK_BORDER_RADIUS};
           overflow: hidden;
         }
         .directories li:hover {

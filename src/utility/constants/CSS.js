@@ -1,6 +1,9 @@
 const CSS = {
   MAX_WIDTH_MOBILE: 480,
   MIN_WIDTH_LAPTOP: 1024,
+  CARD_BORDER_RADIUS: '8px',
+  NAV_LINK_BORDER_RADIUS: '3px',
+  ROUND_BORDER_RADIUS: '50%',
 };
 
 export default CSS;
