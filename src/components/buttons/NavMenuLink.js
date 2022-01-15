@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import Colors from '../../utility/constants/colors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CSS from '../../utility/constants/CSS';
 
 const NavMenuLink = ({ children, to, icon, label, ...props }) => {
   let resolved = useResolvedPath(to);
@@ -34,7 +35,7 @@ const NavMenuLink = ({ children, to, icon, label, ...props }) => {
           width: 50px;
           height: 50px;
           background-color: ${Colors.DARK_GREY};
-          border-radius: 8px;
+          border-radius: ${CSS.CARD_BORDER_RADIUS};
           margin-right: 20px;
           font-size: 30px;
           display: flex;

@@ -3,6 +3,7 @@ import Colors from '../../../utility/constants/colors';
 import Regex from '../../../utility/constants/regex';
 import defaultImage from '../../../static/SadFace.png';
 import { Link } from 'react-router-dom';
+import CSS from '../../../utility/constants/CSS';
 
 const ProjectCard = ({ title, image }) => {
   const linkToParam = title.replace(Regex.ALL_SPACES, '').toLowerCase();
@@ -16,7 +17,7 @@ const ProjectCard = ({ title, image }) => {
           width: 250px;
           height: 150px;
           margin: 0px 10px 20px;
-          border-radius: 8px;
+          border-radius: ${CSS.CARD_BORDER_RADIUS};
           overflow: hidden;
           position: relative;
           text-align: center;

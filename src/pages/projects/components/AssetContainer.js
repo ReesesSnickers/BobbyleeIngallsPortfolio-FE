@@ -10,7 +10,7 @@ const AssetContainer = ({ project }) => {
         <iframe
           src={project.url}
           title={project.title}
-          sandbox="allow-scripts"
+          sandbox="allow-scripts allow-same-origin"
         />
       ) : (
         <div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Colors from '../../utility/constants/colors';
+import CSS from '../../utility/constants/CSS';
 
 const NavIconButton = ({
   ariaLabel,
@@ -46,7 +47,7 @@ const NavIconButton = ({
           background: ${Colors.BLACK};
           height: 40px;
           width: 40px;
-          border-radius: 50%;
+          border-radius: ${CSS.ROUND_BORDER_RADIUS};
           border: none;
           outline: none;
           display: -webkit-flex;

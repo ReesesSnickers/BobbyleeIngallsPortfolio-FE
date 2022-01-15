@@ -3,6 +3,7 @@ import Feature from '../utility/featureConfig';
 import Colors from '../utility/constants/colors';
 import BugReportNavMenuLink from './BugReportNavMenuLink';
 import CoffeeDonationContainer from './CoffeeDonationContainer';
+import CSS from '../utility/constants/CSS';
 
 const NavMenuEndContainer = ({ closeMenu }) => {
   return (
@@ -20,7 +21,7 @@ const NavMenuEndContainer = ({ closeMenu }) => {
         .end-container li {
           padding: 10px;
           height: 60px;
-          border-radius: 3px;
+          border-radius: ${CSS.NAV_LINK_BORDER_RADIUS};
           overflow: hidden;
         }
         .end-container li:hover {

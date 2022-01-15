@@ -1,20 +1,23 @@
 import React from 'react';
-import CompanyDescriptionLabel from './CompanyDescriptionLabel';
-import DetailsDescriptionLabel from './DetailsDescriptionLabel';
-import EndedDateDescriptionLabel from './EndedDateDescriptionLabel';
-import RepositoryDescriptionLabel from './RepositoryDescriptionLabel';
-import StartedDateDescriptionLabel from './StartedDateDescriptionLabel';
+import DetailsHeader from './DetailsHeader';
+import DescriptionDetail from './DescriptionDetail';
+import TechnologiesDetail from './TechnologiesDetail';
+import RepositoriesDetail from './RepositoriesDetail';
+import Feature from '../../../utility/featureConfig';
 
 const DetailsContainer = ({ project }) => {
-  const { company, startDate, endDate, description, repos } = project;
+  const { description, repos, technologies } = project;
   return (
-    <section>
-      <CompanyDescriptionLabel company={company} />
-      <RepositoryDescriptionLabel repositories={repos} />
-      <StartedDateDescriptionLabel date={startDate} />
-      <EndedDateDescriptionLabel date={endDate} />
-      <DetailsDescriptionLabel details={description} />
-    </section>
+    <>
+      <DetailsHeader project={project} />
+      <DescriptionDetail description={description} />
+      {Feature.showProjectsTechnologies ? (
+        <TechnologiesDetail technologies={technologies} />
+      ) : null}
+      {Feature.showProjectsRepositories ? (
+        <RepositoriesDetail repositories={repos} />
+      ) : null}
+    </>
   );
 };
 
