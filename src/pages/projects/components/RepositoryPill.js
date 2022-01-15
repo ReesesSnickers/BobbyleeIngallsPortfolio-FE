@@ -5,39 +5,36 @@ import Colors from '../../../utility/constants/colors';
 const RepositoryPill = ({ label, to, ...props }) => {
   return (
     <ExternalLink to={to} {...props}>
-      <div>{label}</div>
+      <div>
+        <p>{label}</p>
+      </div>
       <style jsx>{`
         :global(.external-link) {
           color: ${Colors.WHITE};
           text-decoration: none;
           cursor: pointer;
           text-transform: capitalize;
+          transform: translate(0, 0);
+          transition: transform 1.3s ease-in-out, opacity 0.3s ease-in-out;
         }
         div {
-          opacity: 0.9;
-          background: ${Colors.BLACK};
-          padding: 10px;
+          padding: 2px 10px;
+          background-color: ${Colors.LIGHT_GREY};
           border-radius: 25px;
           text-transform: capitalize;
-          width: min-content;
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8);
+        }
+        p {
+          opacity: 0.4;
+          margin: 0px;
+          font-size: 14px;
         }
 
         div:hover {
-          text-shadow: 0 0 5px ${Colors.YELLOW};
+          color: ${Colors.BRIGHT_GREEN};
+          transform: scale(1.1, 1.1);
         }
-
-        div:focus,
-        div:active,
-        div:hover {
-            color: ${Colors.BRIGHT_GREEN};
-          box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
-            -2px -2px 6px rgba(76, 76, 76, 0.8),
-            inset -2px -2px 10px rgba(0, 0, 0, 0.05),
-            inset -2px -2px 10px rgba(76, 76, 76, 0.5);
-        }
-
+        div:hover p {
+          opacity: 1;
         }
       `}</style>
     </ExternalLink>

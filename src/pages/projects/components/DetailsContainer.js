@@ -3,6 +3,7 @@ import DetailsHeader from './DetailsHeader';
 import DescriptionDetail from './DescriptionDetail';
 import TechnologiesDetail from './TechnologiesDetail';
 import RepositoriesDetail from './RepositoriesDetail';
+import Feature from '../../../utility/featureConfig';
 
 const DetailsContainer = ({ project }) => {
   const { description, repos, technologies } = project;
@@ -10,8 +11,12 @@ const DetailsContainer = ({ project }) => {
     <>
       <DetailsHeader project={project} />
       <DescriptionDetail description={description} />
-      <TechnologiesDetail technologies={technologies} />
-      <RepositoriesDetail repositories={repos} />
+      {Feature.showProjectsTechnologies ? (
+        <TechnologiesDetail technologies={technologies} />
+      ) : null}
+      {Feature.showProjectsRepositories ? (
+        <RepositoriesDetail repositories={repos} />
+      ) : null}
     </>
   );
 };

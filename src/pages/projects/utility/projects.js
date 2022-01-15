@@ -1,10 +1,21 @@
 import MyTechLogo from '../../../static/mytech.svg';
+
 import EmeraldEmpireLogo from '../../../static/Emerald-Empire.jpg';
+import EmeraldEmpireScreenshot1 from '../../../static/EEScreenshot1.png';
+import EmeraldEmpireScreenshot2 from '../../../static/EEScreenshot2.png';
+import EmeraldEmpireVideo1 from '../../../static/EEVideo1.mov';
+
 import BIPLogo from '../../../static/bip.jpg';
+
 import WalmartLogo from '../../../static/WalmartLogo.png';
+
 import NewRepublicArkLogo from '../../../static/newrepubliclogo.png';
+import NewRepublicArkVideo from '../../../static/NewRepublicArkVideo.mov';
+
 import KaneCrazyChristmasLogo from '../../../static/kanecrazychristmas.jpg';
+
 import Technology from '../../../utility/constants/technologies';
+import Consts from '../../../utility/constants/consts';
 
 const Projects = [
   {
@@ -42,11 +53,11 @@ const Projects = [
       Technology.STRAPI,
     ],
     description:
-      'Was asked to build a applictaion where users can come to see tech related information, their assigned devices, support, ect. MyTech was our solution. Although I am primarily a front end developer on this project, I also handle occasional backend and dev ops related tasks. This is still a ongoing project and I am excited to be a part of its growth. Some technologies I have worked with on this project as it has grown are: ReactJs, NodeJs, Azure, Apollo GraphQL, MongoDB, Strapi, React-Router, Material UI, Jest, Enzyme, Axios, Filepond, Formik, Moment, Redux, Context, Styled-jsx, Yup, LDAP',
+      'Was asked to build a applictaion where users can come to see tech related information, their assigned devices, support, ect. MyTech was our solution. Although I am primarily a front end developer on this project, I also handle occasional backend and dev ops related tasks. This is still a ongoing project and I am excited to be a part of its growth.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: MyTechLogo,
         alt: 'MyTech Logo',
         title: 'MyTech Logo',
@@ -97,7 +108,7 @@ const Projects = [
     url: 'https://bobbyleeingalls.dev',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: BIPLogo,
         alt: 'BIP Logo',
         title: 'Bobbylee Ingalls Portfolio Logo',
@@ -126,7 +137,7 @@ const Projects = [
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for Night Notes',
@@ -156,11 +167,11 @@ const Projects = [
       Technology.REACT_ROUTER,
     ],
     description:
-      'I came on this project for the v2 refactor. Origionally it was a simple applictaion with a few simple scripts that Windows users could use to see computer information and fix minor issues. The origional developer of the project had moved on and support for the appliction left with him. This was one of the applications I first started on and we grew the v2 version of the applictaion into much more then just simple scripts and information. We added advanced powershell scripts that allowed corrections of common issues seen on the level one helpdesk as well as knowledge share for different technologies that were new. We also provided quick links to commonly used sites and directories that the user may have needed. I only worked on the frontend for this application and some of the technologies I worked with during the development process are: ReactJs, Bootstrap, ElectronJs, Powershell, Axios',
+      'I came on this project for the v2 refactor. Origionally it was a simple applictaion with a few simple scripts that Windows users could use to see computer information and fix minor issues. The origional developer of the project had moved on and support for the appliction left with him. This was one of the applications I first started on and we grew the v2 version of the applictaion into much more then just simple scripts and information. We added advanced powershell scripts that allowed corrections of common issues seen on the level one helpdesk as well as knowledge share for different technologies that were new. We also provided quick links to commonly used sites and directories that the user may have needed. I only worked on the frontend for this application.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for HOSS',
@@ -191,11 +202,11 @@ const Projects = [
       Technology.STRAPI,
     ],
     description:
-      'We were asked to help reduce calls and increase the corrected issues and only slightly increasing the number of tickets. We accomplished this by creating a self service portal where callers could see current Issues in Progress (IIPs) as well as select common issues and do general troubleshooting by following instructions we provided for the issue. if it was fixed we made a ticket and showed it was fixed and if not we made a ticket and logged the information that the user would have done to the proper team to correct the issue. This project successfully did as we were asked. Some of the technologies I worked with during this project are: ReactJs, Axios, Remedy, PowerShell, NodeJs, React-Router',
+      'We were asked to help reduce calls and increase the corrected issues and only slightly increasing the number of tickets. We accomplished this by creating a self service portal where callers could see current Issues in Progress (IIPs) as well as select common issues and do general troubleshooting by following instructions we provided for the issue. if it was fixed we made a ticket and showed it was fixed and if not we made a ticket and logged the information that the user would have done to the proper team to correct the issue. This project successfully did as we were asked.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for SSaaS',
@@ -214,7 +225,7 @@ const Projects = [
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for Workstation Tool',
@@ -238,11 +249,11 @@ const Projects = [
       Technology.REACTJS,
     ],
     description:
-      'I worked briefly on this project at the beginning creation. The application at the time allowed users to create custome themed emails similar to MailChimp. Technologies I worked with at the time of the project are: ReactJs, NodeJs',
+      'I worked briefly on this project at the beginning creation. The application at the time allowed users to create custome themed emails similar to MailChimp.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for Spark Notifications',
@@ -269,11 +280,11 @@ const Projects = [
       Technology.REACTJS,
     ],
     description:
-      'Worked on this project for a short time. Was asked to assist the developer who was on it with adding a few features. Shortly after adding a feature or two the project was handed of to a different team during a reorg event. The application was a widget that would show different feed back and other information to a page widget if the site was registerd to show it. It also had a custome admin page for setting up what features showed on each registered site. I also helped get this project from no test coverage to >50% test coverage. During the time i worked with technologies such as: Filepond, ReactJs, NodeJs, Jest, Enzyme',
+      'Worked on this project for a short time. Was asked to assist the developer who was on it with adding a few features. Shortly after adding a feature or two the project was handed of to a different team during a reorg event. The application was a widget that would show different feed back and other information to a page widget if the site was registerd to show it. It also had a custome admin page for setting up what features showed on each registered site. I also helped get this project from no test coverage to >50% test coverage.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: WalmartLogo,
         alt: 'Walmart Logo',
         title: 'Pending Logo for Toolbox Widget',
@@ -333,10 +344,16 @@ const Projects = [
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: NewRepublicArkLogo,
         alt: 'New Republic Ark Logo',
         title: 'New Republic Ark Logo',
+      },
+      {
+        type: Consts.VIDEO_ASSET_TYPE,
+        path: NewRepublicArkVideo,
+        alt: 'New Republic Ark Video',
+        title: 'New Republic Ark Video',
       },
     ],
   },
@@ -353,6 +370,10 @@ const Projects = [
       {
         url: 'https://github.com/ReesesSnickers/kane-crazy-christmas-be',
         label: 'Backend',
+      },
+      {
+        url: 'https://kanecrazychristmas.netlify.app/login',
+        label: 'Website',
       },
     ],
     technologies: [
@@ -380,11 +401,11 @@ const Projects = [
       Technology.NETLIFY,
     ],
     description:
-      'Every year my family would play a gift game where each player would bring a wrapped gift and set it in the middle. We would all pull a number for order then proceed to choose a gift but the next person to pick had the option to steal a gift. The catch was a gift could only be stolen twice. This is one of my favorite games each year. The issue I saw was we have a very large family. Many of which were very far away and I wanted to find a way to include them. So I started making a game where we could have sessions and play the same game but virtually on a screen. This is a inprogress game that I started but have yet to find the time to finish. Technologies I have used working on this so far are: ReactJs, NodeJs, Apollo GraphQL, MongoDB, Express, React-router, Netlify, Heroku, styled-jsx, Formik, Axios, Fontawesome, Material UI, Moment, Mongoose, Auth0',
+      'Every year my family would play a gift game where each player would bring a wrapped gift and set it in the middle. We would all pull a number for order then proceed to choose a gift but the next person to pick had the option to steal a gift. The catch was a gift could only be stolen twice. This is one of my favorite games each year. The issue I saw was we have a very large family. Many of which were very far away and I wanted to find a way to include them. So I started making a game where we could have sessions and play the same game but virtually on a screen. This is a inprogress game that I started but have yet to find the time to finish.',
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: KaneCrazyChristmasLogo,
         alt: 'Kane Crazy Christmas Logo',
         title: 'Kane Crazy Christmas Logo',
@@ -424,7 +445,7 @@ const Projects = [
       Technology.EXPRESSJS,
     ],
     description:
-      'Bridget Ingalls had a Etsy as a way for her sell her witchy services and products. She asked to begin building a simple website to take over for the Etsy profile she had. I began building the site, but soon after she decided to close the Etsy shop and cancel the website. During my time starting this project I worked with the following technologies: ReactJs, MongoDB, Formik',
+      'Bridget Ingalls had a Etsy as a way for her sell her witchy services and products. She asked to begin building a simple website to take over for the Etsy profile she had. I began building the site, but soon after she decided to close the Etsy shop and cancel the website.',
     url: '',
     assets: [],
   },
@@ -446,10 +467,28 @@ const Projects = [
     url: '',
     assets: [
       {
-        type: 'image',
+        type: Consts.IMAGE_ASSET_TYPE,
         path: EmeraldEmpireLogo,
         alt: 'Emerald Empire Logo',
         title: 'Emerald Empire Logo',
+      },
+      {
+        type: Consts.IMAGE_ASSET_TYPE,
+        path: EmeraldEmpireScreenshot1,
+        alt: 'Emerald Empire Screenshot 1',
+        title: 'Emerald Empire Screenshot 1',
+      },
+      {
+        type: Consts.IMAGE_ASSET_TYPE,
+        path: EmeraldEmpireScreenshot2,
+        alt: 'Emerald Empire Screenshot 2',
+        title: 'Emerald Empire Screenshot 2',
+      },
+      {
+        type: Consts.VIDEO_ASSET_TYPE,
+        path: EmeraldEmpireVideo1,
+        alt: 'Emerald Empire Video 1',
+        title: 'Emerald Empire Video 1',
       },
     ],
   },
