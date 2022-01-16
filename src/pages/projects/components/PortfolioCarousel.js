@@ -24,7 +24,6 @@ const PortfolioCarousel = ({ assets, key }) => {
         />
       );
   };
-
   return (
     <>
       <Carousel
@@ -39,12 +38,20 @@ const PortfolioCarousel = ({ assets, key }) => {
         })}
       </Carousel>
       <style jsx>{`
-        :global(.carousel .slide img) {
+        :global(.slide > div) {
           max-height: 400px;
-          width: auto;
         }
-        :global(.carousel img) {
-          width: auto;
+        :global(li) {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+        :global(img) {
+          height: 100%;
+          max-width: 300px;
         }
       `}</style>
     </>
