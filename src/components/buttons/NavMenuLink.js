@@ -25,8 +25,15 @@ const NavMenuLink = ({ children, to, icon, label, ...props }) => {
           background-color: ${Colors.BRIGHT_GREEN};
         }
         .label-wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           width: 100%;
           height: 100%;
@@ -38,8 +45,14 @@ const NavMenuLink = ({ children, to, icon, label, ...props }) => {
           border-radius: ${CSS.CARD_BORDER_RADIUS};
           margin-right: 20px;
           font-size: 30px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           margin-left: 20px;
         }
@@ -50,6 +63,7 @@ const NavMenuLink = ({ children, to, icon, label, ...props }) => {
           width: 100%;
         }
         :global(.nav-menu-link):hover :global(.icon-container > svg) {
+          -webkit-animation: shake 1s;
           animation: shake 1s;
         }
         :global(.nav-menu-link):hover :global(.icon-container > svg > path) {
@@ -59,20 +73,48 @@ const NavMenuLink = ({ children, to, icon, label, ...props }) => {
           color: ${Colors.BRIGHT_GREEN};
         }
 
-        @keyframes shake {
+        @-webkit-keyframes shake {
           0% {
+            -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
           }
           25% {
+            -webkit-transform: rotate(-5deg);
             transform: rotate(-5deg);
           }
           50% {
+            -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
           }
           75% {
+            -webkit-transform: rotate(-5deg);
             transform: rotate(-5deg);
           }
           100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+        }
+
+        @keyframes shake {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          25% {
+            -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+          }
+          50% {
+            -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+          }
+          75% {
+            -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+          }
+          100% {
+            -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
           }
         }

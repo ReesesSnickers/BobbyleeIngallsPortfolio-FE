@@ -19,11 +19,6 @@ const CoffeeDonationContainer = () => {
         {/* </a>{' '} */}
         and support my coffee addiction!
       </h5>
-      <style jsx>{`
-        h5 {
-          text-align: center;
-        }
-      `}</style>
       <div className="icon-wrapper">
         <FontAwesomeIcon icon={faMugHot} />
       </div>
@@ -35,10 +30,19 @@ const CoffeeDonationContainer = () => {
         a:visited {
           color: ${Colors.BRIGHT_GREEN};
         }
-
+        h5 {
+          text-align: center;
+        }
         section {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
         .icon-wrapper:first-of-type {

@@ -96,8 +96,15 @@ const SocialMediaContainer = ({ closeMenu }) => {
             .social-media-sources ul {
               padding: 0px;
               margin: 0px;
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: row;
               flex-direction: row;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
               justify-content: center;
             }
 

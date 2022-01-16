@@ -17,7 +17,12 @@ const RepositoriesDetail = ({ repositories = [] }) => {
       </div>
       <style jsx>{`
         div {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
         }
         :global(.external-link) {

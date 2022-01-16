@@ -26,8 +26,15 @@ const DetailContainer = ({
       {children}
       <style jsx>{`
         .detail-header {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           width: 100%;
           margin-bottom: 22px;

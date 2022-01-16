@@ -27,9 +27,18 @@ const TechnologyCard = ({ technology }) => {
             width: 200px;
             height: 133px;
             position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
           }
           h4 {
@@ -37,8 +46,17 @@ const TechnologyCard = ({ technology }) => {
             bottom: 10px;
             left: -85px;
             margin: 0px;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
             transform: translate(0, 0);
+            -webkit-transition: opacity 0.3s ease-in-out,
+              -webkit-transform 1.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out,
+              -webkit-transform 1.3s ease-in-out;
+            -o-transition: transform 1.3s ease-in-out, opacity 0.3s ease-in-out;
             transition: transform 1.3s ease-in-out, opacity 0.3s ease-in-out;
+            transition: transform 1.3s ease-in-out, opacity 0.3s ease-in-out,
+              -webkit-transform 1.3s ease-in-out;
           }
           .icon-wrapper {
             font-size: 40px;
@@ -50,9 +68,13 @@ const TechnologyCard = ({ technology }) => {
           }
           .card:hover {
             color: ${Colors.BRIGHT_GREEN};
+            -webkit-transform: scale(1.1, 1.1);
+            -ms-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
           }
           .card:hover h4 {
+            -webkit-transform: translate(141px, 0);
+            -ms-transform: translate(141px, 0);
             transform: translate(141px, 0);
           }
           .card:hover h3,

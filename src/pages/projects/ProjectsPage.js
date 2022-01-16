@@ -28,9 +28,17 @@ const ProjectsPage = () => {
         .projects-container {
           width: 100%;
           max-width: 1100px;
-          display flex;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
       `}</style>

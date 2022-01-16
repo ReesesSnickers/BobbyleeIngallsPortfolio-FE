@@ -33,13 +33,22 @@ const TechnologiesDetail = ({ technologies = [] }) => {
         .closed {
           max-height: 153px;
           overflow: hidden;
+          -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
         .cards-wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
       `}</style>

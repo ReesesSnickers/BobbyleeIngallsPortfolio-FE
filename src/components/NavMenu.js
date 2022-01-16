@@ -4,18 +4,19 @@ import DirectoriesContainer from './DirectoriesContainer';
 import NavMenuEndContainer from './NavMenuEndContainer';
 import SocialMediaContainer from './SocialMediaContainer';
 
-const NavMenu = ({ isOpen = false, closeMenu }) => {
-  const [hidden, setHidden] = useState(true);
+const NavMenu = ({ isOpen = false, closeMenu, hidden = true }) => {
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
+
   const handleResize = () => {
     setDimensions({
       height: window.innerHeight,
       width: window.innerWidth,
     });
   };
+
   useEffect(() => {
     // UE for handling windows events
     window.addEventListener('resize', handleResize);
@@ -23,19 +24,6 @@ const NavMenu = ({ isOpen = false, closeMenu }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  // UE sets the visability to hidden to hide changes when the screen is resized to mobile sizes and prevents issues if the button is clicked quickly
-  useEffect(() => {
-    let timer = null;
-    if (!isOpen && !hidden) {
-      timer = setTimeout(() => {
-        setHidden(true);
-      }, 1100);
-    } else setHidden(false);
-    return () => {
-      if (isOpen && timer) clearTimeout(timer);
-    };
-  }, [isOpen, hidden]);
 
   return (
     <div
@@ -48,21 +36,23 @@ const NavMenu = ({ isOpen = false, closeMenu }) => {
       <div className="line" />
       <NavMenuEndContainer closeMenu={closeMenu} />
       <style jsx>{`
-      .line {
-        width:100%
-        height:1px;
-        border-bottom: 2px solid rgba(255,255,255,0.18);
-      }
+        .line {
+          height: 1px;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+        }
         .menu {
           position: fixed;
           width: 300px;
           top: 68px;
           border-bottom-right-radius: 8px;
           background: rgba(38, 37, 37, 0.1);
+          -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.18);
+          -webkit-transition: all 0.6s linear;
+          -o-transition: all 0.6s linear;
           transition: all 0.6s linear;
         }
 
@@ -72,11 +62,10 @@ const NavMenu = ({ isOpen = false, closeMenu }) => {
         }
 
         .open-menu {
-          left: 0;
+          left: 0px;
         }
         .hidden {
           visibility: hidden;
-          display: none;
         }
 
         .menu :global(li) {

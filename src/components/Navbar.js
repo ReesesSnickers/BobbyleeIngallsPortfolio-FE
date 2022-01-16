@@ -15,6 +15,7 @@ const Navbar = () => {
     (isMenuOpen) => (isMenuOpen = !isMenuOpen),
     false
   );
+  const [isMenuHidden, setIsMenuHidden] = useReducer((hidden) => !hidden, true);
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
@@ -69,19 +70,34 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // UE handles setting the hidden attribute to prevent seeing the menu as a sliver in mobile port views
+    const menuIsOpenAndHidden = isMenuOpen && isMenuHidden;
+    const menuIsClosedAndVisable = !isMenuOpen && !isMenuHidden;
+
+    if (menuIsOpenAndHidden) {
+      setIsMenuHidden();
+    }
+    if (menuIsClosedAndVisable) {
+      setIsMenuHidden();
+    }
+  }, [isMenuOpen, isMenuHidden]);
+
   return (
     <>
       <nav className={`nav ${showNav ? 'show-nav' : ''}`}>
         <NavIconButton
-          onClick={() => {
-            toggleMenu();
-          }}
+          onClick={toggleMenu}
           ariaLabel="Menu"
           className="menu-button"
           icon={faBars}
           useButton={true}
         />
-        <NavMenu isOpen={isMenuOpen} closeMenu={toggleMenu} />
+        <NavMenu
+          isOpen={isMenuOpen}
+          closeMenu={toggleMenu}
+          hidden={isMenuHidden}
+        />
 
         {showFacebook && Feature.showFacebookMediaButton ? (
           <FacebookNavIconButton />
@@ -97,17 +113,24 @@ const Navbar = () => {
 
       <style jsx>{`
         .nav {
-          display: -webkit-flex;
           display: -moz-flex;
           display: -ms-flex;
           display: -o-flex;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
           position: fixed;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           top: 0;
           width: 100%;
           background-color: ${Colors.BLACK};
+          -webkit-transition-timing-function: ease-in;
+          -o-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
           transition: 0.5s;
           opacity: 0;
           z-index: 100;
@@ -126,7 +149,6 @@ const Navbar = () => {
         }
 
         .menu-button {
-          // position: relative;
           margin-left: 30px;
         }
 
