@@ -18,9 +18,6 @@ const AssetContainer = ({ project }) => {
         </div>
       )}
       <style jsx>{`
-        div {
-          max-height: 400px;
-        }
         iframe {
           height: 500px;
           width: 100%;
