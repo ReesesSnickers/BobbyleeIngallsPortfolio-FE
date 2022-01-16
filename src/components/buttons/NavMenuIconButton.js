@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Colors from '../../utility/constants/colors';
 
 const NavMenuIconButton = ({ href, icon, ariaLabel, className }) => {
   return (
@@ -23,7 +24,7 @@ const NavMenuIconButton = ({ href, icon, ariaLabel, className }) => {
 
         section {
           position: absolute;
-          color: #fff;
+          color: ${Colors.WHITE};
           width: 200px;
           height: 200px;
           background-color: grey;

@@ -41,8 +41,8 @@ const DirectoriesContainer = ({ closeMenu }) => {
           overflow: hidden;
         }
         .directories li:hover {
+          -webkit-box-shadow: 0px 0px 3px 5px ${Colors.BRIGHT_GREEN};
           box-shadow: 0px 0px 3px 5px ${Colors.BRIGHT_GREEN};
-          -moz-transition: all 0.2s ease-in;
           -o-transition: all 0.2s ease-in;
           -webkit-transition: all 0.2s ease-in;
           transition: all 0.2s ease-in;

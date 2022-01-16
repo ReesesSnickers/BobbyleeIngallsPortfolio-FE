@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 import Colors from './utility/constants/colors';
 import Navbar from './components/Navbar';
 
+// DEV NOTE: Run CSS threw Autoprefixer on occasion https://autoprefixer.github.io/
+
 const App = () => {
   return (
     <main className="App">
@@ -24,8 +26,13 @@ const App = () => {
         }
         .page {
           padding: 72px 30px 50px 30px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
         }
       `}</style>

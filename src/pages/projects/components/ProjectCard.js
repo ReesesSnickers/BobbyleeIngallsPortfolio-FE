@@ -21,13 +21,18 @@ const ProjectCard = ({ title, image }) => {
           overflow: hidden;
           position: relative;
           text-align: center;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
           transition: all 0.3s;
         }
         img {
           width: 100%;
           height: 100%;
+          -o-object-fit: cover;
           object-fit: cover;
           opacity: 0.7;
+          -webkit-transition: opacity 0.3s ease-in-out;
+          -o-transition: opacity 0.3s ease-in-out;
           transition: opacity 0.3s ease-in-out;
         }
         h2 {
@@ -36,6 +41,8 @@ const ProjectCard = ({ title, image }) => {
           position: absolute;
           top: 50%;
           left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           width: 100%;
           margin: 0px;
@@ -45,6 +52,8 @@ const ProjectCard = ({ title, image }) => {
           opacity: 0.3;
         }
         :global(.projectcard-link):hover {
+          -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
         }
       `}</style>

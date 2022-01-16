@@ -50,15 +50,25 @@ const NavIconButton = ({
           border-radius: ${CSS.ROUND_BORDER_RADIUS};
           border: none;
           outline: none;
-          display: -webkit-flex;
           display: -moz-flex;
           display: -ms-flex;
           display: -o-flex;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           text-decoration: none;
+          -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
+            -2px -2px 6px rgba(76, 76, 76, 0.8);
           box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
             -2px -2px 6px rgba(76, 76, 76, 0.8);
         }
@@ -74,6 +84,10 @@ const NavIconButton = ({
         button.neumorphism-button:focus,
         button.neumorphism-button:active,
         button.neumorphism-button:hover {
+          -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
+            -2px -2px 6px rgba(76, 76, 76, 0.8),
+            inset -2px -2px 10px rgba(0, 0, 0, 0.05),
+            inset -2px -2px 10px rgba(76, 76, 76, 0.5);
           box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.1),
             -2px -2px 6px rgba(76, 76, 76, 0.8),
             inset -2px -2px 10px rgba(0, 0, 0, 0.05),

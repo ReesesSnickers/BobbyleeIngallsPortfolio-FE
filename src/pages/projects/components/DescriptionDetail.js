@@ -17,6 +17,7 @@ const DescriptionDetail = ({ description }) => {
         }
         .closed p {
           overflow: hidden;
+          -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
