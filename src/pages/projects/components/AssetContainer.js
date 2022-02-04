@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioCarousel from './PortfolioCarousel';
 
-const AssetContainer = ({ project }) => {
+const AssetContainer = ({ project = { title: '', url: '', assets: [] } }) => {
   let forceCarousel = false;
   if (project.title === 'Bobbylee Ingalls Portfolio') forceCarousel = true;
   return (
