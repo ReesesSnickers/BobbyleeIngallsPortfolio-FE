@@ -5,7 +5,9 @@ import TechnologiesDetail from './TechnologiesDetail';
 import RepositoriesDetail from './RepositoriesDetail';
 import Feature from '../../../utility/featureConfig';
 
-const DetailsContainer = ({ project }) => {
+const DetailsContainer = ({
+  project = { description: '', technologies: [], repos: [] },
+}) => {
   const { description, repos, technologies } = project;
   return (
     <>
