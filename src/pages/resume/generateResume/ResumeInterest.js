@@ -2,10 +2,6 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
-  //   referenceWrapper: {
-  //     marginTop: '5px',
-  //     marginBottom: '5px',
-  //   },
   title: {
     fontFamily: 'Helvetica-Bold',
   },
