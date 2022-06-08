@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 import ResumeReferences from './ResumeReferences';
+import ResumeInterests from './ResumeInterests';
 
 const styles = StyleSheet.create({
   page: {
@@ -43,10 +44,34 @@ const references = [
   },
 ];
 
+const outdoorInterests = {
+  name: 'Outdoor Activities',
+  activities: [
+    'Hiking',
+    'Kayaking',
+    'Camping',
+    'Gardening',
+    'Motorcycle Riding',
+  ],
+};
+const indoorInterests = {
+  name: 'Indoor Activities',
+  activities: [
+    'Coding',
+    'Video Games',
+    'Board & Card Games',
+    'Latin Dancing',
+    'Billiards',
+  ],
+};
+
+const interests = [outdoorInterests, indoorInterests];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
+        {interests.length ? <ResumeInterests interests={interests} /> : null}
         {references.length ? (
           <ResumeReferences references={references} />
         ) : null}
