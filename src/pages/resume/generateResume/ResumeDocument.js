@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Document, StyleSheet } from '@react-pdf/renderer';
-import ResumeReference from './ResumeReference';
 import ResumeReferences from './ResumeReferences';
 
 const styles = StyleSheet.create({
