@@ -11,6 +11,8 @@ import BadRoute from './pages/BadRoute';
 
 import _JSXStyle from 'styled-jsx/style';
 import Feature from './utility/featureConfig';
+import Resume from './pages/resume/Resume';
+
 if (typeof global !== 'undefined') {
   Object.assign(global, { _JSXStyle });
 }
@@ -26,6 +28,7 @@ ReactDOM.render(
             <Route path=":title" element={<ProjectPage />} />
           </Route>
         )}
+        {Feature.resume && <Route path={ROUTES.RESUME} element={<Resume />} />}
         <Route path="*" element={<BadRoute />} />
       </Route>
     </Routes>
