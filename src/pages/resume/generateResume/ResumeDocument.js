@@ -3,6 +3,7 @@ import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 import ResumeReferences from './ResumeReferences';
 import ResumeInterests from './ResumeInterests';
 import ResumeIntroduction from './ResumeIntroduction';
+import ResumeSkills from './ResumeSkills';
 
 const styles = StyleSheet.create({
   page: {
@@ -66,6 +67,70 @@ const indoorInterests = {
   ],
 };
 
+const frontendSkills = {
+  name: 'Frontend',
+  skills: [
+    'ReactJs',
+    'HTML',
+    'CSS',
+    'Jest',
+    'Enzyme',
+    'Formik',
+    'JavaScript',
+    'React-Router',
+    'ReduxJs',
+    'MaterialUI',
+    'Bulma',
+    'FilePond',
+    'Fontawesome',
+    'Bootstrap',
+    'ElectronJs',
+    'MustashJs',
+    'HandlebarsJs',
+  ],
+};
+const backendSkills = {
+  name: 'Backend',
+  skills: ['JavaScript', 'NodeJs', 'Apollo GraphQL', 'ExpressJs', 'REST'],
+};
+const devopsSkills = {
+  name: 'DevOps',
+  skills: [
+    'MongoDB',
+    'Git',
+    'Agile Methodologies',
+    'Scrum',
+    'Active Directory/LDAP',
+    'Netlify',
+    'Heroku',
+    'Microsoft Visual Studios Code',
+    'Postman',
+    'Azure DevOps',
+    'Strapi',
+    'Axios',
+    'NPM',
+    'Stripe',
+    'Paypal',
+    'Auth0',
+    'PowerShell',
+  ],
+};
+const softSkills = {
+  name: 'Soft',
+  skills: [
+    'Problem Solving',
+    'Teamwork',
+    'Quick Learner',
+    'Leadership',
+    'Employee Training',
+    'Critical Thinking',
+    'Project Planning',
+    'ProjectProgram Management',
+    'Technical Writing',
+  ],
+};
+const skills = [frontendSkills, backendSkills, devopsSkills, softSkills];
+
 const interests = [outdoorInterests, indoorInterests];
 
 const introduction =
@@ -79,6 +144,7 @@ const PdfDocument = ({ resumeData }) => {
           <ResumeIntroduction introduction={introduction} />
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
+        {skills.length ? <ResumeSkills skills={skills} /> : null}
         {references.length ? (
           <ResumeReferences references={references} />
         ) : null}
