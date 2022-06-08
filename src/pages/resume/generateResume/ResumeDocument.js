@@ -2,6 +2,7 @@ import React from 'react';
 import { Page, Document, StyleSheet } from '@react-pdf/renderer';
 import ResumeReferences from './ResumeReferences';
 import ResumeInterests from './ResumeInterests';
+import ResumeIntroduction from './ResumeIntroduction';
 
 const styles = StyleSheet.create({
   page: {
@@ -67,20 +68,21 @@ const indoorInterests = {
 
 const interests = [outdoorInterests, indoorInterests];
 
+const introduction =
+  'Software Engineer with 3 years of experience building agile enterprise grade applications for the number 1 fortune 500 retail company. Primarily JavaScript Frontend React focused developer, but can work in backend technologies if the skillset is needed. Willing to learn as needed to accomplish project needs.';
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
+        {introduction ? (
+          <ResumeIntroduction introduction={introduction} />
+        ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {references.length ? (
           <ResumeReferences references={references} />
         ) : null}
         {/* <Image style={styles.logo} src={logo} /> */}
-        {/* <InvoiceTitle title={'Invoice'} />
-        <InvoiceNo invoice={invoicedata} />
-        <BillTo invoice={invoicedata} />
-        <InvoiceItemsTable invoice={invoicedata} />
-        <InvoiceThankYouMsg /> */}
       </Page>
     </Document>
   );
