@@ -5,7 +5,7 @@ import PDFResume from './generateResume/PDFResume';
 const Resume = () => {
   return (
     <>
-      <ExamplePDFInvoice />
+      {/* <ExamplePDFInvoice /> */}
       <PDFResume />
     </>
   );

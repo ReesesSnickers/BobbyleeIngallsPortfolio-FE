@@ -1,5 +1,7 @@
 import React from 'react';
-import { Page, Document, StyleSheet, Text } from '@react-pdf/renderer';
+import { Page, Document, StyleSheet } from '@react-pdf/renderer';
+import ResumeReference from './ResumeReference';
+import ResumeReferences from './ResumeReferences';
 
 const styles = StyleSheet.create({
   page: {
@@ -20,11 +22,35 @@ const styles = StyleSheet.create({
   },
 });
 
+const references = [
+  {
+    name: 'test name',
+    title: ' test title',
+    company: 'test company',
+    email: 'test email',
+    phone: '1-111-1111',
+  },
+  {
+    name: 'test name 2',
+    title: ' test title',
+    company: 'test company',
+    email: 'test email',
+  },
+  {
+    name: 'test name 3',
+    title: ' test title',
+    company: 'test company',
+    phone: '1-111-1111',
+  },
+];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Text>Test</Text>
+        {references.length ? (
+          <ResumeReferences references={references} />
+        ) : null}
         {/* <Image style={styles.logo} src={logo} /> */}
         {/* <InvoiceTitle title={'Invoice'} />
         <InvoiceNo invoice={invoicedata} />
