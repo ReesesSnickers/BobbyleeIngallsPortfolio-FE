@@ -4,6 +4,7 @@ import ResumeReferences from './ResumeReferences';
 import ResumeInterests from './ResumeInterests';
 import ResumeIntroduction from './ResumeIntroduction';
 import ResumeSkills from './ResumeSkills';
+import ResumeAwards from './ResumeAwards';
 
 const styles = StyleSheet.create({
   page: {
@@ -136,6 +137,34 @@ const interests = [outdoorInterests, indoorInterests];
 const introduction =
   'Software Engineer with 3 years of experience building agile enterprise grade applications for the number 1 fortune 500 retail company. Primarily JavaScript Frontend React focused developer, but can work in backend technologies if the skillset is needed. Willing to learn as needed to accomplish project needs.';
 
+const awards = [
+  {
+    date: { month: '05', year: '2017' },
+    award: 'Home Office Client Associate of the Month',
+    company: 'WalMart - April McClure',
+    description: '',
+  },
+  {
+    date: { month: '04', year: '2015' },
+    award: 'Airman Maintenance Professional of the Quarter',
+    company: 'USAF, 22nd Aircraft Maintenance Squadron',
+    description: 'Presented for outstanding professionalism for the quarter.',
+  },
+  {
+    date: { month: '01', year: '2015' },
+    award: 'Commanders Choice Airman',
+    company: 'USAF, 22nd Aircraft Maintenance Squadron',
+    description:
+      'Presented for outstanding performance during a training exercise.',
+  },
+  {
+    date: { month: '', year: '2011' },
+    award: 'Meritorious Unit Award',
+    company: 'USAF, Secretary of the Air Force',
+    description: `Presented to recognize organizations for outstanding achievement or service in direct support of combat operations. The unit must display such outstanding devotion and superior performance of exceptionally difficult tasks as to set it apart and above other units with similar missions. 2011 - Present`,
+  },
+];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
@@ -145,10 +174,10 @@ const PdfDocument = ({ resumeData }) => {
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {skills.length ? <ResumeSkills skills={skills} /> : null}
+        {awards.length ? <ResumeAwards awards={awards} /> : null}
         {references.length ? (
           <ResumeReferences references={references} />
         ) : null}
-        {/* <Image style={styles.logo} src={logo} /> */}
       </Page>
     </Document>
   );
