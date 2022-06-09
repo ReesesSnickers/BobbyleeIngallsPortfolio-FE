@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
-  award: {
+  project: {
     fontFamily: 'Helvetica-Bold',
   },
   company: {
@@ -11,13 +11,14 @@ const styles = StyleSheet.create({
   date: {
     fontFamily: 'Helvetica-Oblique',
     width: '20%',
+    paddingRight: '10px',
   },
   row: {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
-  awardWrapper: {
+  projectWrapper: {
     marginTop: '5px',
     marginBottom: '5px',
   },
@@ -29,30 +30,25 @@ const styles = StyleSheet.create({
   },
 });
 
-const ResumeAward = ({ awardData }) => {
-  const { date, award, company, description } = awardData;
-  const formattedDateString = `${date?.month ? date.month + '/' : ''}${
-    date?.year
-  }`;
+const ResumeProject = ({ projectData }) => {
+  const { startDate, endDate, title, company, description } = projectData;
+
+  const formattedDateString = `${startDate} - ${endDate}`;
+
   return (
-    <View style={styles.awardWrapper}>
+    <View style={styles.projectWrapper}>
       <div style={styles.row}>
         <Text style={styles.date}>{formattedDateString}</Text>
         <div style={styles.information}>
           <div style={styles.row}>
-            <Text style={styles.award}>{award}, </Text>
-            <Text style={styles.company}>
-              {company}
-              {description ? ',' : null}
-            </Text>
+            <Text style={styles.project}>{title}, </Text>
+            <Text style={styles.company}>{company}</Text>
           </div>
-          {description ? (
-            <Text style={styles.description}>{description}</Text>
-          ) : null}
+          <Text style={styles.description}>{description}</Text>
         </div>
       </div>
     </View>
   );
 };
 
-export default ResumeAward;
+export default ResumeProject;

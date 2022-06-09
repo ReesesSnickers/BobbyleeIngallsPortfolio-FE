@@ -6,6 +6,9 @@ import ResumeIntroduction from './ResumeIntroduction';
 import ResumeSkills from './ResumeSkills';
 import ResumeAwards from './ResumeAwards';
 
+import Projects from '../../projects/utility/projects';
+import ResumeProjects from './ResumeProjects';
+
 const styles = StyleSheet.create({
   page: {
     backgroundColor: '#fff',
@@ -174,6 +177,7 @@ const PdfDocument = ({ resumeData }) => {
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {skills.length ? <ResumeSkills skills={skills} /> : null}
+        {Projects.length ? <ResumeProjects projects={Projects} /> : null}
         {awards.length ? <ResumeAwards awards={awards} /> : null}
         {references.length ? (
           <ResumeReferences references={references} />

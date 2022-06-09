@@ -294,8 +294,8 @@ const Projects = [
   {
     title: 'New Republic Ark',
     company: 'Volunteer freelance for David Cordell',
-    startDate: 'Feb 2021',
-    endDate: 'Feb 2021',
+    startDate: '2021',
+    endDate: '2021',
     repos: [
       {
         url: 'https://github.com/newrepublicark/newrepublicark-FE',
@@ -360,8 +360,8 @@ const Projects = [
   {
     title: 'Kane Crazy Christmas',
     company: 'Personal Project',
-    startDate: 'Nov 2019',
-    endDate: 'Nov 2020 (Pending Re-start)',
+    startDate: '2019',
+    endDate: '2020',
     repos: [
       {
         url: 'https://github.com/ReesesSnickers/kane-crazy-christmas',
@@ -452,8 +452,8 @@ const Projects = [
   {
     title: 'Emerald-Empire',
     company: 'Freelance for Roger Hernandez',
-    startDate: 'Novemeber 2019',
-    endDate: 'Novemeber 2019',
+    startDate: '2019',
+    endDate: '2019',
     repos: [],
     technologies: [
       Technology.GIT,
