@@ -9,6 +9,7 @@ import ResumeAwards from './ResumeAwards';
 import Projects from '../../projects/utility/projects';
 import ResumeProjects from './ResumeProjects';
 import ResumeCourses from './ResumeCourses';
+import ResumeEducations from './ResumeEducations';
 
 const styles = StyleSheet.create({
   page: {
@@ -271,6 +272,29 @@ const courses = [
   },
 ];
 
+const educations = [
+  {
+    degree: 'Associate of Arts (A.A.) - Liberal Arts & Science/Liberal Studies',
+    date: { startYear: '2012', endYear: '2018' },
+    city: 'Wichita',
+    state: 'Kansas',
+    country: 'United States',
+    institution: 'Butler Community College',
+    institutionWebsiteUrl: 'https://butlercc.edu/',
+    description: `Classes taken: \n\u2022 Physical Education \n\u2022 Art Appreciation \n\u2022 U.S. History I`,
+  },
+  {
+    degree: 'High School Diploma',
+    date: { startYear: '1995', endYear: '2010' },
+    city: 'Pea Ridge',
+    state: 'Arkansas',
+    country: 'United States',
+    institution: 'Pea Ridge High School',
+    institutionWebsiteUrl: '',
+    description: '',
+  },
+];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
@@ -280,6 +304,9 @@ const PdfDocument = ({ resumeData }) => {
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {skills.length ? <ResumeSkills skills={skills} /> : null}
+        {educations.length ? (
+          <ResumeEducations educations={educations} />
+        ) : null}
         {courses.length ? <ResumeCourses courses={courses} /> : null}
         {Projects.length ? <ResumeProjects projects={Projects} /> : null}
         {awards.length ? <ResumeAwards awards={awards} /> : null}
