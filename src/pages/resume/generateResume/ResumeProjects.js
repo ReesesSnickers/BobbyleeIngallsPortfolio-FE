@@ -19,7 +19,7 @@ const ResumeProjects = ({ projects }) => {
         <Text style={styles.title}>Projects</Text>
       </div>
       {projects.map((project) => {
-        return <ResumeProject key={project.project} projectData={project} />;
+        return <ResumeProject key={project.title} projectData={project} />;
       })}
     </View>
   );
