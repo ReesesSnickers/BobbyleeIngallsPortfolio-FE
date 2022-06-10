@@ -11,17 +11,19 @@ import ResumeProjects from './ResumeProjects';
 import ResumeCourses from './ResumeCourses';
 import ResumeEducations from './ResumeEducations';
 import ResumeProfessionalExperiences from './ResumeProfessionalExperiences';
+import ResumeHeader from './ResumeHeader';
 
 const styles = StyleSheet.create({
   page: {
     backgroundColor: '#fff',
     fontFamily: 'Helvetica',
     fontSize: 11,
-    paddingTop: 30,
-    paddingLeft: 50,
-    paddingRight: 50,
     lineHeight: 1.5,
     flexDirection: 'column',
+  },
+  content: {
+    paddingLeft: 50,
+    paddingRight: 50,
   },
   logo: {
     width: 84,
@@ -402,25 +404,28 @@ const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {introduction ? (
-          <ResumeIntroduction introduction={introduction} />
-        ) : null}
-        {interests.length ? <ResumeInterests interests={interests} /> : null}
-        {skills.length ? <ResumeSkills skills={skills} /> : null}
-        {professionalExperiences.length ? (
-          <ResumeProfessionalExperiences
-            professionalExperiences={professionalExperiences}
-          />
-        ) : null}
-        {educations.length ? (
-          <ResumeEducations educations={educations} />
-        ) : null}
-        {courses.length ? <ResumeCourses courses={courses} /> : null}
-        {Projects.length ? <ResumeProjects projects={Projects} /> : null}
-        {awards.length ? <ResumeAwards awards={awards} /> : null}
-        {references.length ? (
-          <ResumeReferences references={references} />
-        ) : null}
+        <ResumeHeader />
+        <div style={styles.content}>
+          {introduction ? (
+            <ResumeIntroduction introduction={introduction} />
+          ) : null}
+          {interests.length ? <ResumeInterests interests={interests} /> : null}
+          {skills.length ? <ResumeSkills skills={skills} /> : null}
+          {professionalExperiences.length ? (
+            <ResumeProfessionalExperiences
+              professionalExperiences={professionalExperiences}
+            />
+          ) : null}
+          {educations.length ? (
+            <ResumeEducations educations={educations} />
+          ) : null}
+          {courses.length ? <ResumeCourses courses={courses} /> : null}
+          {Projects.length ? <ResumeProjects projects={Projects} /> : null}
+          {awards.length ? <ResumeAwards awards={awards} /> : null}
+          {references.length ? (
+            <ResumeReferences references={references} />
+          ) : null}
+        </div>
       </Page>
     </Document>
   );
