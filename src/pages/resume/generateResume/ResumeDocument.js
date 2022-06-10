@@ -8,6 +8,7 @@ import ResumeAwards from './ResumeAwards';
 
 import Projects from '../../projects/utility/projects';
 import ResumeProjects from './ResumeProjects';
+import ResumeCourses from './ResumeCourses';
 
 const styles = StyleSheet.create({
   page: {
@@ -168,6 +169,108 @@ const awards = [
   },
 ];
 
+const courses = [
+  {
+    date: {
+      startDate: { month: '03', year: '2022' },
+      endDate: { month: '03', year: '2022' },
+    },
+    course: 'Microservices Foundations',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/microservices-foundations',
+  },
+  {
+    date: {
+      startDate: { month: '03', year: '2022' },
+      endDate: { month: '03', year: '2022' },
+    },
+    course: 'Cloud Native Twelve-Factor Applications',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/cloud-native-twelve-factor-applications/leverage-twelve-factor-methodologies?u=26192810',
+  },
+  {
+    date: {
+      startDate: { month: '06', year: '2021' },
+      endDate: { month: '06', year: '2021' },
+    },
+    course: 'React Hooks',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/react-js-building-an-interface-8551484?replacementOf=react-js-building-an-interface-2019',
+  },
+  {
+    date: {
+      startDate: { month: '11', year: '2020' },
+      endDate: { month: '11', year: '2020' },
+    },
+    course: 'React.js: Building an Interface',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/react-js-building-an-interface-8551484?replacementOf=react-js-building-an-interface-2019',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'Learning React.js',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/learning-react-js-5',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'Learning S.O.L.I.D. Programming Principles',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/learning-s-o-l-i-d-programming-principles',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'Node.js Essential Training',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/node-js-essential-training-2',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'React.js Essential Training',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/react-js-essential-training?replacementOf=react-js-essential-training-2018',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'React: Context API Development',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/react-context-api-development',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'React: Ecosystems',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/react-ecosystems',
+  },
+  {
+    date: {
+      startDate: { month: '10', year: '2020' },
+      endDate: { month: '10', year: '2020' },
+    },
+    course: 'GraphQL Essential Training',
+    institution: 'LinkedIn',
+    url: 'https://www.linkedin.com/learning/graphql-essential-training',
+  },
+];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
@@ -177,6 +280,7 @@ const PdfDocument = ({ resumeData }) => {
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {skills.length ? <ResumeSkills skills={skills} /> : null}
+        {courses.length ? <ResumeCourses courses={courses} /> : null}
         {Projects.length ? <ResumeProjects projects={Projects} /> : null}
         {awards.length ? <ResumeAwards awards={awards} /> : null}
         {references.length ? (
