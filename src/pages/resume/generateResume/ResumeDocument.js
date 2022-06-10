@@ -10,6 +10,7 @@ import Projects from '../../projects/utility/projects';
 import ResumeProjects from './ResumeProjects';
 import ResumeCourses from './ResumeCourses';
 import ResumeEducations from './ResumeEducations';
+import ResumeProfessionalExperiences from './ResumeProfessionalExperiences';
 
 const styles = StyleSheet.create({
   page: {
@@ -295,6 +296,108 @@ const educations = [
   },
 ];
 
+const professionalExperiences = [
+  {
+    date: {
+      startDate: { month: '', year: '2019' },
+      endDate: { month: '', year: 'Present' },
+    },
+    city: 'Bentonville',
+    state: 'Arkansas',
+    country: 'United States',
+    position: 'Software Engineer',
+    company: 'Walmart',
+    responsabilities: [
+      'Adhere to all relevant coding guidelines (Ex: code review processes, code branching strategies, reusability etc.) while writing/configuring code.',
+      'Create/configure minimalistic (Less Complex, Highly Robust and high quality) code for a component/module under guidance.',
+      'Maintain records by documenting program development and revisions.',
+      'Stay updated on the prevalent coding languages and frameworks in the industry outside the immediate scope of delivery.',
+      'Identify repetitive and routine tasks in (Continuous Integration/Continuous Delivery) CI/CD, Testing or any other process that can be automated.',
+      'Implement telemetry features as required under guidance.',
+      'Apply security policy requirements to component/module during code development/configuration.',
+      'Identify and create test cases for the task/story.',
+      'Map test cases to business and functional requirements.',
+      'Comprehend different types of testing and testing tools and can execute them under guidance.',
+      'Execute test cases to test the code and detect errors and defects for the component/module under guidance.',
+      'Evaluate test results against desired performance, standards, and usability outcomes.',
+      'Detect and document defects, bugs and errors for the component/module and conduct analysis to determine source of error under guidance.',
+      'Troubleshoot performance and availability bottlenecks for the application under guidance.',
+      'Failover incase of an Issue.',
+      'Carry out routine maintenance of applications under guidance.',
+      'Comprehend applicable application monitoring metrics (for example transaction volume etc.) and can track and analyze them under guidance.',
+      'Assist in performing maintenance (corrective, adaptive, perfective) and re- engineering activities.',
+      'Understand the concept to Maintenance Debt and implications on allied areas.',
+      'Ensure adherence to the project agains approved milestones and timelines.',
+      'Serve as a Walmart ambassador and models our values in everyday behavior to foster our culture.',
+      'Maintain and promote the highest standards of integrity, ethics and compliance.',
+      'Serve the customer by knowing and empathizing with them.',
+      'Demonstrate and encourage respect for others. Set high expectations for oneself. Hold self accountable for results. Implement and support ideas that drive exceptional results and create better experiences for our customers.',
+      'Align personal goals and objectives with core values and strategic priorities.',
+      'Support initiatives to enhance sustainability and ensure shared value across stakeholders.',
+      'Contribute to a psychologically safe and inclusive environment where individuals feel respected and diversity is appreciated in all its forms.',
+      'Put the interests of the company and others before self.',
+      'Be humble and self-aware. Is always honest and transparent.',
+      'Demonstrate awareness of how own behaviors, actions, or words affect others and adjusts accordingly Maintain a keen awareness of own strengths and development opportunities by consistently seeking feedback and engaging in self-reflection.',
+      'Be Curious and constantly open to learning and applying new concepts; display a growth mindset. Seek opportunities for collaboration to broaden knowledge and capabilities.',
+      'Support innovation and intelligent risk-taking while challenging the status quo.',
+    ],
+  },
+  {
+    date: {
+      startDate: { month: '08', year: '2016' },
+      endDate: { month: '02', year: '2019' },
+    },
+    city: 'Bentonville',
+    state: 'Arkansas',
+    country: 'United States',
+    position: 'Field Support Technician',
+    company: 'Walmart',
+    responsabilities: [
+      'Perform level one troubleshooting on over 150 software used for business daily operation throughout Home Office and Distribution Centers.',
+      'Perform level one troubleshooting on Windows 7 and Windows 10 Operating Systems',
+      'Identify, Document, and report trends based on call, team, and ticket data.',
+      'Train and monitor team members based on skill level requirements.',
+      'Understand and use troubleshooting documentation.',
+      'Identify and program scripts to increase workflow.',
+      'Provide excellent customer service via email, phone, and chats to perform or schedule troubleshooting.',
+      'Meet or exceed department and team-based goals.',
+      'Meet or exceed department Quality Assurance goals.',
+      'Write automated scripts to assist in technician efficiencies.',
+      'Write scripts to automate self-help for customers.',
+      'Maintain Home Office Client team specific tools using various coding languages.',
+    ],
+  },
+  {
+    date: {
+      startDate: { month: '08', year: '2010' },
+      endDate: { month: '08', year: '2016' },
+    },
+    city: '',
+    state: '',
+    country: 'United States',
+    position: 'Aerospace Maintenance Journeyman (Crew Chief)',
+    company: 'United States Air Force',
+    responsabilities: [
+      'Preform specialized aircraft ground inspections prior to and after flights.',
+      'Identify and document aircraft discrepancies and ensure accuracy of automated and paper forms.',
+      'Maintain, troubleshoot and service KC135 aircraft.',
+      'Perform aircraft ground handling task such as refuel, defuel and towing.',
+      'Remove and replace, adjust, rig, align, and conduct functional checks of aircraft structures and components.',
+      'Inventory, inspect and maintain tool kits, test equipment and vehicles worth over $15 million using TCMAX accountability program.',
+      'Create, maintain, and control flight line driving records.',
+      'Manage and maintain bench stock and shop stock parts programs.',
+      'Inspect and schedule maintenance on aircraft emergency escape slides and cargo rolling systems.',
+      'Manage, maintain, and inspect hazardous waste satellite points, storage and documents.',
+      'Manage, inventory, order, and repair unserviceable tools and test equipment and tool kits.',
+      'Maintain required training and supplies to be mobilized quickly world-wide.',
+      'Supervise, train and mentor personnel and maintain training documentation.',
+      'Maintain operational and security and risk management.',
+      'Understand and use aircraft technical orders.',
+      'Use and know emergency procedures for specialized ground equipment and vehicles.',
+    ],
+  },
+];
+
 const PdfDocument = ({ resumeData }) => {
   return (
     <Document>
@@ -304,6 +407,11 @@ const PdfDocument = ({ resumeData }) => {
         ) : null}
         {interests.length ? <ResumeInterests interests={interests} /> : null}
         {skills.length ? <ResumeSkills skills={skills} /> : null}
+        {professionalExperiences.length ? (
+          <ResumeProfessionalExperiences
+            professionalExperiences={professionalExperiences}
+          />
+        ) : null}
         {educations.length ? (
           <ResumeEducations educations={educations} />
         ) : null}
