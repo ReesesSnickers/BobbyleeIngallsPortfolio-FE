@@ -1,4 +1,3 @@
-import type { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import {
@@ -14,19 +13,6 @@ import {
 } from "lucide-react";
 import { getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
 import Project from "@/types/projects";
-
-interface ProjectDetailProps {
-  project: Project & {
-    slug: string;
-    category: string;
-    timeline?: string;
-    team?: string[];
-    challenges?: string[];
-    solutions?: string[];
-    impact?: string[];
-    lessons?: string[];
-  };
-}
 
 function categorizeProject(
   project: Project

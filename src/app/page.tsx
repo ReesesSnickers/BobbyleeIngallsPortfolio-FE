@@ -4,7 +4,6 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
-// import { getPortfolio } from "@/lib/content";
 import Portfolio from "@/types/portfolio";
 import portfolioData from "@/data/portfolio";
 
@@ -12,7 +11,7 @@ interface HomeProps {
   data?: Portfolio;
 }
 
-export default function Home({ data }: HomeProps) {
+export default function Home({}: HomeProps) {
   return (
     <>
       <Head>
