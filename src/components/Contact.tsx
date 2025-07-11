@@ -107,7 +107,23 @@ export default function Contact({ data }: ContactProps) {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              data-netlify="true"
+              name="contact"
+              action="/pages/success"
+              method="POST"
+            >
+              {/* Used for Netlify Forms integration */}
+              <input type="hidden" name="contact" value="contact" />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Portfolio contact requested %{submissionId}"
+                data-remove-prefix
+              />
+              {/* ---------------------------------- */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label

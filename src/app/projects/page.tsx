@@ -111,7 +111,7 @@ export default function AllProjects() {
   return (
     <>
       <Head>
-        <title>All Projects - Bobbylee Ingalls</title>
+        <title>All Projects | Bobbylee Ingalls</title>
         <meta
           name="description"
           content="Complete portfolio of professional projects, community initiatives, and personal work by Bobbylee Ingalls"

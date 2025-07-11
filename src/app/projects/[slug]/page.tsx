@@ -116,7 +116,7 @@ export default async function ProjectDetail({ params }: PageProps) {
   return (
     <>
       <Head>
-        <title>{projectWithCategory.title} - Bobbylee Ingalls</title>
+        <title>{projectWithCategory.title} | Bobbylee Ingalls Portfolio</title>
         <meta name="description" content={projectWithCategory.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
