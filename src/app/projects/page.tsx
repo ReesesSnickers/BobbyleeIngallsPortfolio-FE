@@ -12,13 +12,9 @@ import {
   ArrowLeft,
   Filter,
 } from "lucide-react";
-import { useState } from "react";
 import projectsData from "@/data/projects";
 import Project from "@/types/projects";
-
-interface AllProjectsProps {
-  projects: Project[];
-}
+import { useState, useEffect } from "react";
 
 function getCategoryIcon(category: string) {
   switch (category) {
@@ -66,10 +62,24 @@ function createSlug(title: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
-export default function AllProjects({
-  projects = projectsData,
-}: AllProjectsProps) {
+export default function AllProjects() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        setProjects(projectsData);
+      } catch (error) {
+        console.error("Failed to fetch projects:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchProjects();
+  }, []);
 
   const categories = [
     { value: "all", label: "All Projects", icon: "🎯" },
@@ -95,6 +105,8 @@ export default function AllProjects({
       (project) => project.type === "open-source"
     ),
   };
+
+  if (loading) return <p>Loading projects...</p>;
 
   return (
     <>
