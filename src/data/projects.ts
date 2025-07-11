@@ -27,6 +27,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -54,6 +55,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -80,6 +82,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -97,6 +100,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -121,6 +125,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -147,6 +152,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -171,6 +177,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -195,6 +202,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -219,6 +227,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Freelance Software Engineer",
     featured: true,
   },
   {
@@ -244,6 +253,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Freelance Software Engineer",
     featured: true,
   },
   {
@@ -262,6 +272,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -280,6 +291,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Freelance Software Engineer",
     featured: true,
   },
   {
@@ -304,6 +316,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Level 1 Technician",
     featured: true,
   },
   {
@@ -326,6 +339,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "work",
+    role: "Level 1 Technician",
     featured: true,
   },
   {
@@ -351,6 +365,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "personal",
+    role: "Full Stack Software Engineer",
     featured: true,
   },
   {
@@ -373,6 +388,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "Level 1 Technician",
     featured: true,
   },
   {
@@ -395,6 +411,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "United States Airforce",
     featured: true,
   },
   {
@@ -413,6 +430,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "United States Airforce",
     featured: true,
   },
   {
@@ -431,6 +449,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "United States Airforce",
     featured: true,
   },
   {
@@ -449,6 +468,7 @@ const projectsData: Project[] = [
     timeline: "",
     team: [],
     type: "initiative",
+    role: "United States Airforce",
     featured: true,
   },
 ];

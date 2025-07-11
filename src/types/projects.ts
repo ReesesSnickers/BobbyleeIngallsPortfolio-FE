@@ -12,5 +12,6 @@ export default interface Project {
   lessons?: string[];
   timeline?: string;
   team?: string[];
+  role: string;
   type: "work" | "initiative" | "open-source" | "personal";
 }

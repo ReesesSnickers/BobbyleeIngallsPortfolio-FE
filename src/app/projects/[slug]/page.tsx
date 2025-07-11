@@ -357,13 +357,7 @@ export default function ProjectDetail({
                     <Code className="w-4 h-4" />
                     <span className="text-sm font-medium">Role</span>
                   </div>
-                  <p className="text-gray-900">
-                    {projectWithCategory.category === "work"
-                      ? "Full Stack Developer"
-                      : projectWithCategory.category === "initiative"
-                      ? "Technical Lead"
-                      : "Developer"}
-                  </p>
+                  <p className="text-gray-900">{projectWithCategory.role}</p>
                 </div>
               </div>
 
@@ -432,49 +426,4 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({
     slug,
   }));
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   try {
-//     const slugs = getAllProjectSlugs();
-//     const paths = slugs.map((slug) => ({
-//       params: { slug },
-//     }));
-
-//     return {
-//       paths,
-//       fallback: false, // Set to 'blocking' if you want ISR for new projects
-//     };
-//   } catch (error) {
-//     console.error("Error in getStaticPaths:", error);
-//     return { paths: [], fallback: false };
-//   }
-// };
-
-// export const getStaticProps: GetStaticProps<ProjectDetailProps> = async ({
-//   params,
-// }) => {
-//   try {
-//     const slug = params?.slug as string;
-//     const project = getProjectBySlug(slug);
-
-//     if (!project) {
-//       return { notFound: true };
-//     }
-
-//     const category = categorizeProject(project);
-
-//     return {
-//       props: {
-//         project: {
-//           ...project,
-//           slug,
-//           category,
-//         },
-//       },
-//       revalidate: 3600, // Revalidate every hour
-//     };
-//   } catch (error) {
-//     console.error("Error in getStaticProps:", error);
-//     return { notFound: true };
-//   }
-// };
+}
