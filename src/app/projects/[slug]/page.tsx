@@ -85,12 +85,15 @@ function getCategoryColor(category: string) {
   }
 }
 
-export default function ProjectDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const project = getProjectBySlug(params.slug);
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export default async function ProjectDetail({ params }: PageProps) {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
 
   if (!project) {
     return (
@@ -108,7 +111,7 @@ export default function ProjectDetail({
   }
 
   const category = categorizeProject(project);
-  const projectWithCategory = { ...project, slug: params.slug, category };
+  const projectWithCategory = { ...project, slug: slug, category };
 
   return (
     <>
