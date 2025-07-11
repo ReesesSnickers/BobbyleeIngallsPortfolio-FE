@@ -112,11 +112,11 @@ export default function Contact({ data }: ContactProps) {
               className="space-y-6"
               data-netlify="true"
               name="contact"
-              action="/pages/success"
+              action="/success"
               method="POST"
             >
               {/* Used for Netlify Forms integration */}
-              <input type="hidden" name="contact" value="contact" />
+              <input type="hidden" name="form-name" value="contact" />
               <input
                 type="hidden"
                 name="subject"

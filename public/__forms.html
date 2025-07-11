@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hidden Netlify Form</title>
+  </head>
+  <body>
+    <form
+      onSubmit="{handleSubmit}"
+      className="space-y-6"
+      data-netlify="true"
+      name="contact"
+      action="/success"
+      method="POST"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" data-remove-prefix />
+      <input name="name" />
+      <input name="email" />
+      <input name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
