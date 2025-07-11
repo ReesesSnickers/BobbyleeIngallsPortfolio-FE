@@ -8,7 +8,7 @@ const experienceData: Experience[] = [
     endDate: null,
     location: "Bentonville, Arkansas · Hybrid",
     description:
-      "Develop and maintain scalable, modular web applications using React.js, Node.js, and GraphQL, adhering to coding standards and enterprise branching strategies. Lead automation initiatives and mentor junior engineers.",
+      "Develop and maintain scalable, modular web applications using React.js, Node.js, and GraphQL, adhering to coding standards and enterprise branching strategies. Lead automation initiatives and mentor junior engineers. Position lifecycle: Associate Software Engineer - Tech, Analyst, Software Engineering, Software Engineer II, Software Engineer III.",
     achievements: [
       "Developed and maintained scalable web applications using React.js, Node.js, and GraphQL with enterprise coding standards",
       "Automated repetitive CI/CD, testing, and diagnostics workflows using PowerShell, reducing deployment bottlenecks",

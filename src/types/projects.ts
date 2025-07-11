@@ -6,5 +6,11 @@ export default interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  solutions?: string[];
+  challenges?: string[];
+  impact?: string[];
+  lessons?: string[];
+  timeline?: string;
+  team?: string[];
   type: "work" | "initiative" | "open-source" | "personal";
 }

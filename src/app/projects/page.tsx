@@ -249,7 +249,7 @@ export default function AllProjects({
 
                     <div className="flex gap-2">
                       <Link
-                        href={`/project/${slug}`}
+                        href={`/projects/${slug}`}
                         className="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
                       >
                         View Details
