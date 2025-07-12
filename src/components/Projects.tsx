@@ -148,6 +148,7 @@ export default function Projects({ projects = [] }: ProjectsProps) {
                     width={500}
                     alt={project.title}
                     className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 

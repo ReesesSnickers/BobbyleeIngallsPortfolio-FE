@@ -5,7 +5,7 @@ const heroData: Hero = {
   tagline: "Senior Full Stack Developer & Technical Lead",
   description:
     "Results-driven Sr. Software Engineer (15 yrs exp; 6+ in Fortune 500 enterprise platforms). My military leadership shaped a blend of technical depth & operational discipline, driving automation, accessibility, & resilience across global teams.",
-  avatar: "/avatar.jpg?height=200&width=200",
+  avatar: "/avatar.jpg",
   resumeUrl: "/BobbyleeIngallsResume.pdf",
   social: {
     github: "https://github.com/ReesesSnickers",
