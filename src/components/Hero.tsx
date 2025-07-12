@@ -27,7 +27,6 @@ export default function Hero({ data }: HeroProps) {
               alt={heroData.name}
               height={600}
               width={600}
-              loading="lazy"
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
