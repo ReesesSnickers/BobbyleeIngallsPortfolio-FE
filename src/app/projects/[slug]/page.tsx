@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { getProjectBySlug, getAllProjectSlugs } from "@/data/projects";
 import Project from "@/types/projects";
+import Image from "next/image";
 
 function categorizeProject(
   project: Project
@@ -207,12 +208,11 @@ export default async function ProjectDetail({ params }: PageProps) {
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Project Image */}
           <div className="mb-8">
-            <img
-              src={
-                projectWithCategory.image ||
-                "/placeholder.svg?height=400&width=800"
-              }
+            <Image
+              src={projectWithCategory.image || "/placeholder.svg"}
               alt={`${projectWithCategory.title} project screenshot`}
+              height={400}
+              width={800}
               className="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg"
               loading="lazy"
             />

@@ -15,6 +15,7 @@ import {
 import projectsData from "@/data/projects";
 import Project from "@/types/projects";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 function getCategoryIcon(category: string) {
   switch (category) {
@@ -212,10 +213,10 @@ export default function AllProjects() {
                   className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="relative overflow-hidden">
-                    <img
-                      src={
-                        project.image || "/placeholder.svg?height=200&width=400"
-                      }
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      height={200}
+                      width={400}
                       alt={`${project.title} project screenshot`}
                       className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"

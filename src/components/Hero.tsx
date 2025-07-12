@@ -1,5 +1,6 @@
 import type Hero from "@/types/hero";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import Image from "next/image";
 
 interface HeroProps {
   data: Hero;
@@ -21,9 +22,11 @@ export default function Hero({ data }: HeroProps) {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <div className="w-80 h-80 rounded-full mx-auto mb-6 border-4 border-white shadow-lg overflow-hidden">
-            <img
-              src={heroData.avatar || "/placeholder.svg?height=200&width=200"}
+            <Image
+              src={heroData.avatar || "/placeholder.svg"}
               alt={heroData.name}
+              height={600}
+              width={600}
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">

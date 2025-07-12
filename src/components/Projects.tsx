@@ -9,6 +9,7 @@ import {
   Briefcase,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectsProps {
   projects: Project[];
@@ -141,10 +142,10 @@ export default function Projects({ projects = [] }: ProjectsProps) {
                 className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={
-                      project.image || "/placeholder.svg?height=300&width=500"
-                    }
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    height={300}
+                    width={500}
                     alt={project.title}
                     className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                   />
