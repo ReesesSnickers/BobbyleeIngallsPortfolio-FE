@@ -19,8 +19,7 @@ export default function Contact({ data }: ContactProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsSubmitting(true);
 
     // Here you would integrate with your form handling service
